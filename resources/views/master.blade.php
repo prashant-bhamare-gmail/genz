@@ -6,11 +6,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Demo Business Consulting | Porto - Multipurpose Website Template</title>	
+<title>Gen Z  | Home Page</title>	
 
 <meta name="keywords" content="WebSite Template" />
-<meta name="description" content="Porto - Multipurpose Website Template">
-<meta name="author" content="okler.net">
+<meta name="description" content="Gen Z  | Home Page">
+<meta name="author" content="">
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="{{ asset('') }}img/favicon.ico" type="image/x-icon" />
@@ -65,7 +65,15 @@
 			
 		</div>
 
-		<a class="style-switcher-open-loader" href="#" data-base-path="" data-skin-src="" data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="Style Switcher" aria-label="Style Switcher"><i class="fas fa-cogs"></i><div class="style-switcher-tooltip"><strong>Style Switcher</strong><p>Check out different color options and styles.</p></div></a>
+		<!-- <a class="style-switcher-open-loader" href="#" data-base-path="" data-skin-src="" 
+			data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" 
+			title="Style Switcher" aria-label="Style Switcher">
+			<i class="fas fa-cogs"></i>
+			<div class="style-switcher-tooltip">
+				<strong>Style Switcher</strong>
+				<p>Check out different color options and styles.</p>
+			</div>
+		</a> -->
 
 		<!-- Vendor -->
 		<script src="{{ asset('') }}vendor/plugins/js/plugins.min.js"></script>
