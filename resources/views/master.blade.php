@@ -6,10 +6,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Gen Z  | Home Page</title>	
+<title>GenZ || Home </title>	
 
-<meta name="keywords" content="WebSite Template" />
-<meta name="description" content="Gen Z  | Home Page">
+<meta name="keywords" content="WebSite" />
+<meta name="description" content="GenZ  | Home Page">
 <meta name="author" content="">
 
 <!-- Favicon -->
@@ -39,9 +39,11 @@
 
 <!-- Demo CSS -->
 <link rel="stylesheet" href="css/demos/demo-business-consulting.css">
+<link rel="stylesheet" href="css/demos/demo-business-consulting-2.css">
 
 <!-- Skin CSS -->
 <link id="skinCSS" rel="stylesheet" href="css/skins/skin-business-consulting.css">
+<!-- <link id="skinCSS" rel="stylesheet" href="css/skins/skin-business-consulting-2.css"> -->
 
 <!-- Theme Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">

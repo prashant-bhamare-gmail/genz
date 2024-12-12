@@ -37,22 +37,22 @@
 								<h4 class="mb-1">Social Media</h4>
 								<ul class="social-icons social-icons-clean custom-social-icons-style-1 mt-2 custom-opacity-font">
 									<li class="social-icons-facebook">
-										<a href="http://www.facebook.com/" target="_blank" title="Facebook">
+										<a href="#" target="_blank" title="Facebook">
 											<i class="fab fa-facebook-f"></i>
 										</a>
 									</li>
 									<li class="social-icons-x">
-										<a href="http://www.x.com/" target="_blank" title="X">
+										<a href="#" target="_blank" title="X">
 											<i class="fab fa-x-twitter"></i>
 										</a>
 									</li>
 									<li class="social-icons-instagram">
-										<a href="http://www.instagram.com/" target="_blank" title="Instagram">
+										<a href="#" target="_blank" title="Instagram">
 											<i class="fab fa-instagram"></i>
 										</a>
 									</li>
 									<li class="social-icons-linkedin">
-										<a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+										<a href="#" target="_blank" title="Linkedin">
 											<i class="fab fa-linkedin-in"></i>
 										</a>
 									</li>
@@ -111,7 +111,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center pb-4">
-					<p>2024 © Porto <span class="text-color-light">Business Consulting</span> - Copyright All Rights Reserved</p>
+					<p>2024 © GentZ <span class="text-color-light">Mindpool Technologies</span> - Copyright All Rights Reserved</p>
 				</div>
 			</div>
 		</div>

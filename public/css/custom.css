@@ -2,3 +2,6 @@
     display: inline-block;
     text-align: center;
 }
+.bg-color-secondary, .bg-secondary {
+    background-color: #21644e !important;
+}
