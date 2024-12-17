@@ -210,7 +210,8 @@
 									</ul>
 								</div>
 							</div>
-							<a class="btn btn-outline custom-border-width btn-primary mt-3 mb-2 custom-border-radius font-weight-semibold text-uppercase" href="demo-business-consulting-about-us.html">Read More</a>
+							<a class="btn btn-outline custom-border-width btn-primary mt-3 mb-2 custom-border-radius 
+							font-weight-semibold text-uppercase" href="#">Read More</a>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-6 position-relative">
@@ -265,12 +266,12 @@
 			<div class="container">
 				<div class="row mb-3">
 					<div class="col-lg-6">
-						<h2 class="font-weight-bold text-color-dark">- Our Strategy</h2>
+						<h2 class="font-weight-bold text-color-dark">- Quizzes</h2>
 						<div class="owl-carousel owl-theme nav-bottom rounded-nav numbered-dots ps-1 pe-1" data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
 							<div>
 								<div class="custom-step-item">
 									<span class="step text-uppercase">
-										Step
+										
 										<span class="step-number text-color-primary">
 											01
 										</span>
@@ -284,7 +285,7 @@
 							<div>
 								<div class="custom-step-item">
 									<span class="step text-uppercase">
-										Step
+										
 										<span class="step-number text-color-primary">
 											02
 										</span>
@@ -298,7 +299,7 @@
 							<div>
 								<div class="custom-step-item">
 									<span class="step text-uppercase">
-										Step
+										
 										<span class="step-number text-color-primary">
 											03
 										</span>
@@ -312,13 +313,13 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<h2 class="font-weight-bold text-color-dark">- Frequently asked questions</h2>
+						<h2 class="font-weight-bold text-color-dark">- Our Services</h2>
 						<div class="accordion without-bg custom-accordion-style-1" id="accordion7">
 							<div class="card card-default">
 								<div class="card-header">
 									<h4 class="card-title m-0">
 										<a class="accordion-toggle" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7One" aria-expanded="true">
-											Praesent sit amet quam a lorem commodo tincidunt.
+										HR Podcast 
 											<span class="custom-accordion-plus"></span>
 										</a>
 									</h4>
@@ -333,7 +334,7 @@
 								<div class="card-header">
 									<h4 class="card-title m-0">
 										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Two" aria-expanded="false">
-											Integer ac elit id est euismod pellentesque.
+										HR Meet - Committee-Membership
 											<span class="custom-accordion-plus"></span>
 										</a>
 									</h4>
@@ -348,7 +349,7 @@
 								<div class="card-header">
 									<h4 class="card-title m-0">
 										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Three" aria-expanded="false">
-											Cras interdum neque sit amet justo maximus, ut sollicitudin eros.
+										HR Learning Session Certification 
 											<span class="custom-accordion-plus"></span>
 										</a>
 									</h4>
@@ -363,12 +364,72 @@
 								<div class="card-header">
 									<h4 class="card-title m-0">
 										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Four" aria-expanded="false">
-											Pellentesque in ex molestie, convallis nulla ut, ornare erat.
+										Campus - HR Connect 
 											<span class="custom-accordion-plus"></span>
 										</a>
 									</h4>
 								</div>
 								<div id="collapse7Four" class="collapse" aria-expanded="false" style="height: 0px;">
+									<div class="card-body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+								<div class="card-header">
+									<h4 class="card-title m-0">
+										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Five" aria-expanded="false">
+										HR Counselling
+											<span class="custom-accordion-plus"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse7Five" class="collapse" aria-expanded="false" style="height: 0px;">
+									<div class="card-body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+								<div class="card-header">
+									<h4 class="card-title m-0">
+										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7six" aria-expanded="false">
+										HR Newsletter and "Paid" HR Magazine
+											<span class="custom-accordion-plus"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse7six" class="collapse" aria-expanded="false" style="height: 0px;">
+									<div class="card-body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+								<div class="card-header">
+									<h4 class="card-title m-0">
+										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7seven" aria-expanded="false">
+										Awards
+											<span class="custom-accordion-plus"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse7seven" class="collapse" aria-expanded="false" style="height: 0px;">
+									<div class="card-body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card card-default">
+								<div class="card-header">
+									<h4 class="card-title m-0">
+										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7eight" aria-expanded="false">
+										Other Benefits
+											<span class="custom-accordion-plus"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse7eight" class="collapse" aria-expanded="false" style="height: 0px;">
 									<div class="card-body">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
 									</div>
@@ -384,21 +445,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h2 class="font-weight-bold text-color-dark mb-3">- Our Cases</h2>
+						<h2 class="font-weight-bold text-color-dark mb-3">- Our Services</h2>
 					</div>
 				</div>
 			</div>
-			<div class="owl-carousel show-nav-title custom-both-sides-shadow custom-dots-position-2 custom-dots-style-1 custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 6, 'loop': false, 'dots': true, 'nav': false}">
+			<div class="owl-carousel show-nav-title custom-both-sides-shadow custom-dots-position-2 custom-dots-style-1 custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 4, 'loop': false, 'dots': true, 'nav': false}">
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-1.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-1.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Corporate Finance</span>
-									<span class="custom-thumb-info-desc font-weight-light">Okler</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Podcast </span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -406,15 +467,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-2.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Corporate Restructuring</span>
-									<span class="custom-thumb-info-desc font-weight-light">Envato</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Meet - Committee-Membership</span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -422,15 +483,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-3.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-3.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Economic Consultanting</span>
-									<span class="custom-thumb-info-desc font-weight-light">Porto</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Learning Session Certification </span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -438,15 +499,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-4.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Tech Consulting</span>
-									<span class="custom-thumb-info-desc font-weight-light">GetCustom</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Campus - HR Connect </span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -454,15 +515,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-5.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Strategic</span>
-									<span class="custom-thumb-info-desc font-weight-light">Jet Orange</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Counselling</span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -470,15 +531,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-1.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-6.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Litigation</span>
-									<span class="custom-thumb-info-desc font-weight-light">Paradoxx</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Newsletter and "Paid" HR Magazine</span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -486,15 +547,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-2.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Consulting</span>
-									<span class="custom-thumb-info-desc font-weight-light">iMessenger</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Awards</span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -502,217 +563,288 @@
 					</a>
 				</div>
 				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
+					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-3.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Brand Consulting</span>
-									<span class="custom-thumb-info-desc font-weight-light">Theme Forest</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Other Benefits</span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
 						</span>
 					</a>
 				</div>
-				<div>
-					<a href="demo-business-consulting-cases-detail.html" class="text-decoration-none">
-						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/demos/business-consulting/cases/case-4.jpg" class="img-fluid" alt="">
-							</span>
-							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Corporate Consulting</span>
-									<span class="custom-thumb-info-desc font-weight-light">Tucson</span>
-								</span>
-								<span class="custom-arrow"></span>
-							</span>
-						</span>
-					</a>
-				</div>
+				
 			</div>
 		</section>
 
-		<section class="custom-section-padding">
+		<section class="custom-section-padding">	
 			<div class="container">
+				<div class="row pt-1 pb-4 mb-3">
 				<div class="row">
 					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Testimonials</h2>
+						<h2 class="font-weight-bold text-color-dark mb-3">- Events</h2>
 					</div>
 				</div>
-				<div class="row">						
 					<div class="col">
-						<div class="owl-carousel show-nav-title custom-dots-style-1 custom-dots-position custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
-							<div class="row">
-								<div class="col-8 col-sm-4 col-lg-2 text-center pt-5">
-									<img src="{{ asset('') }}img/demos/business-consulting/testimonials/testimonial-author-2.jpg" alt class="img-fluid custom-rounded-image" />
+
+						<ul class="nav nav-pills sort-source mb-4" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}">
+							<li class="nav-item active" data-option-value="*" class=""><a class="nav-link active btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Show All</a></li>
+							<li class="nav-item" data-option-value=".economic"><a class="nav-link btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Economic</a></li>
+							<li class="nav-item" data-option-value=".strategic"><a class="nav-link btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Strategic</a></li>
+							<li class="nav-item" data-option-value=".tech"><a class="nav-link btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Tech</a></li>
+						</ul>
+
+						<div class="sort-destination-loader sort-destination-loader-showing">
+							<div class="row portfolio-list sort-destination" data-sort-id="portfolio">
+								<div class="col-lg-4 isotope-item economic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-1.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
 								</div>
-								<div class="col-12 col-sm-12 col-lg-10">
-									<div class="testimonial custom-testimonial-style-1 testimonial-with-quotes mb-0">
-										<blockquote class="pb-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex. Aliquam et tortor nisi. Duis mollis diam nec elit volutpat suscipit.</p>
-										</blockquote>
-										<div class="testimonial-author float-start">
-											<p><strong>John Smith</strong><span class="text-color-primary">CEO &amp; Founder - Okler</span></p>
-										</div>
-									</div>
+								<div class="col-lg-4 isotope-item economic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>	
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-8 col-sm-4 col-lg-2 text-center pt-5">
-									<img src="{{ asset('') }}img/demos/business-consulting/testimonials/testimonial-author-3.jpg" alt class="img-fluid custom-rounded-image" />
+								<div class="col-lg-4 isotope-item strategic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-3.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
 								</div>
-								<div class="col-12 col-sm-12 col-lg-10">
-									<div class="testimonial custom-testimonial-style-1 testimonial-with-quotes mb-0">
-										<blockquote class="pb-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex. Aliquam et tortor nisi. Duis mollis diam nec elit volutpat suscipit.</p>
-										</blockquote>
-										<div class="testimonial-author float-start">
-											<p><strong>John Smith</strong><span class="text-color-primary">CEO &amp; Founder - Okler</span></p>
-										</div>
-									</div>
+								<div class="col-lg-4 isotope-item tech">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div class="col-lg-4 isotope-item economic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div class="col-lg-4 isotope-item strategic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-6.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div class="col-lg-4 isotope-item economic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div class="col-lg-4 isotope-item tech">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div class="col-lg-4 isotope-item economic">
+									<a href="#" class="text-decoration-none">
+										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
+											<span class="thumb-info-wrapper m-0">
+												<img src="img/gen_img/event/event-1.jpg" class="img-fluid" alt="">
+											</span>
+											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
+												<span class="custom-thumb-info-title">
+													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
+													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
+												</span>
+												<span class="custom-arrow"></span>
+											</span>
+										</span>
+									</a>
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>	
 
 		<section class="section-secondary custom-section-padding">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Our Team</h2>
+						<h2 class="font-weight-bold text-color-dark">- Our Blog</h2>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row">						
 					<div class="col">
-						<div class="owl-carousel show-nav-title custom-dots-style-1 custom-dots-position custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 4, 'margin': 20, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
-							<div>
-								<div class="team-item p-0">
-									<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/demos/business-consulting/team/team-1.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">John Doe</span>
-											<span class="team-member-desc font-weight-light">CEO</span>
-										</a>
+						<div class="owl-carousel show-nav-title custom-dots-style-1 custom-dots-position 
+						custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
+							<div class="row">
+								<div class="col-sm-8 col-lg-5">
+									<div class="blog-post-image-wrapper">
+										<img src="{{ asset('') }}img/gen_img/blog-img.jpg" alt="" class="img-fluid mb-4">
+										<!-- <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
+											20
+											<span class="month-year font-weight-light">
+												Oct-16
+											</span>
+										</span> -->
 									</div>
 								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/demos/business-consulting/team/team-2.jpg" alt="" class="img-fluid" />
+								<div class="col-sm-12 col-lg-7">
+									<h2> Blog Heading </h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat 
+										ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vi.</p>
+									<hr class="solid">
+									<div class="post-infos d-flex">
+										<span class="info posted-by">
+											Posted by:
+											<span class="post-author font-weight-semibold text-color-dark">
+												Full Name
+											</span>
 										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Joyce Doe</span>
-											<span class="team-member-desc font-weight-light">Finance Expert</span>
-										</a>
+										<span class="info comments ms-5">
+											Comments:
+											<span class="comments-number text-color-primary font-weight-semibold">
+												15
+											</span>
+										</span>
+										<span class="info like ms-5">
+											Like:
+											<span class="like-number font-weight-semibold custom-color-red">
+												38
+											</span>
+										</span>
 									</div>
+									<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase mt-4" href="#" title="Read More">Read More</a>
 								</div>
 							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/demos/business-consulting/team/team-3.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Donald Doe</span>
-											<span class="team-member-desc font-weight-light">Manufacturing</span>
-										</a>
+							<div class="row">
+								<div class="col-sm-8 col-lg-5">
+									<div class="blog-post-image-wrapper">
+										<img src="{{ asset('') }}img/gen_img/blog-img-1.jpg" alt="" class="img-fluid mb-4">
+										<!-- <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
+											20
+											<span class="month-year font-weight-light">
+												Oct-16
+											</span>
+										</span> -->
 									</div>
 								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/demos/business-consulting/team/team-4.jpg" alt="" class="img-fluid" />
+								<div class="col-sm-12 col-lg-7">
+									<h2> Blog Heading 2</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat 
+										ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vi.</p>
+									<hr class="solid">
+									<div class="post-infos d-flex">
+										<span class="info posted-by">
+											Posted by:
+											<span class="post-author font-weight-semibold text-color-dark">
+												Full Name
+											</span>
 										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Jerry Doe</span>
-											<span class="team-member-desc font-weight-light">Project Manager</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/demos/business-consulting/team/team-5.jpg" alt="" class="img-fluid" />
+										<span class="info comments ms-5">
+											Comments:
+											<span class="comments-number text-color-primary font-weight-semibold">
+												15
+											</span>
 										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="demo-business-consulting-team-detail.html" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Tom Doe</span>
-											<span class="team-member-desc font-weight-light">Business Development</span>
-										</a>
+										<span class="info like ms-5">
+											Like:
+											<span class="like-number font-weight-semibold custom-color-red">
+												38
+											</span>
+										</span>
 									</div>
+									<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase mt-4" href="#" title="Read More">Read More</a>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="row text-center mt-5">
-					<div class="col">
-						<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase" href="demo-business-consulting-team.html">View All</a>
 					</div>
 				</div>
 			</div>
@@ -723,9 +855,9 @@
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
 						<div class="looking-for-box">
-							<h2>- <span class="text-1 custom-secondary-font">Are you looking for a</span><br>
-							Business plan Consultant?</h2>
-							<p class="mb-4 mb-md-0">Schedule your company strategy right session now</p>
+							<h2>- <span class="text-1 custom-secondary-font">Lorem Ipsum is simply dummy text</span><br>
+							Lorem Ipsum </h2>
+							<p class="mb-4 mb-md-0">Lorem Ipsum is simply dummy text</p>
 						</div>
 					</div>
 					<div class="col-md-3 d-flex justify-content-md-end mb-4 mb-md-0">
@@ -748,55 +880,204 @@
 			</div>
 		</section>
 
+		
 		<section class="custom-section-padding">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Our Blog</h2>
+						<h2 class="font-weight-bold text-color-dark">- Certificate </h2>
 					</div>
 				</div>
 				<div class="row">
 					<article class="blog-post col">
 						<div class="row">
-							<div class="col-sm-8 col-lg-5">
+							<div class="col-sm-12 col-lg-4">
 								<div class="blog-post-image-wrapper">
-									<img src="{{ asset('') }}img/demos/business-consulting/blog/blog-1.jpg" alt class="img-fluid mb-4" />
-									<span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
-										20
-										<span class="month-year font-weight-light">
-											Oct-16
-										</span>
-									</span>
+									<img src="{{ asset('') }}img/gen_img/Certificate-img.jpg" style="width: 338px;height: 292px;" alt class="img-fluid mb-4" />
 								</div>
 							</div>
-							<div class="col-sm-12 col-lg-7">
-								<h2> Global Opportunities</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vi.</p>
-								<hr class="solid">
-								<div class="post-infos d-flex">
-									<span class="info posted-by">
-										Posted by:
-										<span class="post-author font-weight-semibold text-color-dark">
-											John Doe
-										</span>
-									</span>
-									<span class="info comments ms-5">
-										Comments:
-										<span class="comments-number text-color-primary font-weight-semibold">
-											15
-										</span>
-									</span>
-									<span class="info like ms-5">
-										Like:
-										<span class="like-number font-weight-semibold custom-color-red">
-											38
-										</span>
-									</span>
+							<div class="col-sm-12 col-lg-4">
+								<div class="blog-post-image-wrapper">
+									<img src="{{ asset('') }}img/gen_img/Certificate-img-1.jpg" style="width: 338px;height: 292px;" alt class="img-fluid mb-4" />
 								</div>
-								<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase mt-4" href="demo-business-consulting-blog-detail.html" title="Read More">Read More</a>
 							</div>
+							<div class="col-sm-12 col-lg-4">
+								<div class="blog-post-image-wrapper">
+									<img src="{{ asset('') }}img/gen_img/blog-img.jpg" style="width: 338px;height: 292px;" alt class="img-fluid mb-4" />
+								</div>
+							</div>
+							
 						</div>
 					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-secondary custom-section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2 class="font-weight-bold text-color-dark">- Our Team</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="owl-carousel show-nav-title custom-dots-style-1 custom-dots-position custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 4, 'margin': 20, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
+							<div>
+								<div class="team-item p-0">
+									<a href="#" class="text-decoration-none">
+										<span class="image-wrapper">
+											<img src="{{ asset('') }}img/gen_img/team-1.jpg" 
+											style="width:266px; height:266px;" alt="" class="img-fluid" />
+										</span>
+									</a>
+									<div class="team-infos">
+										<div class="share">
+											<i class="fas fa-share-alt"></i>
+											<div class="share-icons bg-color-light">
+												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+											</div>
+										</div>
+										<a href="#" class="text-decoration-none">
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
+											<span class="team-member-desc font-weight-light">Designation</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="team-item p-0">
+									<a href="#" class="text-decoration-none">
+										<span class="image-wrapper">
+											<img src="{{ asset('') }}img/gen_img/team-5.jpg" style="width:266px; height:266px;" alt="" class="img-fluid" />
+										</span>
+									</a>
+									<div class="team-infos">
+										<div class="share">
+											<i class="fas fa-share-alt"></i>
+											<div class="share-icons bg-color-light">
+												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+											</div>
+										</div>
+										<a href="#" class="text-decoration-none">
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
+											<span class="team-member-desc font-weight-light">Designation</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="team-item p-0">
+									<a href="#" class="text-decoration-none">
+										<span class="image-wrapper">
+											<img src="{{ asset('') }}img/gen_img/team-3.jpg" alt="" class="img-fluid" />
+										</span>
+									</a>
+									<div class="team-infos">
+										<div class="share">
+											<i class="fas fa-share-alt"></i>
+											<div class="share-icons bg-color-light">
+												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+											</div>
+										</div>
+										<a href="#" class="text-decoration-none">
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
+											<span class="team-member-desc font-weight-light">Designation</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="team-item p-0">
+									<a href="#" class="text-decoration-none">
+										<span class="image-wrapper">
+											<img src="{{ asset('') }}img/gen_img/team-4.jpg" alt="" class="img-fluid" />
+										</span>
+									</a>
+									<div class="team-infos">
+										<div class="share">
+											<i class="fas fa-share-alt"></i>
+											<div class="share-icons bg-color-light">
+												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+											</div>
+										</div>
+										<a href="#" class="text-decoration-none">
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
+											<span class="team-member-desc font-weight-light">Designation</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="team-item p-0">
+									<a href="#" class="text-decoration-none">
+										<span class="image-wrapper">
+											<img src="{{ asset('') }}img/gen_img/team-5.jpg" alt="" class="img-fluid" />
+										</span>
+									</a>
+									<div class="team-infos">
+										<div class="share">
+											<i class="fas fa-share-alt"></i>
+											<div class="share-icons bg-color-light">
+												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+											</div>
+										</div>
+										<a href="#" class="text-decoration-none">
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
+											<span class="team-member-desc font-weight-light">Designation</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="row text-center mt-5">
+					<div class="col">
+						<a class="btn btn-outline custom-border-width btn-primary custom-border-radius 
+						font-weight-semibold text-uppercase" href="#">View All</a>
+					</div>
+				</div> -->
+			</div>
+		</section>
+
+
+		<section class="section border-0 bg-light m-0">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col">
+						<h2 class="font-weight-bold text-color-dark">- Heading</h2>
+					</div>
+				</div>
+				<div class="row align-items-center text-center">
+					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+						<img src="img/gen_img/logo-8.png" alt="" class="img-fluid" style="max-width: 90px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+						<img src="img/gen_img/logo-9.png" alt="" class="img-fluid" style="max-width: 140px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+						<img src="img/gen_img/logo-10.png" alt="" class="img-fluid" style="max-width: 140px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
+						<img src="img/gen_img/logo-11.png" alt="" class="img-fluid" style="max-width: 140px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
+						<img src="img/gen_img/logo-12.png" alt="" class="img-fluid" style="max-width: 100px;">
+					</div>
+					<div class="col-sm-4 col-lg-2">
+						<img src="img/gen_img/logo-13.png" alt="" class="img-fluid" style="max-width: 100px;">
+					</div>
 				</div>
 			</div>
 		</section>

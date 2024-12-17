@@ -6,7 +6,7 @@
 						<div class="header-row">
 							<div class="header-logo">
 								<a href="{{ url('/')}}">
-									<img alt="Logo" width="180" height="63" src="img/gen_img/white-logo.png">
+									<img alt="Logo" width="180" height="63" src="img/gen_img/hr-logo.webp">
 								</a>
 							</div>
 						</div>

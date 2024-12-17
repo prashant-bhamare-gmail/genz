@@ -2,6 +2,12 @@
     display: inline-block;
     text-align: center;
 }
-.bg-color-secondary, .bg-secondary {
+/* .bg-color-secondary, .bg-secondary {
     background-color: #21644e !important;
+} */
+.bg-color-secondary, .bg-secondary {
+    background-color: #ffb508 !important;
+}
+.text-4 {
+    font-size: 1.1em !important;
 }

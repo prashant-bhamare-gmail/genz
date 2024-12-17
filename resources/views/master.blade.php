@@ -39,7 +39,7 @@
 
 <!-- Demo CSS -->
 <link rel="stylesheet" href="css/demos/demo-business-consulting.css">
-<link rel="stylesheet" href="css/demos/demo-business-consulting-2.css">
+<!-- <link rel="stylesheet" href="css/demos/demo-business-consulting-2.css"> -->
 
 <!-- Skin CSS -->
 <link id="skinCSS" rel="stylesheet" href="css/skins/skin-business-consulting.css">

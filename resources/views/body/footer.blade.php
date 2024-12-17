@@ -1,118 +1,97 @@
-<section class="section section-text-light section-background m-0" style="background: url('img/gen_img/contact-background.jpg'); background-size: cover;">
-			<div class="container">
-				<div class="row justify-content-md-center">
-					<div class="col-lg-6 mb-5 mb-lg-0">
-						<h2 class="font-weight-bold">- Contact Us</h2>
-						<p class="custom-opacity-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper.</p>
-						<div class="row">
-							<div class="col-md-6 custom-sm-margin-top">
-								<h4 class="mb-1">Call Us</h4>
-								<a href="tel:+1234567890" class="text-decoration-none" target="_blank" title="Call Us">
-									<span class="custom-call-to-action-2 text-color-light text-2 custom-opacity-font">
-										Phone
-										<span class="info text-5">
-											123-456-7890
-										</span>
-									</span>
-								</a>
-							</div>
-							<div class="col-md-6 custom-sm-margin-top">
-								<h4 class="mb-1">Our Location</h4>
-								<p class="custom-opacity-font">Porto Business Consulting 123 Porto Blvd, Suite 100 New York, NY</p>
-							</div>
+			<footer id="footer" class="position-relative bg-dark border-top-0">		
+				<div class="container pt-5 pb-3">
+					<div class="row pt-5">
+						<div class="col-lg-4">
+							<a href="#" class="text-decoration-none">
+								<img alt="Logo" width="180" height="63" src="img/gen_img/hr-logo.webp">
+							</a>
+							<p class="text-3-5 font-weight-medium pe-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque rutrum pellentesqu. </p>
+							<ul class="list list-unstyled">
+								<li class="d-flex align-items-center mb-4">
+									<i class="icon icon-envelope text-color-light text-5 font-weight-bold position-relative top-1 me-3-5"></i>
+									<a href="mailto:porto@business-consulting-4.com" class="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">example@domain.com</a>
+								</li>
+								<li class="d-flex align-items-center mb-4">
+									<i class="icon icon-phone text-color-light text-5 font-weight-bold position-relative top-1 me-3-5"></i>
+									<a href="tel:8001234567" class="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">123-123-4567</a>
+								</li>
+							</ul>
+							<ul class="social-icons social-icons-clean social-icons-medium">
+								<li class="social-icons-facebook">
+									<a href="#" target="_blank" title="Facebook">
+										<i class="fab fa-facebook-f text-color-light"></i>
+									</a>
+								</li>
+								<li class="social-icons-x">
+									<a href="#" target="_blank" title="X">
+										<i class="fab fa-x-twitter text-color-light"></i>
+									</a>
+								</li>
+								<li class="social-icons-instagram">
+									<a href="#" target="_blank" title="Instagram">
+										<i class="fab fa-instagram text-color-light"></i>
+									</a>
+								</li>
+								<li class="social-icons-linkedin">
+									<a href="#" target="_blank" title="Linkedin">
+										<i class="fab fa-linkedin text-color-light"></i>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<div class="row">
-							<div class="col-md-6 custom-sm-margin-top">
-								<h4 class="mb-1">Mail Us</h4>
-								<a href="mail:mail@example.com" class="text-decoration-none" target="_blank" title="Mail Us">
-									<span class="custom-call-to-action-2 text-color-light text-2 custom-opacity-font">
-										Email
-										<span class="info text-5">
-											mail@example.com
-										</span>
-									</span>
-								</a>
+						<div class="col-lg-8">
+							<div class="row mb-5-5">
+								<div class="col-lg-6 mb-4 mb-lg-0">
+									<h4 class="text-color-light font-weight-bold mb-3">Quick Links</h4>
+									<ul class="list list-unstyled columns-lg-2">
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Home</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">About Us</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Our Services</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Consultants</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Blog</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Contact Us</a></li>
+									</ul>
+								</div>
+								<div class="col-lg-6">
+									<h4 class="text-color-light font-weight-bold mb-3">Services</h4>
+									<ul class="list list-unstyled columns-lg-2">
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
+									</ul>
+								</div>
 							</div>
-							<div class="col-md-6 custom-sm-margin-top">
-								<h4 class="mb-1">Social Media</h4>
-								<ul class="social-icons social-icons-clean custom-social-icons-style-1 mt-2 custom-opacity-font">
-									<li class="social-icons-facebook">
-										<a href="#" target="_blank" title="Facebook">
-											<i class="fab fa-facebook-f"></i>
-										</a>
-									</li>
-									<li class="social-icons-x">
-										<a href="#" target="_blank" title="X">
-											<i class="fab fa-x-twitter"></i>
-										</a>
-									</li>
-									<li class="social-icons-instagram">
-										<a href="#" target="_blank" title="Instagram">
-											<i class="fab fa-instagram"></i>
-										</a>
-									</li>
-									<li class="social-icons-linkedin">
-										<a href="#" target="_blank" title="Linkedin">
-											<i class="fab fa-linkedin-in"></i>
-										</a>
-									</li>
-								</ul>
+							<div class="row">
+								<div class="col">
+									<div class="alert alert-success d-none" id="newsletterSuccess">
+										<strong>Success!</strong> You've been added to our email list.
+									</div>
+									<div class="alert alert-danger d-none" id="newsletterError"></div>
+									<div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+										<h4 class="text-color-light ws-nowrap me-3 mb-3 mb-lg-0">Subscribe to Newsletter:</h4>
+										<form id="newsletterForm" class="form-style-3 w-100" action="php/newsletter-subscribe.php" method="POST">
+											<div class="d-flex">
+												<input class="form-control bg-color-light border-0 box-shadow-none" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text" />
+												<button class="btn btn-primary ms-2 btn-px-3 btn-py-2 font-weight-bold" type="submit">
+													Go
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 custom-sm-margin-top">
-						<h2 class="font-weight-bold">- Write Us</h2>
-						<form class="contact-form custom-contact-form-style-1 form-errors-light" action="php/contact-form.php" method="POST">
-							<div class="contact-form-success alert alert-success d-none mt-4">
-								<strong>Success!</strong> Your message has been sent to us.
+				</div>
+				<div class="footer-copyright bg-transparent">
+					<div class="container">
+						<hr class="bg-color-light opacity-1">
+						<div class="row">
+							<div class="col mt-4 mb-4 pb-5">
+								<p class="text-center text-3 mb-0">GenZ © 2025. All Rights Reserved.</p>
 							</div>
-
-							<div class="contact-form-error alert alert-danger d-none mt-4">
-								<strong>Error!</strong> There was an error sending your message.
-								<span class="mail-error-message text-1 d-block"></span>
-							</div>
-
-							<input type="hidden" name="subject" value="Contact Message Received" />
-							<div class="row">
-								<div class="form-group col">
-									<div class="custom-input-box">
-										<i class="icon-user icons text-color-primary"></i>
-										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" placeholder="Name*" required>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="form-group col">
-									<div class="custom-input-box">
-										<i class="icon-envelope icons text-color-primary"></i>
-										<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" placeholder="Email*" required>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="form-group col">
-									<div class="custom-input-box">
-										<i class="icon-bubble icons text-color-primary"></i>
-										<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" placeholder="Message*" required></textarea>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="form-group col">
-									<input type="submit" value="Submit Now" class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase" data-loading-text="Loading...">
-								</div>
-							</div>
-						</form>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-	<footer id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center pb-4">
-					<p>2024 © GentZ <span class="text-color-light">Mindpool Technologies</span> - Copyright All Rights Reserved</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+			</footer>
