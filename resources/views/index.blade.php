@@ -1,7 +1,9 @@
 @extends('master')
 @section('content')
 		<div role="main" class="main">
-		<div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover show-dots-xs show-dots-sm show-dots-md dots-light custom-nav-arrows-1 nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 9000}" style="height: 100vh;">
+		<div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside 
+		dots-horizontal-center show-dots-hover show-dots-xs show-dots-sm show-dots-md dots-light custom-nav-arrows-1 
+		nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 9000}" style="height: 100vh;">
 			<div class="owl-stage-outer">
 				<div class="owl-stage">
 
@@ -46,7 +48,9 @@
 										<br>
 										Your go-to hub for Gen Z insights, ideation, and HR transformation	
 									</h1>
-									<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">GET STARTED</a>
+									<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 
+									py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
+									data-appear-animation-delay="800">GET STARTED</a>
 								</div>
 							</div>
 						</div>
@@ -65,9 +69,12 @@
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
 						<div class="looking-for-box">
-							<h2>- <span class="text-1 custom-secondary-font">Are you looking for a</span><br>
-							Business Plan Consultant?</h2>
-							<p>Schedule your company strategy right session now</p>
+							<h2>- <span class="text-1 custom-secondary-font">Are you looking for free consultation</span><br>
+							</h2>
+							<p>Would you like to be part of HR growth or attend consulting sessions?</p>
+							<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 
+									py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
+									data-appear-animation-delay="800">Book Now</a>
 						</div>
 					</div>
 					<div class="col-md-3 d-flex justify-content-md-end mb-4 mb-md-0">
@@ -582,7 +589,7 @@
 			</div>
 		</section>
 
-		<section class="custom-section-padding">	
+		<!-- <section class="custom-section-padding">	
 			<div class="container">
 				<div class="row pt-1 pb-4 mb-3">
 				<div class="row">
@@ -768,12 +775,12 @@
 								<div class="col-sm-8 col-lg-5">
 									<div class="blog-post-image-wrapper">
 										<img src="{{ asset('') }}img/gen_img/blog-img.jpg" alt="" class="img-fluid mb-4">
-										<!-- <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
+										 <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
 											20
 											<span class="month-year font-weight-light">
 												Oct-16
 											</span>
-										</span> -->
+										</span> 
 									</div>
 								</div>
 								<div class="col-sm-12 col-lg-7">
@@ -808,12 +815,7 @@
 								<div class="col-sm-8 col-lg-5">
 									<div class="blog-post-image-wrapper">
 										<img src="{{ asset('') }}img/gen_img/blog-img-1.jpg" alt="" class="img-fluid mb-4">
-										<!-- <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
-											20
-											<span class="month-year font-weight-light">
-												Oct-16
-											</span>
-										</span> -->
+										
 									</div>
 								</div>
 								<div class="col-sm-12 col-lg-7">
@@ -1042,12 +1044,12 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="row text-center mt-5">
+				<div class="row text-center mt-5">
 					<div class="col">
 						<a class="btn btn-outline custom-border-width btn-primary custom-border-radius 
 						font-weight-semibold text-uppercase" href="#">View All</a>
 					</div>
-				</div> -->
+				</div> 
 			</div>
 		</section>
 
@@ -1080,7 +1082,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		
 
