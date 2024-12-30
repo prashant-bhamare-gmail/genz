@@ -9,6 +9,7 @@
 									<img alt="Logo" width="165" height="63" src="img/gen_img/hr-logo.png">
 								</a>
 							</div>
+							
 						</div>
 					</div>
 					<div class="header-column justify-content-end">
