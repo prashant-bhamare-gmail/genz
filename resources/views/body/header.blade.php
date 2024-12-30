@@ -6,9 +6,10 @@
 						<div class="header-row">
 							<div class="header-logo">
 								<a href="{{ url('/')}}">
-									<img alt="Logo" width="180" height="63" src="img/gen_img/hr-logo.webp">
+									<img alt="Logo" width="165" height="63" src="img/gen_img/hr-logo.png">
 								</a>
 							</div>
+							
 						</div>
 					</div>
 					<div class="header-column justify-content-end">
@@ -17,10 +18,47 @@
 								<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
 									<nav class="collapse">
 										<ul class="nav nav-pills" id="mainNav">
-											<li>
-												<a class="nav-link active" href="{{ url('/index')}}">
+											<!-- <li>
+												<a class="nav-link active" href="{{ url('/')}}">
 													Home
 												</a>
+											</li> -->
+											<li class="dropdown dropdown-primary">
+												<a class="dropdown-toggle nav-link" href="{{ url('/')}}">
+													Home
+												</a>
+												<ul class="dropdown-menu">
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Our Mission & Vision
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Our Leadership Team
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Our Memories
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Become Volunteer
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Our Team
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+														Advisor Panel
+														</a>
+													</li>
+												</ul>
 											</li>
 											<li>
 												<a class="nav-link" href="{{ url('/about')}}">
@@ -29,8 +67,24 @@
 											</li>
 											<li class="dropdown dropdown-primary">
 												<a class="dropdown-toggle nav-link" href="#">
-													Services 
+													Committee 
 												</a>
+												<ul class="dropdown-menu">
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Pune</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President</a></li>
+														</ul>
+													</li>
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Bangalore</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President</a></li>
+														</ul>
+													</li>
+												</ul>
 												
 											</li>
 											<li>
@@ -38,10 +92,28 @@
 												Gen Z Resources
 												</a>
 											</li>
-											<li>
+											<li class="dropdown dropdown-primary">
 												<a class="nav-link" href="#">
-												Blogs
+													knowledge center
 												</a>
+												<ul class="dropdown-menu">
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Hr certification
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															HR Consulting
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															HR Trains
+														</a>
+													</li>
+													
+												</ul>
 											</li>
 											<li>
 												<a class="nav-link" href="#">
