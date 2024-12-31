@@ -8,27 +8,30 @@
 				<div class="owl-stage">
 
 					<!-- Carousel Slide 1 -->
-					<div class="owl-item position-relative pt-5" style="background-image: url(img/gen_img/banner_image.jpg); background-size: cover; background-position: center;">
+					<div class="owl-item position-relative pt-5" style="background-image: url(img/gen_img/banner_image.png); background-size: cover; background-position: center;">
 						<div class="container position-relative z-index-3 pb-5 h-100">
 							<div class="row align-items-center pb-5 h-100">
-								<div class="col">
-									<h2 class="custom-secondary-font text-color-light font-weight-extra-bold text-8 line-height-1 line-height-sm-3 mb-5 appear-animation" 
+								<div class="col text-center">
+									<h2 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-8 line-height-1 line-height-sm-3 appear-animation" 
 										data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500" 
 										data-plugin-options="{'minWindowWidth': 0}">
 										<span class="custom-secondary-font text-5-6">
-											Empowering Workplaces, Enabling Success
+										Welcome to HR Connect	
 										</span>
 										<br>
-										Your go-to hub for Gen Z insights, ideation, and HR transformation	
 									</h2>
+									<h4 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-6 mb-5 appear-animation"
+										data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">
+										A Global community of 150,000 + HR  Professionals & Business Leaders in 11 Countries</h4>
+										 
 									<a href="#" 
 										class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" 
-										data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Join the Movement
+										data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Join Whatsapp Group
 									</a>
-									<a href="#" 
+									<!-- <a href="#" 
 										class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" 
 										data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Explore Services
-									</a>
+									</a> -->
 								</div>
 							</div>
 						</div>
@@ -38,7 +41,7 @@
 					<div class="owl-item position-relative pt-5" style="background-image: url(img/gen_img//slide-2.jpg); background-size: cover; background-position: center;">
 						<div class="container position-relative z-index-3 pb-5 h-100">
 							<div class="row align-items-center pb-5 h-100">
-								<div class="col">
+								<!-- <div class="col">
 									<h1 class="custom-secondary-font text-color-light font-weight-extra-bold text-8 line-height-1 line-height-sm-3 mb-5 appear-animation" 
 										data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500" 
 										data-plugin-options="{'minWindowWidth': 0}">
@@ -51,6 +54,28 @@
 									<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 
 									py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
 									data-appear-animation-delay="800">GET STARTED</a>
+								</div> -->
+								<div class="col text-center">
+									<h2 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-8 line-height-1 line-height-sm-3 appear-animation" 
+										data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500" 
+										data-plugin-options="{'minWindowWidth': 0}">
+										<span class="custom-secondary-font text-5-6">
+										Welcome to HR Connect	
+										</span>
+										<br>
+									</h2>
+									<h4 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-6 mb-5 appear-animation"
+										data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">
+										A Global community of 150,000 + HR  Professionals & Business Leaders in 11 Countries</h4>
+										 
+									<a href="#" 
+										class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" 
+										data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Join Whatsapp Group
+									</a>
+									<!-- <a href="#" 
+										class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" 
+										data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Explore Services
+									</a> -->
 								</div>
 							</div>
 						</div>
@@ -69,12 +94,12 @@
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
 						<div class="looking-for-box">
-							<h2>- <span class="text-1 custom-secondary-font">Are you looking for free consultation</span><br>
+							<h2>- <span class="text-1 custom-secondary-font mb-4">Are You Looking For HR Consultation Session</span><br>
 							</h2>
-							<p>Would you like to be part of HR growth or attend consulting sessions?</p>
-							<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 
-									py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
-									data-appear-animation-delay="800">Book Now</a>
+							<!-- <p>Would you like to be part of HR growth or attend consulting sessions?</p> -->
+							<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 mt-3
+								py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
+								data-appear-animation-delay="800">Book Now</a>
 						</div>
 					</div>
 					<div class="col-md-3 d-flex justify-content-md-end mb-4 mb-md-0">
@@ -101,7 +126,7 @@
 			<div class="container">
 				<div class="row mb-4">
 					<div class="col">
-						<h2 class="font-weight-bold text-color-dark mb-3">-	Key Features</h2>
+						<h2 class="font-weight-bold text-color-dark mb-3">-	Key Offering</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -112,7 +137,7 @@
 									<img src="{{ asset('') }}img/gen_img/icon-3.png" alt="" width="64px">
 								</div>
 								<div class="feature-box-info ms-3">
-									<h4 class="font-weight-normal text-5">Skill-building for a modern workforce</h4>
+									<h4 class="font-weight-normal text-5">HR Meet </h4>
 									<p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.</p>
 								</div>
 							</div>
@@ -125,7 +150,7 @@
 									<img src="{{ asset('') }}img/gen_img/hr-icon.png" alt="" >
 								</div>
 								<div class="feature-box-info ms-3">
-									<h4 class="font-weight-normal text-5">Innovative HR solutions</h4>
+									<h4 class="font-weight-normal text-5">HR Podcast </h4>
 									<p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.</p>
 								</div>
 							</div>
@@ -138,7 +163,7 @@
 									<img src="{{ asset('') }}img/gen_img/nextgeneration.png" alt="">
 								</div>
 								<div class="feature-box-info ms-3">
-									<h4 class="font-weight-normal text-5">Empowering the next generation</h4>
+									<h4 class="font-weight-normal text-5">GenZ HR</h4>
 									<p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna.</p>
 								</div>
 							</div>
@@ -194,73 +219,65 @@
 			</div>
 		</section>
 
-		<section class=" section-secondary about-us custom-section-padding" id="about-us">
+		<section class="section-secondary">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-lg-6">
-						<h2 class="font-weight-bold text-color-dark">- About Us</h2>
-						<p class="ps-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae.</p>
-						<div class="ps-4">
+					<div class="col-md-12 col-lg-12">
+						<div class="mt-5 mb-5">
 							<div class="row">
-								<div class="col-lg-6">
-									<ul class="list list-icons list-icons-style-3 list-tertiary">
-										<li><i class="fas fa-chevron-right"></i> Certified Professionals</li>
-										<li><i class="fas fa-chevron-right"></i> Former Chief Executives</li>
-										<li><i class="fas fa-chevron-right"></i> Real Estate Professionals</li>
-									</ul>	
-								</div>
-								<div class="col-lg-6">
-									<ul class="list list-icons list-icons-style-3 list-tertiary">
-										<li><i class="fas fa-chevron-right"></i> Nobel Laureate Economists</li>
-										<li><i class="fas fa-chevron-right"></i> Former Political Leaders</li>
-										<li><i class="fas fa-chevron-right"></i> Chartered Financial Analysts</li>
-									</ul>
-								</div>
-							</div>
-							<a class="btn btn-outline custom-border-width btn-primary mt-3 mb-2 custom-border-radius 
-							font-weight-semibold text-uppercase" href="#">Read More</a>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-6 position-relative">
-						<div class="content-grid custom-content-grid mt-5 mb-4">
-							<div class="row content-grid-row">
-								<div class="content-grid-item col-lg-6 bg-color-light p-4">
-									<div class="counters">
+								<div class="col-md-2 col-lg-2 ">
+									<div class="counters bg-color-light p-4">
 										<div class="counter custom-sm-counter-style">
-											<img class="counter-icon" src="{{ asset('') }}img/demos/business-consulting/icons/icon-1.png" alt />
-											<strong class="text-color-primary custom-primary-font" data-to="15" data-append="+">0</strong>
-											<label>Years in Business</label>
+											<img class="counter-icon mb-4" src="{{ asset('') }}img/gen_img/classroom.png" width="65" height="65" alt="icon"  />
+											<strong class="text-color-primary custom-primary-font" data-to="5000" data-append="+">0</strong>
+											<label>Trained</label>
 										</div>
 									</div>	
 								</div>
-								<div class="content-grid-item col-lg-6 p-4">
-									<div class="counters">
-										<div class="counter margin-style-2 custom-sm-counter-style">
-											<img class="counter-icon" src="{{ asset('') }}img/demos/business-consulting/icons/icon-2.png" alt />
-											<strong class="text-color-primary custom-primary-font" data-to="2000" data-append="+">0</strong>
-											<label>Successfull Cases</label>
-										</div>
-									</div>	
-								</div>
-							</div>
-							<div class="row content-grid-row">
-								<div class="content-grid-item col-lg-6 p-4">
-									<div class="counters">
+								<div class="col-md-2 col-lg-2 ">
+									<div class="counters bg-color-light p-4">
 										<div class="counter custom-sm-counter-style">
-											<img class="counter-icon" src="{{ asset('') }}img/demos/business-consulting/icons/icon-3.png" alt />
-											<strong class="text-color-primary custom-primary-font" data-to="240" data-append="+">0</strong>
-											<label>Satisfied Clients</label>
+											<img class="counter-icon mb-4" src="{{ asset('') }}img/gen_img/google-icon.png" width="65" height="65" alt />
+											<strong class="text-color-primary custom-primary-font" data-to="100" data-append="+">0</strong>
+											<label>HR Meet </label>
 										</div>
 									</div>	
 								</div>
-								<div class="content-grid-item col-lg-6 bg-color-light p-4">
-									<div class="counters">
-										<div class="counter margin-style-2 custom-sm-counter-style">
-											<img class="counter-icon" src="{{ asset('') }}img/demos/business-consulting/icons/icon-4.png" alt />
-											<strong class="text-color-primary custom-primary-font" data-to="130" data-append="+">0</strong>
-											<label>Pro Consultants</label>
+								<div class="col-md-2 col-lg-2">
+									<div class="counters bg-color-light p-4">
+										<div class="counter custom-sm-counter-style">
+											<img class="counter-icon mb-2" src="{{ asset('') }}img/gen_img/cooperation.png" width="65" height="65" alt />
+											<strong class="text-color-primary custom-primary-font" data-to="30" data-append="+">0</strong>
+											<label>Corporate Partners</label>
 										</div>
-									</div>
+									</div>	
+								</div>
+								<div class="col-md-2 col-lg-2 ">
+									<div class="counters bg-color-light p-4">
+										<div class="counter custom-sm-counter-style">
+											<img class="counter-icon mb-4" src="{{ asset('') }}img/gen_img/online-class.png" width="65" height="65" alt />
+											<strong class="text-color-primary custom-primary-font" data-to="10000" data-append="+">0</strong>
+											<label>HR Connections</label>
+										</div>
+									</div>	
+								</div>
+								<div class="col-md-2 col-lg-2 ">
+									<div class="counters bg-color-light p-4">
+										<div class="counter custom-sm-counter-style">
+											<img class="counter-icon mb-4" src="{{ asset('') }}img/gen_img/partners.png" width="65" height="65" alt />
+											<strong class="text-color-primary custom-primary-font" data-to="70" data-append="+">0</strong>
+											<label>College Partner</label>
+										</div>
+									</div>	
+								</div>
+								<div class="col-md-2 col-lg-2">
+									<div class="counters bg-color-light p-4">
+										<div class="counter custom-sm-counter-style">
+											<img class="counter-icon mb-4" src="{{ asset('') }}img/gen_img/business-report.png" width="65" height="65" alt />
+											<strong class="text-color-primary custom-primary-font" data-to="90" data-append="%">0</strong>
+											<label>Career Benefits</label>
+										</div>
+									</div>	
 								</div>
 							</div>
 						</div>
@@ -272,9 +289,9 @@
 		<section class="custom-section-padding">
 			<div class="container">
 				<div class="row mb-3">
-					<div class="col-lg-6">
+					<div class="col-lg-12">
 						<h2 class="font-weight-bold text-color-dark">- Quizzes</h2>
-						<div class="owl-carousel owl-theme nav-bottom rounded-nav numbered-dots ps-1 pe-1" data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
+						<div class="owl-carousel owl-theme nav-bottom rounded-nav numbered-dots ps-1 pe-1"  data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
 							<div>
 								<div class="custom-step-item">
 									<span class="step text-uppercase">
@@ -284,8 +301,11 @@
 										</span>
 									</span>
 									<div class="step-content">
-										<h4 class="mb-3">The first meeting<br> <strong>Understanding the Problem</strong></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae odio.</p>
+										<h4 class="mb-3">The first meeting <strong>Understanding the Problem</strong></h4>
+										<input type="radio" id="Yes" name="fav_language" value="Yes">
+										<label for="Yes">YES</label><br>
+										<input type="radio" id="NO" name="fav_language" value="NO">
+										<label for="NO">NO</label>
 									</div>
 								</div>
 							</div>
@@ -298,8 +318,11 @@
 										</span>
 									</span>
 									<div class="step-content">
-										<h4 class="mb-3">The second meeting<br> <strong>Business Plan Consultant</strong></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae odio.</p>
+										<h4 class="mb-3">The second meeting <strong>Business Plan Consultant</strong></h4>
+										<input type="radio" id="Yes" name="fav_language" value="Yes">
+										<label for="Yes">YES</label><br>
+										<input type="radio" id="NO" name="fav_language" value="NO">
+										<label for="NO">NO</label>
 									</div>
 								</div>
 							</div>
@@ -312,138 +335,333 @@
 										</span>
 									</span>
 									<div class="step-content">
-										<h4 class="mb-3">The final meeting<br> <strong>Problem Solved</strong></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae odio.</p>
+										<h4 class="mb-3">The final meeting <strong>Problem Solved</strong></h4>
+										<input type="radio" id="Yes" name="fav_language" value="Yes">
+										<label for="Yes">YES</label><br>
+										<input type="radio" id="NO" name="fav_language" value="NO">
+										<label for="NO">NO</label>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="custom-step-item">
+									<span class="step text-uppercase">
+										
+										<span class="step-number text-color-primary">
+											04
+										</span>
+									</span>
+									<div class="step-content">
+										<h4 class="mb-3">The final meeting <strong>Problem Solved</strong></h4>
+										<input type="radio" id="Yes" name="fav_language" value="Yes">
+										<label for="Yes">YES</label><br>
+										<input type="radio" id="NO" name="fav_language" value="NO">
+										<label for="NO">NO</label>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<h2 class="font-weight-bold text-color-dark">- Our Services</h2>
-						<div class="accordion without-bg custom-accordion-style-1" id="accordion7">
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7One" aria-expanded="true">
-										HR Podcast 
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7One" class="collapse show" aria-expanded="true">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
+					<!-- <div class="col-lg-6">
+						<div class="row d-flex justify-content-center">
+							<div class="col-md-8">
+								<div class="wizard">
+									<div class="wizard-inner">
+										<div class="connecting-line"></div>
+										<ul class="nav nav-tabs" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span> <i>Step 1</i></a>
+											</li>
+											<li role="presentation" class="disabled">
+												<a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="round-tab">2</span> <i>Step 2</i></a>
+											</li>
+											<li role="presentation" class="disabled">
+												<a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span> <i>Step 3</i></a>
+											</li>
+											<li role="presentation" class="disabled">
+												<a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"><span class="round-tab">4</span> <i>Step 4</i></a>
+											</li>
+										</ul>
 									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Two" aria-expanded="false">
-										HR Meet - Committee-Membership
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7Two" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Three" aria-expanded="false">
-										HR Learning Session Certification 
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7Three" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Four" aria-expanded="false">
-										Campus - HR Connect 
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7Four" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7Five" aria-expanded="false">
-										HR Counselling
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7Five" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7six" aria-expanded="false">
-										HR Newsletter and "Paid" HR Magazine
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7six" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7seven" aria-expanded="false">
-										Awards
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7seven" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card card-default">
-								<div class="card-header">
-									<h4 class="card-title m-0">
-										<a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion7" href="#collapse7eight" aria-expanded="false">
-										Other Benefits
-											<span class="custom-accordion-plus"></span>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse7eight" class="collapse" aria-expanded="false" style="height: 0px;">
-									<div class="card-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus.</p>
-									</div>
+					
+									<form role="form" action="index.html" class="login-box">
+										<div class="tab-content" id="main_form">
+											<div class="tab-pane active" role="tabpanel" id="step1">
+												<h4 class="text-center">Step 1</h4>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label>First and Last Name *</label> 
+															<input class="form-control" type="text" name="name" placeholder=""> 
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label>Phone Number  *</label> 
+															<input class="form-control" type="text" name="name" placeholder=""> 
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label>Email Address *</label> 
+															<input class="form-control" type="email" name="name" placeholder=""> 
+														</div>
+													</div>
+													
+													<div class="col-md-6">
+														<div class="form-group">
+															<label>Password *</label> 
+															<input class="form-control" type="password" name="name" placeholder=""> 
+														</div>
+													</div>
+													
+													
+												</div>
+												<ul class="list-inline pull-right">
+													<li><button type="button" class="default-btn next-step">Continue to next step</button></li>
+												</ul>
+											</div>
+											<div class="tab-pane" role="tabpanel" id="step2">
+												<h4 class="text-center">Step 2</h4>
+												<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Address 1 *</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>City / Town *</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Country *</label> 
+														<select name="country" class="form-control" id="country">
+															<option value="NG" selected="selected">Nigeria</option>
+															<option value="NU">Niue</option>
+															<option value="NF">Norfolk Island</option>
+															<option value="KP">North Korea</option>
+															<option value="MP">Northern Mariana Islands</option>
+															<option value="NO">Norway</option>
+														</select>
+													</div>
+												</div>
+												
+												
+												
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Registration No.</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+											</div>
+												
+												
+												<ul class="list-inline pull-right">
+													<li><button type="button" class="default-btn prev-step">Back</button></li>
+													<li><button type="button" class="default-btn next-step skip-btn">Skip</button></li>
+													<li><button type="button" class="default-btn next-step">Continue</button></li>
+												</ul>
+											</div>
+											<div class="tab-pane" role="tabpanel" id="step3">
+												<h4 class="text-center">Step 3</h4>
+												<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Account Name *</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Demo</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Inout</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Information</label> 
+														<div class="custom-file">
+														<input type="file" class="custom-file-input" id="customFile">
+														<label class="custom-file-label" for="customFile">Select file</label>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Number *</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Input Number</label> 
+														<input class="form-control" type="text" name="name" placeholder=""> 
+													</div>
+												</div>
+												</div>
+												<ul class="list-inline pull-right">
+													<li><button type="button" class="default-btn prev-step">Back</button></li>
+													<li><button type="button" class="default-btn next-step skip-btn">Skip</button></li>
+													<li><button type="button" class="default-btn next-step">Continue</button></li>
+												</ul>
+											</div>
+											<div class="tab-pane" role="tabpanel" id="step4">
+												<h4 class="text-center">Step 4</h4>
+												<div class="all-info-container">
+													<div class="list-content">
+														<a href="#listone" data-toggle="collapse" aria-expanded="false" aria-controls="listone">Collapse 1 <i class="fa fa-chevron-down"></i></a>
+														<div class="collapse" id="listone">
+															<div class="list-box">
+																<div class="row">
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>First and Last Name *</label> 
+																			<input class="form-control" type="text"  name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Phone Number *</label> 
+																			<input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="list-content">
+														<a href="#listtwo" data-toggle="collapse" aria-expanded="false" aria-controls="listtwo">Collapse 2 <i class="fa fa-chevron-down"></i></a>
+														<div class="collapse" id="listtwo">
+															<div class="list-box">
+																<div class="row">
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Address 1 *</label> 
+																			<input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>City / Town *</label> 
+																			<input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Country *</label> 
+																			<select name="country2" class="form-control" id="country2" disabled="disabled">
+																				<option value="NG" selected="selected">Nigeria</option>
+																				<option value="NU">Niue</option>
+																				<option value="NF">Norfolk Island</option>
+																				<option value="KP">North Korea</option>
+																				<option value="MP">Northern Mariana Islands</option>
+																				<option value="NO">Norway</option>
+																			</select>
+																		</div>
+																	</div>
+																	
+																	
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Legal Form</label> 
+																			<select name="legalform2" class="form-control" id="legalform2" disabled="disabled">
+																				<option value="" selected="selected">-Select an Answer-</option>
+																				<option value="AG">Limited liability company</option>
+																				<option value="GmbH">Public Company</option>
+																				<option value="GbR">No minimum capital, unlimited liability of partners, non-busines</option>
+																			</select> 
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Business Registration No.</label> 
+																			<input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Registered</label> 
+																			<select name="vat2" class="form-control" id="vat2" disabled="disabled">
+																				<option value="" selected="selected">-Select an Answer-</option>
+																				<option value="yes">Yes</option>
+																				<option value="no">No</option>
+																			</select> 
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Seller</label> 
+																			<input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label>Company Name *</label> 
+																			<input class="form-control" type="password" name="name" placeholder="" disabled="disabled"> 
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="list-content">
+														<a href="#listthree" data-toggle="collapse" aria-expanded="false" aria-controls="listthree">Collapse 3 <i class="fa fa-chevron-down"></i></a>
+														<div class="collapse" id="listthree">
+															<div class="list-box">
+																<div class="row">
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Name *</label> 
+																			<input class="form-control" type="text" name="name" placeholder=""> 
+																		</div>
+																	</div>
+																	
+																	
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label>Number *</label> 
+																			<input class="form-control" type="text" name="name" placeholder=""> 
+																		</div>
+																	</div>
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<ul class="list-inline pull-right">
+													<li><button type="button" class="default-btn prev-step">Back</button></li>
+													<li><button type="button" class="default-btn next-step">Finish</button></li>
+												</ul>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										
+									</form>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
@@ -456,7 +674,24 @@
 					</div>
 				</div>
 			</div>
-			<div class="owl-carousel show-nav-title custom-both-sides-shadow custom-dots-position-2 custom-dots-style-1 custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 4, 'loop': false, 'dots': true, 'nav': false}">
+			<div class="owl-carousel show-nav-title custom-both-sides-shadow custom-dots-position-2 
+				custom-dots-style-1 custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 4, 'loop': true, 'dots': true, 'nav': true}">
+				<div>
+					<a href="#" class="text-decoration-none">
+						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+							<span class="thumb-info-wrapper m-0">
+								<img src="{{ asset('') }}img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
+							</span>
+							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+								<span class="custom-thumb-info-title">
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Counselling</span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
+								</span>
+								<span class="custom-arrow"></span>
+							</span>
+						</span>
+					</a>
+				</div>
 				<div>
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
@@ -481,7 +716,7 @@
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Meet - Committee-Membership</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Meet</span>
 									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
 								</span>
 								<span class="custom-arrow"></span>
@@ -497,7 +732,23 @@
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Learning Session Certification </span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Learning & Certification </span>
+									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
+								</span>
+								<span class="custom-arrow"></span>
+							</span>
+						</span>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="text-decoration-none">
+						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+							<span class="thumb-info-wrapper m-0">
+								<img src="{{ asset('') }}img/gen_img/event/event-3.jpg" class="img-fluid" alt="">
+							</span>
+							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+								<span class="custom-thumb-info-title">
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Committee </span>
 									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
 								</span>
 								<span class="custom-arrow"></span>
@@ -513,40 +764,8 @@
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Campus - HR Connect </span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Campus Connect </span>
 									<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
-								</span>
-								<span class="custom-arrow"></span>
-							</span>
-						</span>
-					</a>
-				</div>
-				<div>
-					<a href="#" class="text-decoration-none">
-						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
-							</span>
-							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Counselling</span>
-									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
-								</span>
-								<span class="custom-arrow"></span>
-							</span>
-						</span>
-					</a>
-				</div>
-				<div>
-					<a href="#" class="text-decoration-none">
-						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-6.jpg" class="img-fluid" alt="">
-							</span>
-							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Newsletter and "Paid" HR Magazine</span>
-									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
 							</span>
@@ -569,15 +788,16 @@
 						</span>
 					</a>
 				</div>
+				
 				<div>
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/event-6.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Other Benefits</span>
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR Knowledge</span>
 									<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
 								</span>
 								<span class="custom-arrow"></span>
@@ -586,6 +806,86 @@
 					</a>
 				</div>
 				
+				<!-- <div>
+					<a href="#" class="text-decoration-none">
+						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+							<span class="thumb-info-wrapper m-0">
+								<img src="{{ asset('') }}img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
+							</span>
+							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+								<span class="custom-thumb-info-title">
+									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Other Benefits</span>
+									
+								</span>
+								<span class="custom-arrow"></span>
+							</span>
+						</span>
+					</a>
+				</div> -->
+				
+			</div>
+		</section>
+
+		<section class="section border-0 bg-light m-0">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col">
+						<h2 class="font-weight-bold text-color-dark">- Our Corporate Partner</h2>
+						<div class="owl-carousel owl-theme stage-margin" 
+							data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-8.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-9.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-10.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-11.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-12.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-13.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-9.png">
+							</div>
+							<div>
+								<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-11.png">
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- <div class="row">
+					<div class="col">
+						<h2 class="font-weight-bold text-color-dark">- Our Corporate Partner</h2>
+					</div>
+				</div>
+				<div class="row align-items-center text-center">
+					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+						<img src="img/gen_img/logo-8.png" alt="" class="img-fluid" style="max-width: 90px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+						<img src="img/gen_img/logo-9.png" alt="" class="img-fluid" style="max-width: 140px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+						<img src="img/gen_img/logo-10.png" alt="" class="img-fluid" style="max-width: 140px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
+						<img src="img/gen_img/logo-11.png" alt="" class="img-fluid" style="max-width: 140px;">
+					</div>
+					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
+						<img src="img/gen_img/logo-12.png" alt="" class="img-fluid" style="max-width: 100px;">
+					</div>
+					<div class="col-sm-4 col-lg-2">
+						<img src="img/gen_img/logo-13.png" alt="" class="img-fluid" style="max-width: 100px;">
+					</div>
+				</div> -->
 			</div>
 		</section>
 
@@ -1052,39 +1352,8 @@
 				</div> 
 			</div>
 		</section>
-
-
-		<section class="section border-0 bg-light m-0">
-			<div class="container py-5">
-				<div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Heading</h2>
-					</div>
-				</div>
-				<div class="row align-items-center text-center">
-					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-						<img src="img/gen_img/logo-8.png" alt="" class="img-fluid" style="max-width: 90px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-						<img src="img/gen_img/logo-9.png" alt="" class="img-fluid" style="max-width: 140px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-						<img src="img/gen_img/logo-10.png" alt="" class="img-fluid" style="max-width: 140px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-						<img src="img/gen_img/logo-11.png" alt="" class="img-fluid" style="max-width: 140px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-						<img src="img/gen_img/logo-12.png" alt="" class="img-fluid" style="max-width: 100px;">
-					</div>
-					<div class="col-sm-4 col-lg-2">
-						<img src="img/gen_img/logo-13.png" alt="" class="img-fluid" style="max-width: 100px;">
-					</div>
-				</div>
-			</div>
-		</section> -->
+			 -->
 
 		
-
 	</div> 
 @endsection

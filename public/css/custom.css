@@ -11,3 +11,25 @@
 .text-4 {
     font-size: 1.1em !important;
 }
+.counters strong {
+    display: block;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 44px;
+}
+.counters label {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+}
+.counters {
+    border-radius: 10px;
+    background-color: #ffece2 !important;
+}
+
+p.lead {
+    line-height: 28.8px;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+}

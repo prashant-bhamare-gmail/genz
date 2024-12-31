@@ -34,28 +34,28 @@
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
+														<a class="dropdown-item" href="{{ url('/leadership-team')}}">
 															Our Leadership Team
 														</a>
 													</li>
-													<li>
+													<!-- <li>
 														<a class="dropdown-item" href="{{ url('/')}}">
 															Our Memories
 														</a>
-													</li>
+													</li> -->
 													<li>
 														<a class="dropdown-item" href="{{ url('/')}}">
 															Become Volunteer
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
-															Our Team
+														<a class="dropdown-item" href="{{ url('/core-team')}}">
+															Our Core Team
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
-														Advisor Panel
+														<a class="dropdown-item" href="{{ url('/advisor-panel')}}">
+															Our	Advisor Panel
 														</a>
 													</li>
 												</ul>
@@ -74,14 +74,49 @@
 														<a class="dropdown-item" href="#">Pune</a>
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
-															<li><a class="dropdown-item" href="#">Current President</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a class="dropdown-item" href="#">Bangalore</a>
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
-															<li><a class="dropdown-item" href="#">Current President</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+														</ul>
+													</li>
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Mumbai</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+														</ul>
+													</li>
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Nashik</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+														</ul>
+													</li>
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Solapur</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+														</ul>
+													</li>
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Bangalore</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+														</ul>
+													</li>
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Indore</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
+															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
 														</ul>
 													</li>
 												</ul>
@@ -99,25 +134,60 @@
 												<ul class="dropdown-menu">
 													<li>
 														<a class="dropdown-item" href="{{ url('/')}}">
-															Hr certification
+															Hr Form
 														</a>
 													</li>
 													<li>
 														<a class="dropdown-item" href="{{ url('/')}}">
-															HR Consulting
+															HR Terminology [ A - Z ]
 														</a>
 													</li>
 													<li>
 														<a class="dropdown-item" href="{{ url('/')}}">
-															HR Trains
+															HR Certification
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Webinars
 														</a>
 													</li>
 													
 												</ul>
 											</li>
+											<li class="dropdown dropdown-primary">
+												<a class="dropdown-toggle nav-link" href="#">
+													Awards 
+												</a>
+												<ul class="dropdown-menu">
+													<li class="dropdown-submenu">
+														<a class="dropdown-item" href="#">Year List</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#">2020</a></li>
+															<li><a class="dropdown-item" href="#">2021</a></li>
+															<li><a class="dropdown-item" href="#">2022</a></li>
+															<li><a class="dropdown-item" href="#">2023</a></li>
+															<li><a class="dropdown-item" href="#">2024</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-item" href="#">Awards Jury</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="#">Our Past Sponsers</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="#">Award Testimonial</a>
+													</li>
+													<li>
+														<a class="dropdown-item" href="#">Media Coverage</a>
+													</li>
+												</ul>
+												
+											</li>
 											<li>
 												<a class="nav-link" href="#">
-												Events
+												Gallery
 												</a>
 											</li>
 											
