@@ -52,7 +52,7 @@
 										<li><a href="#" class="text-color-grey text-color-hover-primary">Contact Us</a></li>
 									</ul>
 								</div>
-								<div class="col-lg-6">
+								<!-- <div class="col-lg-6">
 									<h4 class="text-color-light font-weight-bold mb-3">Services</h4>
 									<ul class="list list-unstyled columns-lg-2">
 										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
@@ -60,7 +60,7 @@
 										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
 										<li><a href="#" class="text-color-grey text-color-hover-primary">Services</a></li>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 							<div class="row">
 								<div class="col">
@@ -69,7 +69,7 @@
 									</div>
 									<div class="alert alert-danger d-none" id="newsletterError"></div>
 									<div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
-										<h4 class="text-color-light ws-nowrap me-3 mb-3 mb-lg-0">Subscribe to Newsletter:</h4>
+										<h4 class="text-color-light ws-nowrap me-3 mb-3 mb-lg-0">Would You like Subscribe For More Benefits</h4>
 										<form id="newsletterForm" class="form-style-3 w-100" action="php/newsletter-subscribe.php" method="POST">
 											<div class="d-flex">
 												<input class="form-control bg-color-light border-0 box-shadow-none" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text" />

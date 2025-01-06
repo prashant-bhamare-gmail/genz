@@ -33,24 +33,32 @@
 								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300"><i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum stibulum.</li>
 								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="600"><i class="fas fa-check"></i> Fusce sit amet orci q vestibulum vestibulum.</li>
 							</ul>
-							<div class="d-flex align-items-center justify-content-start pt-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
+							<!-- <div class="d-flex align-items-center justify-content-start pt-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
 								<div class="circular-bar custom-circular-bar m-0">
 									<div class="circular-bar-chart" data-percent="89" data-plugin-options="{'barColor': '#42ad61'}">
 										<strong class="text-5">89%</strong>
 									</div>
 								</div>
 								<h4 class="font-weight-bold m-0 ms-3">Successful cases<br/>in 15 years.</h4>
-							</div>
+							</div> -->
 						</div>
 						<div class="col-lg-6 pt-4 pt-lg-0">
-							<div class="card border-radius-0 box-shadow-1 border-0 mt-4 mt-lg-0 ms-lg-3 p-3 mb-3 mb-lg-0">
-								<img src="img/demos/business-consulting-2/bg/bg-2.jpg" class="img-fluid border-radius-0" alt="">
+							<div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 4000, 'margin': 10, 'animateIn': 'slideInDown', 'animateOut': 'slideOutDown'}">
+								<div>
+									<img alt="" class="img-fluid rounded" src="img/gen_img/event/event-1.jpg">
+								</div>
+								<div>
+									<img alt="" class="img-fluid rounded" src="img/gen_img/event/event-2.jpg">
+								</div>
 							</div>
+							<!-- <div class="card border-radius-0 box-shadow-1 border-0 mt-4 mt-lg-0 ms-lg-3 p-3 mb-3 mb-lg-0">
+								<img src="img/demos/business-consulting-2/bg/bg-2.jpg" class="img-fluid border-radius-0" alt="">
+							</div> -->
 						</div>
 					</div>
 				</div>
 
-				<div class="container-fluid">
+				<!-- <div class="container-fluid">
 					<div class="row py-3 mt-2">
 
 						<div class="col-lg-6 p-0">
@@ -137,7 +145,7 @@
 							</div>
 						</div>
 					</div>
-				</section>				
+				</section>				 -->
 
 			</div>
 
