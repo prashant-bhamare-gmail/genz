@@ -301,7 +301,7 @@
 										</span>
 									</span>
 									<div class="step-content">
-										<h4 class="mb-3">The first meeting <strong>Understanding the Problem</strong></h4>
+										<h4 class="mb-3">The first meeting <strong>Understanding the Problem ?</strong></h4>
 										<input type="radio" id="Yes" name="fav_language" value="Yes">
 										<label for="Yes">YES</label><br>
 										<input type="radio" id="NO" name="fav_language" value="NO">
@@ -362,7 +362,8 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="col-lg-6">
+					
+					 <!-- <div class="col-lg-6">
 						<div class="row d-flex justify-content-center">
 							<div class="col-md-8">
 								<div class="wizard">
@@ -661,7 +662,7 @@
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>  -->
 				</div>
 			</div>
 		</section>

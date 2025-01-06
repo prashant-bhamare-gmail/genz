@@ -93,6 +93,7 @@
 
 		<!-- Theme Initialization Files -->
 		<script src="{{ asset('') }}js/theme.init.js"></script>
+		
 		<script>
 			// ------------step-wizard-------------
 			$(document).ready(function () {
@@ -108,19 +109,60 @@
 					}
 				});
 
-				$(".next-step").click(function (e) {
+				// $(".next-step").click(function (e) {
 
-					var active = $('.wizard .nav-tabs li.active');
-					active.next().removeClass('disabled');
-					nextTab(active);
+				// 	var active = $('.wizard .nav-tabs li.active');
+				// 	active.next().removeClass('disabled');
+				// 	nextTab(active);
 
+				// });
+				// $(".prev-step").click(function (e) {
+
+				// 	var active = $('.wizard .nav-tabs li.active');
+				// 	prevTab(active);
+
+				// });
+
+				$('.next-step').click(function(e) {
+					var currentTab = $(this).closest('.tab-pane');
+					var nextTab = currentTab.next('.tab-pane');
+					var nextTabNav = $('ul.nav-tabs li').eq(currentTab.index() + 1);
+					
+					if (nextTab.length) {
+						currentTab.removeClass('active');  // Remove active class from the current tab
+						nextTab.addClass('active');  // Add active class to the next tab
+						$('ul.nav-tabs li').removeClass('active');  // Remove active from all nav-tabs
+						nextTabNav.addClass('active');  // Add active to the corresponding nav-tab
+					}
 				});
-				$(".prev-step").click(function (e) {
 
-					var active = $('.wizard .nav-tabs li.active');
-					prevTab(active);
+				// When Back button is clicked
+				$('.prev-step').click(function(e) {
+					var currentTab = $(this).closest('.tab-pane');
+					var prevTab = currentTab.prev('.tab-pane');
+					var prevTabNav = $('ul.nav-tabs li').eq(currentTab.index() - 1);
 
+					if (prevTab.length) {
+						currentTab.removeClass('active');  // Remove active class from the current tab
+						prevTab.addClass('active');  // Add active class to the previous tab
+						$('ul.nav-tabs li').removeClass('active');  // Remove active from all nav-tabs
+						prevTabNav.addClass('active');  // Add active to the corresponding nav-tab
+					}
 				});
+
+				// Skip button logic
+				$('.skip-btn').click(function(e) {
+					var currentTab = $(this).closest('.tab-pane');
+					var nextTab = currentTab.next('.tab-pane');
+					var nextTabNav = $('ul.nav-tabs li').eq(currentTab.index() + 1);
+					
+					if (nextTab.length) {
+						currentTab.removeClass('active');
+						nextTab.addClass('active');
+						nextTabNav.removeClass('disabled').addClass('active');
+						$('ul.nav-tabs li').eq(currentTab.index()).addClass('completed');
+					}
+				});		
 			});
 
 			function nextTab(elem) {
