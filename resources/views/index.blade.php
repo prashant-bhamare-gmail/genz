@@ -24,7 +24,7 @@
 										data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">
 										A Global community of 150,000 + HR  Professionals & Business Leaders in 11 Countries</h4>
 										 
-									<a href="#" 
+									<a href="https://api.whatsapp.com/send?phone=911234567890" target="_blank" 
 										class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" 
 										data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Join Whatsapp Group
 									</a>
@@ -681,7 +681,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/HRCounselling.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -697,7 +697,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-1.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/Podcast.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -713,7 +713,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/HRMeet.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -729,7 +729,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-3.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/HRLearningCertification.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -745,7 +745,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-3.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/HRCommittee.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -761,7 +761,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/CampusConnect.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -777,7 +777,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/Awards.jpg" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">
@@ -794,7 +794,7 @@
 					<a href="#" class="text-decoration-none">
 						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-6.jpg" class="img-fluid" alt="">
+								<img src="{{ asset('') }}img/gen_img/event/HRKnowledge.jpg" style="height:255px" class="img-fluid" alt="">
 							</span>
 							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
 								<span class="custom-thumb-info-title">

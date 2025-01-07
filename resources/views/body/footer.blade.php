@@ -3,7 +3,7 @@
 					<div class="row pt-5">
 						<div class="col-lg-4">
 							<a href="#" class="text-decoration-none">
-								<img alt="Logo" width="180" height="63" src="img/gen_img/hr-logo.png">
+								<img alt="Logo" width="180" height="63" src="img/gen_img/logo-design.png">
 							</a>
 							<p class="text-3-5 font-weight-medium pe-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque rutrum pellentesqu. </p>
 							<ul class="list list-unstyled">

@@ -6,7 +6,7 @@
 						<div class="header-row">
 							<div class="header-logo">
 								<a href="{{ url('/')}}">
-									<img alt="Logo" width="165" height="63" src="img/gen_img/hr-logo.png">
+									<img alt="Logo" width="165" height="70" src="img/gen_img/logo-design.png">
 								</a>
 							</div>
 							
@@ -34,30 +34,32 @@
 														</a>
 													</li>
 													<li>
+														<a class="dropdown-item" href="{{ url('/advisor-panel')}}">
+															Our	Mentors
+														</a>
+													</li>
+													<!-- <li>
 														<a class="dropdown-item" href="{{ url('/leadership-team')}}">
 															Our Leadership Team
 														</a>
-													</li>
+													</li> -->
 													<!-- <li>
 														<a class="dropdown-item" href="{{ url('/')}}">
 															Our Memories
 														</a>
 													</li> -->
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
-															Become Volunteer
-														</a>
-													</li>
-													<li>
 														<a class="dropdown-item" href="{{ url('/core-team')}}">
 															Our Core Team
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/advisor-panel')}}">
-															Our	Advisor Panel
+														<a class="dropdown-item" href="{{ url('/')}}">
+															Become Volunteer
 														</a>
 													</li>
+													
+													
 												</ul>
 											</li>
 											<li>
@@ -75,6 +77,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
@@ -82,6 +85,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
@@ -89,6 +93,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
@@ -96,6 +101,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
@@ -103,6 +109,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
@@ -110,6 +117,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
@@ -117,6 +125,7 @@
 														<ul class="dropdown-menu">
 															<li><a class="dropdown-item" href="#">Managing Committee</a></li>
 															<li><a class="dropdown-item" href="#">Current President & Mentors</a></li>
+															<li><a class="dropdown-item" href="#">Past & Current Event</a></li>
 														</ul>
 													</li>
 												</ul>
@@ -163,11 +172,9 @@
 													<li class="dropdown-submenu">
 														<a class="dropdown-item" href="#">Year List</a>
 														<ul class="dropdown-menu">
-															<li><a class="dropdown-item" href="#">2020</a></li>
-															<li><a class="dropdown-item" href="#">2021</a></li>
-															<li><a class="dropdown-item" href="#">2022</a></li>
 															<li><a class="dropdown-item" href="#">2023</a></li>
 															<li><a class="dropdown-item" href="#">2024</a></li>
+															<li><a class="dropdown-item" href="#">2025</a></li>
 														</ul>
 													</li>
 													<li>
