@@ -112,7 +112,7 @@
 						</a>
 					</div>
 					<div class="col-md-3 col-lg-2">
-						<a class="text-decoration-none" href="mailto:mail@example.com" target="_blank" title="Email Us Now">
+						<a class="text-decoration-none" href="mail:mail@example.com" target="_blank" title="Email Us Now">
 							<span class="custom-call-to-action">
 								<span class="action-title text-color-primary">Email Us Now</span>
 								<span class="action-info text-color-light">mail@example.com</span>
