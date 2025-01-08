@@ -99,9 +99,10 @@
 							<!-- <p>Would you like to be part of HR growth or attend consulting sessions?</p> -->
 							<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 mt-3
 								py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
-								data-appear-animation-delay="800">Book Now</a>
+								data-appear-animation-delay="800" data-bs-toggle="modal" data-bs-target="#booknow">Book Now</a>
 						</div>
 					</div>
+					
 					<div class="col-md-3 d-flex justify-content-md-end mb-4 mb-md-0">
 						<a class="text-decoration-none" href="tel:+00112304567" target="_blank" title="Call Us Now">
 							<span class="custom-call-to-action">
@@ -111,7 +112,7 @@
 						</a>
 					</div>
 					<div class="col-md-3 col-lg-2">
-						<a class="text-decoration-none" href="mail:mail@example.com" target="_blank" title="Email Us Now">
+						<a class="text-decoration-none" href="mailto:mail@example.com" target="_blank" title="Email Us Now">
 							<span class="custom-call-to-action">
 								<span class="action-title text-color-primary">Email Us Now</span>
 								<span class="action-info text-color-light">mail@example.com</span>
@@ -121,6 +122,138 @@
 				</div>
 			</div>
 		</section>
+		
+
+		<!-- Book Now Model Box -->
+		<div class="modal fade" id="booknow" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<div class="modal-header">
+						<!-- <div class="">
+						<h4 class="modal-title" id="largeModalLabel">Name</h4>
+						<p class="lead pt-1">CEO &amp; Founder</p>
+						</div> -->
+						
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+					</div> 
+					<div class="modal-body">
+						<div class="row mb-4">
+							<div class="tab-pane" id="formsStyleWithIcons">								
+								<!-- <h4 class="mb-3">With Icons</h4> -->
+								<div class="card mb-4">
+									<div class="card-body">
+										<div class="row">
+											<div class="col">
+												<form class="contact-form form-with-icons" action="php/contact-form.php" method="POST">
+													<div class="contact-form-success alert alert-success d-none mt-4">
+														<strong>Success!</strong> Your message has been sent to us.
+													</div>
+
+													<div class="contact-form-error alert alert-danger d-none mt-4">
+														<strong>Error!</strong> There was an error sending your message.
+														<span class="mail-error-message text-1 d-block"></span>
+													</div>
+
+													<div class="row">
+														<div class="form-group col-lg-6">
+															<label class="form-label mb-1 text-2">Full Name</label>
+															<div class="position-relative">
+																<i class="icons icon-user text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
+																<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+															</div>
+														</div>
+														<div class="form-group col-lg-6">
+															<label class="form-label mb-1 text-2">Email Address</label>
+															<div class="position-relative">
+																<i class="icons icon-envelope text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
+																<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group col">
+															<label class="form-label">City</label>
+															<div class="position-relative">
+																<i class="icons icon-location-pin text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50 z-index-1"></i>
+																<div class="custom-select-1">
+																	<select class="form-select form-control h-auto" data-msg-required="Please select a city." name="city" required>
+																		<option value="">--- Please Select City ---</option>
+																		<option value="1">Pune</option>
+																		<option value="2">Solapur</option>
+																		<option value="3">Mumbai</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group col">
+															<label class="form-label mb-1 text-2">Subject</label>
+															<div class="position-relative">
+																<i class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
+																<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+															</div>
+														</div>
+													</div>
+													<!-- <div class="row">
+														<div class="form-group col">
+															<div class="form-check form-check-inline">
+																<label class="form-check-label">
+																	<input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent13Radio1" value="option1" required> Option 1
+																</label>
+															</div>
+															<div class="form-check form-check-inline">
+																<label class="form-check-label">
+																	<input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent13Radio2" value="option2" required> Option 2
+																</label>
+															</div>
+															<div class="form-check form-check-inline">
+																<label class="form-check-label">
+																	<input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent13Radio3" value="option3" required> Option 3
+																</label>
+															</div>
+														</div>
+													</div> -->
+													<div class="row">
+														<div class="form-group col">
+															<label class="form-label mb-1 text-2">Message</label>
+															<div class="position-relative">
+																<i class="icons icon-bubble text-color-primary text-3 position-absolute left-15 top-15"></i>
+																<textarea maxlength="5000" data-msg-required="Please enter your message." rows="3" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group col">
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" name="agree" id="tabContent13Checkbox" data-msg-required="You must agree before submiting." required>
+																<label class="form-check-label" for="tabContent13Checkbox">
+																	Agree to terms and conditions
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group col">
+															<input type="submit" value="Submit Form" class="btn btn-primary" data-loading-text="Loading...">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Model Box -->
 
 		<section class=" custom-section-padding">
 			<div class="container">

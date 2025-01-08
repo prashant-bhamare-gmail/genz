@@ -45,10 +45,13 @@
 						<div class="col-lg-6 pt-4 pt-lg-0">
 							<div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 4000, 'margin': 10, 'animateIn': 'slideInDown', 'animateOut': 'slideOutDown'}">
 								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/event/event-1.jpg">
+									<img alt="" class="img-fluid rounded" src="img/gen_img/training.jpg">
 								</div>
 								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/event/event-2.jpg">
+									<img alt="" class="img-fluid rounded" src="img/gen_img/training-1.jpg">
+								</div>
+								<div>
+									<img alt="" class="img-fluid rounded" src="img/gen_img/training-2.jpg">
 								</div>
 							</div>
 							<!-- <div class="card border-radius-0 box-shadow-1 border-0 mt-4 mt-lg-0 ms-lg-3 p-3 mb-3 mb-lg-0">
