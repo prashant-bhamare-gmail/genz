@@ -496,7 +496,7 @@
 						</div>
 					</div>
 					
-					 <!-- <div class="col-lg-6">
+					  <div class="col-lg-6">
 						<div class="row d-flex justify-content-center">
 							<div class="col-md-8">
 								<div class="wizard">
@@ -795,7 +795,7 @@
 								</div>
 							</div>
 						</div>
-					</div>  -->
+					</div> 
 				</div>
 			</div>
 		</section>

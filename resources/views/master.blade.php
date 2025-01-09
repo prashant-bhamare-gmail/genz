@@ -178,5 +178,52 @@
 				$(this).addClass('active');
 			});
 		</script>
+
+
+		<!-- <script>
+			$(document).ready(function () {
+				// Enable tooltips for tabs
+				$('.nav-tabs > li a[title]').tooltip();
+
+				// Handle tab navigation
+				$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+					if ($(e.target).parent().hasClass('disabled')) return false;
+				});
+
+				// Next and Previous button logic
+				$('.next-step, .prev-step').click(function () {
+					const currentTab = $(this).closest('.tab-pane');
+					const targetTab = $(this).hasClass('next-step') 
+						? currentTab.next('.tab-pane') 
+						: currentTab.prev('.tab-pane');
+
+					if (targetTab.length) {
+						const index = targetTab.index();
+						currentTab.removeClass('active');
+						targetTab.addClass('active');
+						$('ul.nav-tabs li').removeClass('active').eq(index).addClass('active');
+					}
+				});
+
+				// Skip button logic
+				$('.skip-btn').click(function () {
+					const currentTab = $(this).closest('.tab-pane');
+					const nextTab = currentTab.next('.tab-pane');
+					if (nextTab.length) {
+						const index = nextTab.index();
+						currentTab.removeClass('active');
+						nextTab.addClass('active');
+						$('ul.nav-tabs li').eq(index).removeClass('disabled').addClass('active');
+						$('ul.nav-tabs li').eq(currentTab.index()).addClass('completed');
+					}
+				});
+
+				// Tab click handler
+				$('.nav-tabs').on('click', 'li', function () {
+					$('.nav-tabs li.active').removeClass('active');
+					$(this).addClass('active');
+				});
+			});
+		</script> -->
 	</body>
 </html>
