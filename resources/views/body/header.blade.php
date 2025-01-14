@@ -29,12 +29,12 @@
 												</a>
 												<ul class="dropdown-menu">
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
+														<a class="dropdown-item" href="{{ url('/mission-vision')}}">
 															Our Mission & Vision
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/advisor-panel')}}">
+														<a class="dropdown-item" href="{{ url('/mentors')}}">
 															Our	Mentors
 														</a>
 													</li>
@@ -54,7 +54,7 @@
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
+														<a class="dropdown-item" target="_blank" href="{{ url('https://forms.gle/6tur28y68aAx1ajf9')}}">
 															Become Volunteer
 														</a>
 													</li>
@@ -147,7 +147,7 @@
 														</a>
 													</li>
 													<li>
-														<a class="dropdown-item" href="{{ url('/')}}">
+														<a class="dropdown-item" href="{{ url('/hr-terminology')}}">
 															HR Terminology [ A - Z ]
 														</a>
 													</li>

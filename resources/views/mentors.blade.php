@@ -7,13 +7,13 @@
 				<div class="row">
 					<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
 						<h1 class="font-weight-bold text-9 text-color-secondary appear-animation" 
-						data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Our Advisor Panel</h1>
+						data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Our Mentors</h1>
 					</div>
 					
 					<div class="col-md-4 order-1 order-md-2 align-self-center">
 						<ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<li><a href="#">Home</a></li>
-							<li class="active">Advisor Panel</li>
+							<li><a href="/">Home</a></li>
+							<li class="active">Mentors Panel</li>
 						</ul>
 					</div>
 				</div>
@@ -24,10 +24,10 @@
 		<section class="section-secondary custom-section-padding">
 			<div class="container">
 				<div class="row">
-					<div class="">
+					<!-- <div class="">
 						<h1 class="font-weight-bold text-color-dark mb-3" 
-						data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Our Advisor Panel</h1>
-					</div>
+						data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Our Mentors</h1>
+					</div> -->
 					<div class="col">
 
 						<!-- <ul class="nav nav-pills sort-source mb-4" data-sort-id="team" data-option-key="filter" data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}">
@@ -47,7 +47,7 @@
 									
 									<div class="team-infos">
 										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Name</span>
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Preeti Ahuja</span>
 											<span class="team-member-desc font-weight-light">Current Work</span>
 										</a>
 									</div>
@@ -59,7 +59,7 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<div class="">
-												<h4 class="modal-title" id="largeModalLabel">Name</h4>
+												<h4 class="modal-title" id="largeModalLabel">Preeti Ahuja</h4>
 												<p class="lead pt-1">CEO &amp; Founder</p>
 												</div>
 												
@@ -124,7 +124,7 @@
 									</a>
 									<div class="team-infos">
 										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Name</span>
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Ruby Baksi</span>
 											<span class="team-member-desc font-weight-light">Current Work</span>
 										</a>
 									</div>
@@ -150,36 +150,6 @@
 									<a href="#" class="text-decoration-none">
 										<span class="image-wrapper">
 											<img src="img/gen_img/team-6-1.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Name</span>
-											<span class="team-member-desc font-weight-light">Current Work</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 isotope-item other">
-								<div class="team-item mb-4 p-0 pb-2" data-bs-toggle="modal" data-bs-target="#largeModal">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="img/gen_img/team-5-1.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Name</span>
-											<span class="team-member-desc font-weight-light">Current Work</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 isotope-item other">
-								<div class="team-item mb-4 p-0 pb-2" data-bs-toggle="modal" data-bs-target="#largeModal">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="img/gen_img/team-2.jpg" alt="" class="img-fluid" />
 										</span>
 									</a>
 									<div class="team-infos">

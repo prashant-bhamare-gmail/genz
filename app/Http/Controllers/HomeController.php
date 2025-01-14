@@ -20,10 +20,16 @@ class HomeController extends Controller
     public function coreteam(){
         return view('core-team');
     }
-    public function advisorpanel(){
-        return view('advisor-panel');
+    public function mentorspanel(){
+        return view('mentors');
     }
     public function about(){
         return view('about');
+    }
+    public function missionvision(){
+        return view('mission-vision');
+    }
+    public function hrterminology(){
+        return view('hr-terminology');
     }
 }

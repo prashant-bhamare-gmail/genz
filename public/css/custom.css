@@ -34,17 +34,24 @@ p.lead {
     margin-bottom: 0;
 }
 
+.container .call-to-action {
+    border-radius: 6px;
+}
+.call-to-action.with-button-arrow .call-to-action-btn {
+    left: 0px;
+}
 
-/*------------------------*/
-input:focus,
-button:focus,
-.form-control:focus{
-	outline: none;
-	box-shadow: none;
+/* .tab-content {
+    border-radius: 0;
+    border: 0;
+    border-top: 0;
+    padding: 15px;
+    box-shadow: none;
+} */
+.custom-step-item .step:before {
+    height: 46px;
 }
-.form-control:disabled, .form-control[readonly]{
-	background-color: #fff;
-}
+
 /*----------step-wizard------------*/
 .d-flex{
 	display: flex;
@@ -177,7 +184,7 @@ span.round-tab i{
 
 .wizard .tab-pane {
     position: relative;
-    padding-top: 20px;
+    padding-top: 11px;
 }
 
 
@@ -186,14 +193,18 @@ span.round-tab i{
 }
 .prev-step,
 .next-step{
-    font-size: 13px;
+    font-size: 16px;
     padding: 8px 24px;
     border: none;
     border-radius: 4px;
     margin-top: 30px;
+    color: #fff;
+}
+.prev-step{
+    color: #000;
 }
 .next-step{
-	background-color: #0db02b;
+	background-color: #ff6708;
 }
 .skip-btn{
 	background-color: #cec12d;
@@ -344,11 +355,6 @@ input[type="checkbox"]:checked::before{
     background-color: #18ba60;
     border-color: #18ba60;
 }
-
-
-
-
-
 
 @media (max-width: 767px){
 	.sign-content h3{

@@ -21,5 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/leadership-team',[HomeController::class, 'leadershipteam'])->name('leadership-team');
 Route::get('/core-team',[HomeController::class, 'coreteam'])->name('core-team');
-Route::get('/advisor-panel',[HomeController::class, 'advisorpanel'])->name('advisor-panel');
+Route::get('/mentors',[HomeController::class, 'mentorspanel'])->name('mentors');
 Route::get('/about',[HomeController::class, 'about'])->name('about');
+Route::get('/mission-vision',[HomeController::class, 'missionvision'])->name('mission-vision');
+Route::get('/hr-terminology',[HomeController::class, 'hrterminology'])->name('hr-terminology');

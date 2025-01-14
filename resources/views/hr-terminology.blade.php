@@ -7,12 +7,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-								<h1 class="font-weight-bold text-9 text-color-secondary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">About Us</h1>
+								<h1 class="font-weight-bold text-9 text-color-secondary appear-animation" 
+								data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">HR Terminology</h1>
 							</div>
 							<div class="col-md-4 order-1 order-md-2 align-self-center">
 								<ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
 									<li><a href="#">Home</a></li>
-									<li class="active">About Us</li>
+									<li class="active">HR Terminology</li>
 								</ul>
 							</div>
 						</div>
@@ -26,64 +27,116 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-6">
-							<p class="m-0 p-0">
-							HRConnect is more than just a platform; it’s a mission-driven community dedicated to empowering aspiring 
-							professionals to unlock their true potential and achieve remarkable career success. We exist to bridge the 
-							gap between where you are and where you aspire to be by offering comprehensive guidance, actionable resources, 
-							and a network that feels like a genuine professional family.
-							</p>
-
-							<p class="m-0 p-0">
-							Our core philosophy revolves around the belief that every individual deserves access to the right tools, 
-							mentorship, and opportunities to excel. At HRConnect, we create an ecosystem where collaboration and personal 
-							growth thrive. Whether you’re just beginning your professional journey, transitioning careers, or striving to 
-							reach new heights, we are here to help you navigate the complexities of today’s ever-evolving professional 
-							landscape.
-							</p>
-
-							<p class="m-0 p-0">
-							We provide more than just advice; we offer mentorship from experienced professionals, insights into industry 
-							trends, and access to valuable resources that empower you to make informed decisions. Our supportive community 
-							encourages open dialogue, fosters mutual growth, and connects you with like-minded individuals who share your
-							 drive and ambition.
-							</p>
-							
-							<p class="m-0 p-0">
-								At HRConnect, we envision a world where no professional feels isolated in their career journey. We are 
-								committed to being the bridge that connects you with opportunities, expertise, and a network of support 
-								that empowers you to thrive. Together, let’s build a future where your career aspirations turn into 
-								tangible achievements, and your potential finds its ultimate expression.
-							</p>
-							<!-- <ul class="list list-icons list-primary mt-4">
-								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum.</li>
-								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300"><i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum stibulum.</li>
-								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="600"><i class="fas fa-check"></i> Fusce sit amet orci q vestibulum vestibulum.</li>
-							</ul> -->
-							<!-- <div class="d-flex align-items-center justify-content-start pt-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
-								<div class="circular-bar custom-circular-bar m-0">
-									<div class="circular-bar-chart" data-percent="89" data-plugin-options="{'barColor': '#42ad61'}">
-										<strong class="text-5">89%</strong>
+						<div class="col-lg-12">
+							<div class="tabs">
+								<ul class="nav nav-tabs">
+									<li class="nav-item">
+										<a class="nav-link active" href="#a" data-bs-toggle="tab">A</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#c" data-bs-toggle="tab">C</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#d" data-bs-toggle="tab">D</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#e" data-bs-toggle="tab">E</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#f" data-bs-toggle="tab">F</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#g" data-bs-toggle="tab">G</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#h" data-bs-toggle="tab">H</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#i" data-bs-toggle="tab">I</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#b" data-bs-toggle="tab">B</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div id="a" class="tab-pane active">
+										<div class="">
+											<ul class="list list-icons list-icons-style-2">
+												<li>
+													<i class="fas fa-check"></i> <strong>Applicant Tracking System (ATS):</strong> Software for managing recruitment processes.
+												</li>
+												<li>
+													<i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum vestibulum.
+												</li>
+												<li>
+													<i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum vestibulum.
+												</li>
+												<li>
+													<i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum vestibulum.
+												</li>
+												<li>
+													<i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum vestibulum.
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div id="b" class="tab-pane">
+										<p>Recent</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
 									</div>
 								</div>
-								<h4 class="font-weight-bold m-0 ms-3">Successful cases<br/>in 15 years.</h4>
-							</div> -->
-						</div>
-						<div class="col-lg-6 pt-4 pt-lg-0">
-							<div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 4000, 'margin': 10, 'animateIn': 'slideInDown', 'animateOut': 'slideOutDown'}">
-								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/training.jpg">
-								</div>
-								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/training-1.jpg">
-								</div>
-								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/training-2.jpg">
-								</div>
 							</div>
-							<!-- <div class="card border-radius-0 box-shadow-1 border-0 mt-4 mt-lg-0 ms-lg-3 p-3 mb-3 mb-lg-0">
-								<img src="img/demos/business-consulting-2/bg/bg-2.jpg" class="img-fluid border-radius-0" alt="">
-							</div> -->
 						</div>
 					</div>
 				</div>
