@@ -182,49 +182,7 @@
 			$(this).addClass('active');
 		});
 
-		// Quiz submission
-		document.getElementById('submit-quiz').addEventListener('click', function () {
-			const form = document.getElementById('quiz-form');
-			const formData = new FormData(form);
-
-			const questions = @json($randomQuestions);
-			const submissionData = questions.map((question, index) => {
-				const selectedOption = form.querySelector(`input[name="questions[${index}]"]:checked`);
-				return {
-					question: question.question,
-					selectedAnswer: selectedOption ? selectedOption.value : '',
-					correctAnswer: question.answer,
-				};
-			});
-
-			formData.append('submissionData', JSON.stringify(submissionData));
-
-			// Send data to the backend
-			fetch('{{ route('submitQuiz') }}', {
-				method: 'POST',
-				headers: {
-					'X-CSRF-TOKEN': '{{ csrf_token() }}',
-				},
-				body: formData,
-			})
-				.then(response => response.json())
-				.then(data => {
-					// Update the progress bar
-					const percentage = data.percentage;
-
-					const circle = document.querySelector('.progress-ring-bar');
-					const radius = circle.r.baseVal.value;
-					const circumference = 2 * Math.PI * radius;
-
-					const offset = circumference - (percentage / 100) * circumference;
-					circle.style.strokeDashoffset = offset;
-
-					document.querySelector('.progress-percentage').textContent = `${percentage.toFixed(0)}%`;
-				})
-				.catch(error => {
-					console.error('Error submitting quiz:', error);
-				});
-		});
+		
 	</script>
 	<style>
 		.progress-ring-container {

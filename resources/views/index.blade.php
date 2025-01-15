@@ -292,11 +292,12 @@
 	</div>
 	<!-- Model Box -->
 
-	<section class=" custom-section-padding">
-		<div class="container">
-			<div class="row mb-4">
-				<div class="col">
-					<h2 class="font-weight-bold text-color-dark mb-3">- Key Offering</h2>
+		<!--<section class=" custom-section-padding">
+			<div class="container">
+				<div class="row mb-4">
+					<div class="col">
+						<h2 class="font-weight-bold text-color-dark mb-3">-	Key Offering</h2>
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -324,57 +325,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-lg-4">
-					<a href="#" class="text-decoration-none appear-animation" data-appear-animation="fadeInUp"
-						data-appear-animation-delay="100">
-						<div class="feature-box custom-feature-box feature-box-style-2">
-							<div class="counter-icon">
-								<img src="{{ asset('') }}img/gen_img/hr-icon.png" alt="">
-							</div>
-							<div class="feature-box-info ms-3">
-								<h4 class="font-weight-normal text-5">HR Podcast </h4>
-								<p class="text-2">It serves as a dynamic platform to explore evolving trends, share best
-									practices,
-									and discuss innovative strategies shaping the future of human resources. It provides
-									insightful
-									conversations with industry leaders, experts, and practitioners, offering practical
-									knowledge
-									and thought-provoking ideas to address challenges in workforce management, employee
-									engagement,
-									and organizational growth. Through engaging dialogues, the podcast aims to inspire
-									HR
-									professionals to lead with innovation and strategic impact.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4">
-					<a href="#" class="text-decoration-none appear-animation" data-appear-animation="fadeInUp"
-						data-appear-animation-delay="200">
-						<div class="feature-box custom-feature-box feature-box-style-2">
-							<div class="counter-icon">
-								<img src="{{ asset('') }}img/gen_img/nextgeneration.png" alt="">
-							</div>
-							<div class="feature-box-info ms-3">
-								<h4 class="font-weight-normal text-5">GenZ HR</h4>
-								<p class="text-2">The expectations of meaningful work, purpose-driven roles, and
-									opportunities for
-									growth and learning. They value flexible work arrangements, modern tools, and a
-									strong focus on
-									mental health, well-being, and inclusivity. Transparency, clear career progression,
-									and regular
-									feedback are essential, alongside structured training programs and mentorship to
-									build their
-									expertise. These professionals also seek supportive leadership, exposure to diverse
-									HR functions,
-									and recognition for their contributions, fostering a collaborative
-									and innovative work environment.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<!-- <div class="row">
+				 <div class="row">
 					<div class="col-lg-4">
 						<a href="demo-business-consulting-expertise-detail.html" class="text-decoration-none appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
 							<div class="feature-box custom-feature-box feature-box-style-2">
@@ -419,9 +370,9 @@
 					<div class="col-lg-12 text-center">
 						<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase mb-3" href="demo-business-consulting-expertise.html" title="View All">View All</a>
 					</div>
-				</div> -->
-		</div>
-	</section>
+				</div>
+			</div>
+		</section> -->
 
 	<section class="section-secondary">
 		<div class="container">
@@ -572,12 +523,13 @@
 				</div>
 			</div>
 		</section>
-	</form>
-	<section class="section-secondary custom-section-padding-2">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h2 class="font-weight-bold text-color-dark mb-3">- Our Services</h2>
+
+		<section class="section-secondary custom-section-padding-2">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2 class="font-weight-bold text-color-dark mb-3">- Activities Connected to HR Connect Forum</h2>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -727,23 +679,6 @@
 				</a>
 			</div>
 
-			<!-- <div>
-					<a href="#" class="text-decoration-none">
-						<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper m-0">
-								<img src="{{ asset('') }}img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
-							</span>
-							<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-								<span class="custom-thumb-info-title">
-									<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Other Benefits</span>
-									
-								</span>
-								<span class="custom-arrow"></span>
-							</span>
-						</span>
-					</a>
-				</div> -->
-
 		</div>
 	</section>
 
@@ -787,499 +722,52 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Our Corporate Partner</h2>
-					</div>
-				</div>
-				<div class="row align-items-center text-center">
-					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-						<img src="img/gen_img/logo-8.png" alt="" class="img-fluid" style="max-width: 90px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-						<img src="img/gen_img/logo-9.png" alt="" class="img-fluid" style="max-width: 140px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-						<img src="img/gen_img/logo-10.png" alt="" class="img-fluid" style="max-width: 140px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-						<img src="img/gen_img/logo-11.png" alt="" class="img-fluid" style="max-width: 140px;">
-					</div>
-					<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-						<img src="img/gen_img/logo-12.png" alt="" class="img-fluid" style="max-width: 100px;">
-					</div>
-					<div class="col-sm-4 col-lg-2">
-						<img src="img/gen_img/logo-13.png" alt="" class="img-fluid" style="max-width: 100px;">
-					</div>
-				</div> -->
-		</div>
-	</section>
-
-	<!-- <section class="custom-section-padding">	
-			<div class="container">
-				<div class="row pt-1 pb-4 mb-3">
-				<div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark mb-3">- Events</h2>
-					</div>
-				</div>
-					<div class="col">
-
-						<ul class="nav nav-pills sort-source mb-4" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}">
-							<li class="nav-item active" data-option-value="*" class=""><a class="nav-link active btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Show All</a></li>
-							<li class="nav-item" data-option-value=".economic"><a class="nav-link btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Economic</a></li>
-							<li class="nav-item" data-option-value=".strategic"><a class="nav-link btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Strategic</a></li>
-							<li class="nav-item" data-option-value=".tech"><a class="nav-link btn btn-outline custom-border-width btn-primary custom-border-radius custom-border-radius-small text-uppercase me-2 mb-2" href="#">Tech</a></li>
-						</ul>
-
-						<div class="sort-destination-loader sort-destination-loader-showing">
-							<div class="row portfolio-list sort-destination" data-sort-id="portfolio">
-								<div class="col-lg-4 isotope-item economic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-1.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item economic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>	
-								</div>
-								<div class="col-lg-4 isotope-item strategic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-3.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item tech">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-4.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item economic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item strategic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-6.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item economic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-2.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item tech">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-5.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-								<div class="col-lg-4 isotope-item economic">
-									<a href="#" class="text-decoration-none">
-										<span class="thumb-info custom-thumb-info-style-1 mb-4 pb-1 thumb-info-hide-wrapper-bg">
-											<span class="thumb-info-wrapper m-0">
-												<img src="img/gen_img/event/event-1.jpg" class="img-fluid" alt="">
-											</span>
-											<span class="thumb-info-caption bg-color-secondary p-3 pt-4 pb-4">
-												<span class="custom-thumb-info-title">
-													<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Event Name</span>
-													<span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span>
-												</span>
-												<span class="custom-arrow"></span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>	
-
-		<section class="section-secondary custom-section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Our Blog</h2>
-					</div>
-				</div>
-				<div class="row">						
-					<div class="col">
-						<div class="owl-carousel show-nav-title custom-dots-style-1 custom-dots-position 
-						custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
-							<div class="row">
-								<div class="col-sm-8 col-lg-5">
-									<div class="blog-post-image-wrapper">
-										<img src="{{ asset('') }}img/gen_img/blog-img.jpg" alt="" class="img-fluid mb-4">
-										 <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
-											20
-											<span class="month-year font-weight-light">
-												Oct-16
-											</span>
-										</span> 
-									</div>
-								</div>
-								<div class="col-sm-12 col-lg-7">
-									<h2> Blog Heading </h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat 
-										ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vi.</p>
-									<hr class="solid">
-									<div class="post-infos d-flex">
-										<span class="info posted-by">
-											Posted by:
-											<span class="post-author font-weight-semibold text-color-dark">
-												Full Name
-											</span>
-										</span>
-										<span class="info comments ms-5">
-											Comments:
-											<span class="comments-number text-color-primary font-weight-semibold">
-												15
-											</span>
-										</span>
-										<span class="info like ms-5">
-											Like:
-											<span class="like-number font-weight-semibold custom-color-red">
-												38
-											</span>
-										</span>
-									</div>
-									<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase mt-4" href="#" title="Read More">Read More</a>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-8 col-lg-5">
-									<div class="blog-post-image-wrapper">
-										<img src="{{ asset('') }}img/gen_img/blog-img-1.jpg" alt="" class="img-fluid mb-4">
-										
-									</div>
-								</div>
-								<div class="col-sm-12 col-lg-7">
-									<h2> Blog Heading 2</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat 
-										ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vi.</p>
-									<hr class="solid">
-									<div class="post-infos d-flex">
-										<span class="info posted-by">
-											Posted by:
-											<span class="post-author font-weight-semibold text-color-dark">
-												Full Name
-											</span>
-										</span>
-										<span class="info comments ms-5">
-											Comments:
-											<span class="comments-number text-color-primary font-weight-semibold">
-												15
-											</span>
-										</span>
-										<span class="info like ms-5">
-											Like:
-											<span class="like-number font-weight-semibold custom-color-red">
-												38
-											</span>
-										</span>
-									</div>
-									<a class="btn btn-outline custom-border-width btn-primary custom-border-radius font-weight-semibold text-uppercase mt-4" href="#" title="Read More">Read More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="looking-for section-primary">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-6 col-lg-7">
-						<div class="looking-for-box">
-							<h2>- <span class="text-1 custom-secondary-font">Lorem Ipsum is simply dummy text</span><br>
-							Lorem Ipsum </h2>
-							<p class="mb-4 mb-md-0">Lorem Ipsum is simply dummy text</p>
-						</div>
-					</div>
-					<div class="col-md-3 d-flex justify-content-md-end mb-4 mb-md-0">
-						<a class="text-decoration-none" href="tel:+00112304567" target="_blank" title="Call Us Now">
-							<span class="custom-call-to-action white-border text-color-light">
-								<span class="action-title">Call Us Now</span>
-								<span class="action-info">+001 1230 4567</span>
-							</span>
-						</a>
-					</div>
-					<div class="col-md-3 col-lg-2">
-						<a class="text-decoration-none" href="mail:mail@example.com" target="_blank" title="Email Us Now">
-							<span class="custom-call-to-action white-border text-color-light">
-								<span class="action-title">Email Us Now</span>
-								<span class="action-info">mail@example.com</span>
-							</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		
-		<section class="custom-section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Certificate </h2>
-					</div>
-				</div>
-				<div class="row">
-					<article class="blog-post col">
-						<div class="row">
-							<div class="col-sm-12 col-lg-4">
-								<div class="blog-post-image-wrapper">
-									<img src="{{ asset('') }}img/gen_img/Certificate-img.jpg" style="width: 338px;height: 292px;" alt class="img-fluid mb-4" />
-								</div>
-							</div>
-							<div class="col-sm-12 col-lg-4">
-								<div class="blog-post-image-wrapper">
-									<img src="{{ asset('') }}img/gen_img/Certificate-img-1.jpg" style="width: 338px;height: 292px;" alt class="img-fluid mb-4" />
-								</div>
-							</div>
-							<div class="col-sm-12 col-lg-4">
-								<div class="blog-post-image-wrapper">
-									<img src="{{ asset('') }}img/gen_img/blog-img.jpg" style="width: 338px;height: 292px;" alt class="img-fluid mb-4" />
-								</div>
-							</div>
-							
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
-
-		<section class="section-secondary custom-section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark">- Our Team</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="owl-carousel show-nav-title custom-dots-style-1 custom-dots-position custom-xs-arrows-style-2 mb-0" data-plugin-options="{'items': 4, 'margin': 20, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
-							<div>
-								<div class="team-item p-0">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/gen_img/team-1.jpg" 
-											style="width:266px; height:266px;" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
-											<span class="team-member-desc font-weight-light">Designation</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/gen_img/team-5.jpg" style="width:266px; height:266px;" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
-											<span class="team-member-desc font-weight-light">Designation</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/gen_img/team-3.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
-											<span class="team-member-desc font-weight-light">Designation</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/gen_img/team-4.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
-											<span class="team-member-desc font-weight-light">Designation</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="team-item p-0">
-									<a href="#" class="text-decoration-none">
-										<span class="image-wrapper">
-											<img src="{{ asset('') }}img/gen_img/team-5.jpg" alt="" class="img-fluid" />
-										</span>
-									</a>
-									<div class="team-infos">
-										<div class="share">
-											<i class="fas fa-share-alt"></i>
-											<div class="share-icons bg-color-light">
-												<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-												<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-											</div>
-										</div>
-										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Full Name</span>
-											<span class="team-member-desc font-weight-light">Designation</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row text-center mt-5">
-					<div class="col">
-						<a class="btn btn-outline custom-border-width btn-primary custom-border-radius 
-						font-weight-semibold text-uppercase" href="#">View All</a>
-					</div>
-				</div> 
-			</div>
-		</section>
-			 -->
-
-
 </div>
+
 @endsection
+
+<script>
+	// Quiz submission
+	document.getElementById('submit-quiz').addEventListener('click', function () {
+			const form = document.getElementById('quiz-form');
+			const formData = new FormData(form);
+
+			const questions = @json($randomQuestions);
+			const submissionData = questions.map((question, index) => {
+				const selectedOption = form.querySelector(`input[name="questions[${index}]"]:checked`);
+				return {
+					question: question.question,
+					selectedAnswer: selectedOption ? selectedOption.value : '',
+					correctAnswer: question.answer,
+				};
+			});
+
+			formData.append('submissionData', JSON.stringify(submissionData));
+
+			// Send data to the backend
+			fetch('{{ route('submitQuiz') }}', {
+				method: 'POST',
+				headers: {
+					'X-CSRF-TOKEN': '{{ csrf_token() }}',
+				},
+				body: formData,
+			})
+				.then(response => response.json())
+				.then(data => {
+					// Update the progress bar
+					const percentage = data.percentage;
+
+					const circle = document.querySelector('.progress-ring-bar');
+					const radius = circle.r.baseVal.value;
+					const circumference = 2 * Math.PI * radius;
+
+					const offset = circumference - (percentage / 100) * circumference;
+					circle.style.strokeDashoffset = offset;
+
+					document.querySelector('.progress-percentage').textContent = `${percentage.toFixed(0)}%`;
+				})
+				.catch(error => {
+					console.error('Error submitting quiz:', error);
+				});
+		});
+</script>
