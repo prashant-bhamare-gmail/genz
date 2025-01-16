@@ -168,7 +168,7 @@
 												</div>
 
 												<div class="row">
-													<div class="form-group col-lg-6">
+													<div class="form-group col-lg-12">
 														<label class="form-label mb-1 text-2">Full Name</label>
 														<div class="position-relative">
 															<i
@@ -179,7 +179,7 @@
 																name="name" required>
 														</div>
 													</div>
-													<div class="form-group col-lg-6">
+													<div class="form-group col-lg-12">
 														<label class="form-label mb-1 text-2">Email Address</label>
 														<div class="position-relative">
 															<i
@@ -189,6 +189,31 @@
 																data-msg-email="Please enter a valid email address."
 																maxlength="100" class="form-control text-3 h-auto py-2"
 																name="email" required>
+														</div>
+													</div>
+													<div class="form-group col-lg-12">
+														<label class="form-label mb-1 text-2">Phone Number</label>
+														<div class="position-relative">
+															<i class="icons icon-phone text-color-primary text-3 
+																position-absolute left-15 top-50pct transform3dy-n50"></i>
+															<input type="email" value=""
+																data-msg-required="Please enter your phone Number."
+																data-msg-email="Please enter a valid email address."
+																maxlength="100" class="form-control text-3 h-auto py-2"
+																name="email" required>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-group col">
+														<label class="form-label mb-1 text-2">Subject</label>
+														<div class="position-relative">
+															<i
+																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
+															<input type="text" value=""
+																data-msg-required="Please enter the subject."
+																maxlength="100" class="form-control text-3 h-auto py-2"
+																name="subject" required>
 														</div>
 													</div>
 												</div>
@@ -458,7 +483,7 @@
 		<section class="custom-section-padding">
 			<div class="container">
 				<div class="row mb-3">
-					<h2 class="font-weight-bold text-color-dark">- Quizzes</h2>
+					<h2 class="font-weight-bold text-color-dark">- Quizzes Let's Have Fun Test Your Basic HR Fundamentals</h2>
 					<div class="col-lg-9">
 						<!-- Quiz -->
 						<div class="wizard">
