@@ -25,7 +25,7 @@
 								<h4 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-6 mb-5 appear-animation"
 									data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500"
 									data-plugin-options="{'minWindowWidth': 0}">
-									A Global community of 150,000 + HR Professionals & Business Leaders in 11 Countries
+									A Global community of 150,000 + HR Professionals & Business Leaders 
 								</h4>
 
 								<a href="https://api.whatsapp.com/send?phone=911234567890" target="_blank"
@@ -73,7 +73,7 @@
 								<h4 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-6 mb-5 appear-animation"
 									data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500"
 									data-plugin-options="{'minWindowWidth': 0}">
-									A Global community of 150,000 + HR Professionals & Business Leaders in 11 Countries
+									A Global community of 150,000 + HR Professionals & Business Leaders 
 								</h4>
 
 								<a href="#"
@@ -206,19 +206,6 @@
 												</div>
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Subject</label>
-														<div class="position-relative">
-															<i
-																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
-															<input type="text" value=""
-																data-msg-required="Please enter the subject."
-																maxlength="100" class="form-control text-3 h-auto py-2"
-																name="subject" required>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group col">
 														<label class="form-label">City</label>
 														<div class="position-relative">
 															<i
@@ -238,17 +225,32 @@
 												</div>
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Subject</label>
+														<label class="form-label mb-1 text-2">Current Role </label>
 														<div class="position-relative">
 															<i
 																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
 															<input type="text" value=""
-																data-msg-required="Please enter the subject."
+																data-msg-required="Please enter the current role ."
 																maxlength="100" class="form-control text-3 h-auto py-2"
-																name="subject" required>
+																name="role" required>
 														</div>
 													</div>
 												</div>
+												<div class="row">
+													<div class="form-group col">
+														<label class="form-label mb-1 text-2">Current Company </label>
+														<div class="position-relative">
+															<i
+																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
+															<input type="text" value=""
+																data-msg-required="Please enter the current company."
+																maxlength="100" class="form-control text-3 h-auto py-2"
+																name="company" required>
+														</div>
+													</div>
+												</div>
+												
+												
 												<!-- <div class="row">
 														<div class="form-group col">
 															<div class="form-check form-check-inline">
@@ -270,7 +272,7 @@
 													</div> -->
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Message</label>
+														<label class="form-label mb-1 text-2">Please mention few pointers on the topics you need counselling </label>
 														<div class="position-relative">
 															<i
 																class="icons icon-bubble text-color-primary text-3 position-absolute left-15 top-15"></i>
@@ -289,7 +291,7 @@
 																data-msg-required="You must agree before submiting."
 																required>
 															<label class="form-check-label" for="tabContent13Checkbox">
-																Agree to terms and conditions
+																Allow as 2 working days to assign a mentor for your above session 
 															</label>
 														</div>
 													</div>

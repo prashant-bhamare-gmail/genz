@@ -164,7 +164,7 @@
 													
 												</ul>
 											</li>
-											<li class="dropdown dropdown-primary">
+											<!-- <li class="dropdown dropdown-primary">
 												<a class="dropdown-toggle nav-link" href="#">
 													Awards 
 												</a>
@@ -191,7 +191,7 @@
 													</li>
 												</ul>
 												
-											</li>
+											</li> -->
 											<li>
 												<a class="nav-link" href="#">
 												Gallery

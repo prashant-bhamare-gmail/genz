@@ -22,14 +22,8 @@
 	</section>
 
 	<div class="container py-5">
-		<!-- <div class="row align-items-center">
-						<div class="col">
-                        <h2 class="font-weight-bold text-color-dark mb-3">-	Who We Are</h2>
-						</div>
-					</div> -->
 		<div class="row">
 			<div class="container">
-
 				<!-- Tab navigation -->
 				<div class="tabs">
 					<ul class="nav nav-tabs" id="alphabetTab" role="tablist">
@@ -44,9 +38,6 @@
 						@endforeach
 					</ul>
 				</div>
-
-
-
 				<!-- Tab content -->
 				<div class="tab-content mt-3" id="alphabetTabContent">
 					@foreach ($terms as $letter => $types)
@@ -81,8 +72,46 @@
 					@endforeach
 				</div>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="font-weight-bold text-color-dark my-5">- Key Responsibility – Role wise </h2>
+				<div class="accordion without-bg custom-accordion-style-1" id="accordion7">
+					<div class="mt-5">
 
-			<!--  -->
+						@foreach($jobs as $title => $job)
+							<div class="card card-default">
+								<div class="card-header">
+									<h4 class="card-title m-0">
+										<a class="accordion-toggle collapsed " data-bs-toggle="collapse" data-bs-parent="#accordion7"
+											href="#collapse{{ $loop->index }}" aria-expanded="true">
+											{{ $title }}
+											<span class="custom-accordion-plus"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse{{ $loop->index }}" class="collapse {{ $loop->first ? 'show' : '' }}"
+									aria-expanded="true">
+									<div class="card-body">
+										<p><strong>Job Description:</strong> {{ $job['job_description'] }}</p>
+										<h5>Key Responsibilities:</h5>
+										<ul class="list list-icons list-icons-style-2">
+											@foreach($job['key_responsibilities'] as $responsibility)
+												<li>
+													<i class="fas fa-caret-right"></i>
+													{{ $responsibility }}
+												</li>
+											@endforeach
+										</ul>
+									</div>
+								</div>
+							</div>
+						@endforeach
+
+					</div>
+					
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

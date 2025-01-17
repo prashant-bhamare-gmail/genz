@@ -9,7 +9,7 @@
 							<ul class="list list-unstyled">
 								<li class="d-flex align-items-center mb-4">
 									<i class="icon icon-envelope text-color-light text-5 font-weight-bold position-relative top-1 me-3-5"></i>
-									<a href="mailto:porto@business-consulting-4.com" class="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">example@domain.com</a>
+									<a href="mailto:hrconnect2025@gmail.com" class="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">hrconnect2025@gmail.com</a>
 								</li>
 								<li class="d-flex align-items-center mb-4">
 									<i class="icon icon-phone text-color-light text-5 font-weight-bold position-relative top-1 me-3-5"></i>
@@ -46,9 +46,9 @@
 									<ul class="list list-unstyled columns-lg-2">
 										<li><a href="#" class="text-color-grey text-color-hover-primary">Home</a></li>
 										<li><a href="#" class="text-color-grey text-color-hover-primary">About Us</a></li>
-										<li><a href="#" class="text-color-grey text-color-hover-primary">Our Services</a></li>
-										<li><a href="#" class="text-color-grey text-color-hover-primary">Consultants</a></li>
-										<li><a href="#" class="text-color-grey text-color-hover-primary">Blog</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Committee</a></li>
+										<!-- <li><a href="#" class="text-color-grey text-color-hover-primary">Consultants</a></li>
+										<li><a href="#" class="text-color-grey text-color-hover-primary">Blog</a></li> -->
 										<li><a href="#" class="text-color-grey text-color-hover-primary">Contact Us</a></li>
 									</ul>
 								</div>
@@ -69,7 +69,7 @@
 									</div>
 									<div class="alert alert-danger d-none" id="newsletterError"></div>
 									<div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
-										<h4 class="text-color-light ws-nowrap me-3 mb-3 mb-lg-0">Would You like Subscribe For More Benefits</h4>
+										<h4 class="text-color-light ws-nowrap me-3 mb-3 mb-lg-0">Would You like be a volunteer form click here</h4>
 										<form id="newsletterForm" class="form-style-3 w-100" action="php/newsletter-subscribe.php" method="POST">
 											<div class="d-flex">
 												<input class="form-control bg-color-light border-0 box-shadow-none" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text" />

@@ -428,6 +428,104 @@ class HrTerminologyController extends Controller
             ]
         ];
 
-        return view('hr-terminology', compact('terms'));
+        $jobs = [
+            'HR Generalist' => [
+                'job_description' => 'The HR Generalist handles a variety of HR functions, including employee relations, recruitment, performance management, compliance with labor laws, and employee development. This role ensures HR programs and policies align with business goals and help maintain a positive workplace culture.',
+                'key_responsibilities' => [
+                    'Assist in recruitment and onboarding of new employees.',
+                    'Handle employee relations, addressing concerns and disputes.',
+                    'Maintain personnel records and ensure compliance with labor laws.',
+                    'Coordinate performance reviews and manage the performance improvement process.',
+                    'Support training and development initiatives.',
+                    'Administer employee benefits and compensation plans.',
+                ],
+            ],
+            'HR Business Partner (HRBP)' => [
+                'job_description' => 'An HRBP works closely with business leaders to align HR strategies with business goals. They serve as a consultant to management on human resource-related issues, offering expert advice on talent management, organizational development, and employee engagement.',
+                'key_responsibilities' => [
+                    'Partner with leadership to develop HR strategies that align with business objectives.',
+                    'Advise and coach managers on HR issues, including performance management and employee relations.',
+                    'Monitor employee engagement and recommend initiatives to improve retention.',
+                    'Support talent management and succession planning.',
+                    'Ensure compliance with HR policies and legal requirements.',
+                ],
+            ],
+
+            'Total Rewards Manager' => [
+                'job_description' => 'A Total Rewards Manager is responsible for overseeing compensation and benefits programs, ensuring they are competitive and aligned with company goals. They play a key role in shaping the organization’s reward strategy, including compensation analysis, bonuses, and benefits.',
+                'key_responsibilities' => [
+                    'Develop, implement, and manage compensation and benefits programs.',
+                    'Conduct market analysis to ensure competitiveness of reward offerings.',
+                    'Ensure compliance with applicable labor laws regarding compensation and benefits.',
+                    'Collaborate with leadership to develop incentive and bonus plans.',
+                    'Oversee the administration of employee rewards programs.',
+                ],
+            ],
+            'Payroll and Compliance Specialist' => [
+                'job_description' => 'This role ensures the accurate and timely processing of payroll and ensures the organization complies with all local, state, and federal employment laws. They also handle audits, reporting, and tax filing related to payroll.',
+                'key_responsibilities' => [
+                    'Manage payroll processing and ensure employees are paid accurately and on time.',
+                    'Ensure compliance with tax laws and labor regulations.',
+                    'Maintain payroll records and ensure confidentiality.',
+                    'Prepare and submit payroll tax filings.',
+                    'Assist with payroll audits and resolve discrepancies.',
+                ],
+            ],
+            'Training and Development Lead' => [
+                'job_description' => 'The Training and Development Lead designs and implements employee training programs to enhance skills, performance, and overall productivity. They play a key role in developing talent and fostering continuous learning within the organization.',
+                'key_responsibilities' => [
+                    'Develop and implement training and development programs.',
+                    'Identify training needs through assessments, surveys, and feedback.',
+                    'Collaborate with managers to ensure training aligns with business objectives.',
+                    'Measure the effectiveness of training programs.',
+                    'Maintain records of training activities and progress.',
+                ],
+            ],
+            'Recruitment Specialist' => [
+                'job_description' => 'A Recruitment Specialist focuses on sourcing, screening, and hiring talent to meet the organization’s staffing needs. They work closely with department heads to understand staffing requirements and ensure that candidates are a good fit for both the role and the company culture.',
+                'key_responsibilities' => [
+                    'Source candidates using various channels (job boards, social media, etc.).',
+                    'Screen resumes and conduct interviews.',
+                    'Coordinate with hiring managers to understand job requirements.',
+                    'Facilitate the interview and selection process.',
+                    'Maintain a pipeline of qualified candidates for future openings.',
+                ],
+            ],
+            'HR Manager' => [
+                'job_description' => 'An HR Manager oversees all aspects of human resources, including recruitment, performance management, employee relations, compliance, and training. They ensure HR practices align with the company’s goals and are executed effectively.',
+                'key_responsibilities' => [
+                    'Lead HR operations and support management in HR activities.',
+                    'Handle employee relations and resolve workplace issues.',
+                    'Administer compensation and benefits programs.',
+                    'Manage performance management processes.',
+                    'Ensure compliance with labor laws and regulations.',
+                    'Develop and implement HR policies and procedures.',
+                ],
+            ],
+            'HR Head' => [
+                'job_description' => 'The HR Head is responsible for developing and overseeing the strategic direction of HR within the organization. They manage the HR team and collaborate with senior leadership to ensure that human resource functions align with the business’s overall goals.',
+                'key_responsibilities' => [
+                    'Lead and develop the HR department to support organizational objectives.',
+                    'Oversee talent management, succession planning, and employee development.',
+                    'Develop HR strategies that align with business needs.',
+                    'Drive organizational culture and employee engagement initiatives.',
+                    'Ensure compliance with labor laws and industry regulations.',
+                ],
+            ],
+            'Chief Human Resources Officer (CHRO)' => [
+                'job_description' => 'The CHRO is responsible for the overall leadership of HR strategies and operations. They are a key member of the executive team, advising on HR policies, culture, talent management, and organizational development to ensure alignment with the company’s vision and goals.',
+                'key_responsibilities' => [
+                    'Develop and implement HR strategies that align with business objectives.',
+                    'Lead organizational development and talent management initiatives.',
+                    'Ensure the company’s HR practices support its growth and culture.',
+                    'Advise the executive team on HR-related issues.',
+                    'Oversee compensation, benefits, performance management, and compliance.',
+                    'Represent the company in labor relations matters.',
+                ],
+            ],
+            // Add other job data here in a similar format
+        ];
+
+        return view('hr-terminology', compact('terms', 'jobs'));
     }
 }
