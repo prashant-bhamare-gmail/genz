@@ -70,6 +70,8 @@
 
 		@include('body.footer')
 
+		<!-- Include the scripts here -->
+		@stack('scripts')
 	</div>
 
 	<!-- <a class="style-switcher-open-loader" href="#" data-base-path="" data-skin-src="" 
@@ -182,7 +184,7 @@
 			$(this).addClass('active');
 		});
 
-		
+
 	</script>
 	<style>
 		.progress-ring-container {

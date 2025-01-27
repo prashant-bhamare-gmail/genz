@@ -489,6 +489,9 @@
 				<div class="row mb-3">
 					<h2 class="font-weight-bold text-color-dark">- Quizzes Let's Have Fun Test Your Basic HR
 						Fundamentals</h2>
+					<div id="review-message" style="display: none;">
+						<p><b>You've finished the quiz successfully!</b></p>
+					</div>
 					<div class="col-lg-9">
 						<!-- Quiz -->
 						<div class="wizard">
@@ -745,89 +748,92 @@
 		</div>
 	</div>
 </section>
-
-<script>
-	// Quiz submission
-	document.getElementById('submit-quiz').addEventListener('click', function () {
-		const form = document.getElementById('quiz-form');
-		const formData = new FormData(form);
-
-		const questions = @json($randomQuestions);
-		const submissionData = questions.map((question, index) => {
-			const selectedOption = form.querySelector(`input[name="questions[${index}]"]:checked`);
-			return {
-				question: question.question,
-				selectedAnswer: selectedOption ? selectedOption.value : '',
-				correctAnswer: question.answer,
-			};
-		});
-
-		formData.append('submissionData', JSON.stringify(submissionData));
-
-		// Send data to the backend
-		fetch('{{ route('submitQuiz') }}', {
-			method: 'POST',
-			headers: {
-				'X-CSRF-TOKEN': '{{ csrf_token() }}',
-			},
-			body: formData,
-		})
-			.then(response => response.json())
-			.then(data => {
-				// Update the progress bar
-				const percentage = data.percentage;
-
-				const circle = document.querySelector('.progress-ring-bar');
-				const radius = circle.r.baseVal.value;
-				const circumference = 2 * Math.PI * radius;
-
-				const offset = circumference - (percentage / 100) * circumference;
-				circle.style.strokeDashoffset = offset;
-
-				document.querySelector('.progress-percentage').textContent = `${percentage.toFixed(0)}%`;
-				handleQuizResult(data);
-			})
-			.catch(error => {
-				console.error('Error submitting quiz:', error);
-			});
-	});
-
-	function handleQuizResult(response) {
-		const form = document.getElementById('quiz-form');
-		const questions = response.questions;
-		const finishButton = document.getElementById('submit-quiz');
-
-		// Remove the finish button
-		finishButton.remove();
-		
-		// Set the first tab to active
-		const firstTab = document.getElementById('step1');
-		const firstTabPane = firstTab.closest('.tab-pane');
-		const allTabs = document.querySelectorAll('.tab-pane');
-		allTabs.forEach(tab => tab.classList.remove('active'));
-		firstTabPane.classList.add('active');
-
-		// Disable the options and highlight answers
-		questions.forEach((question, index) => {
-			const selectedAnswer = question.selectedAnswer;
-			const correctAnswer = question.correctAnswer;
-			const options = form.querySelectorAll(`input[name="questions[${index}]"]`);
-
-			// Find the correct and selected options in the form
-			options.forEach(option => {
-				const label = option.nextElementSibling;
-
-				option.disabled = true;
-
-				if (option.value === selectedAnswer) {
-					label.style.color = selectedAnswer === correctAnswer ? 'green' : 'red';
-				}
-				if (option.value === correctAnswer) {
-					label.style.color = 'green';
-				}
-			});
-		});
-	}
-</script>
-
 @endsection
+
+@push('scripts')
+	<script>
+		// Quiz submission
+		document.getElementById('submit-quiz').addEventListener('click', function () {
+			const form = document.getElementById('quiz-form');
+			const formData = new FormData(form);
+
+			const questions = @json($randomQuestions);
+			const submissionData = questions.map((question, index) => {
+				const selectedOption = form.querySelector(`input[name="questions[${index}]"]:checked`);
+				return {
+					question: question.question,
+					selectedAnswer: selectedOption ? selectedOption.value : '',
+					correctAnswer: question.answer,
+				};
+			});
+
+			formData.append('submissionData', JSON.stringify(submissionData));
+
+			// Send data to the backend
+			fetch('{{ route('submitQuiz') }}', {
+				method: 'POST',
+				headers: {
+					'X-CSRF-TOKEN': '{{ csrf_token() }}',
+				},
+				body: formData,
+			})
+				.then(response => response.json())
+				.then(data => {
+					// Update the progress bar
+					const percentage = data.percentage;
+
+					const circle = document.querySelector('.progress-ring-bar');
+					const radius = circle.r.baseVal.value;
+					const circumference = 2 * Math.PI * radius;
+
+					const offset = circumference - (percentage / 100) * circumference;
+					circle.style.strokeDashoffset = offset;
+
+					document.querySelector('.progress-percentage').textContent = `${percentage.toFixed(0)}%`;
+					handleQuizResult(data);
+					// Show the review message after submission
+					document.getElementById('review-message').style.display = 'block';
+				})
+				.catch(error => {
+					console.error('Error submitting quiz:', error);
+				});
+		});
+
+		function handleQuizResult(response) {
+			const form = document.getElementById('quiz-form');
+			const questions = response.questions;
+			const finishButton = document.getElementById('submit-quiz');
+
+			// Remove the finish button
+			finishButton.remove();
+
+			// Set the first tab to active
+			const firstTab = document.getElementById('step1');
+			const firstTabPane = firstTab.closest('.tab-pane');
+			const allTabs = document.querySelectorAll('.tab-pane');
+			allTabs.forEach(tab => tab.classList.remove('active'));
+			firstTabPane.classList.add('active');
+
+			// Disable the options and highlight answers
+			questions.forEach((question, index) => {
+				const selectedAnswer = question.selectedAnswer;
+				const correctAnswer = question.correctAnswer;
+				const options = form.querySelectorAll(`input[name="questions[${index}]"]`);
+
+				// Find the correct and selected options in the form
+				options.forEach(option => {
+					const label = option.nextElementSibling;
+
+					option.disabled = true;
+
+					if (option.value === selectedAnswer) {
+						label.style.color = selectedAnswer === correctAnswer ? 'green' : 'red';
+					}
+					if (option.value === correctAnswer) {
+						label.style.color = 'green';
+					}
+				});
+			});
+		}
+	</script>
+@endpush
