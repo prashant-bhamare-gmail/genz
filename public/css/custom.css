@@ -376,3 +376,25 @@ input[type="checkbox"]:checked::before{
 .bg-color-primary-rgba-10 {
     background-color: rgba(227, 97, 89, 0.1);
 }
+
+.nav-tabs li .nav-link {
+
+    padding: 7.2px 16.1px;
+}
+.nav-tabs li .nav-link, .nav-tabs li .nav-link:hover {
+    background: none;
+}
+
+.accordion.accordion-modern-status.accordion-modern-status-arrow > .card .card-header a:after {
+    transform: translate3d(0, -50%, 0) rotate(180deg);
+    font-family: 'Font Awesome 6 Free';
+    content: "\f107";
+    font-weight: 900;
+    background: #212529;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 50%;
+}

@@ -10,7 +10,7 @@
 
 				<!-- Carousel Slide 1 -->
 				<div class="owl-item position-relative pt-5"
-					style="background-image: url(img/gen_img/banner_image.png); background-size: cover; background-position: center;">
+					style="background-image: url(img/gen_img/slide-1.jpg); background-size: cover; background-position: center;">
 					<div class="container position-relative z-index-3 pb-5 h-100">
 						<div class="row align-items-center pb-5 h-100">
 							<div class="col text-center">
@@ -44,7 +44,7 @@
 
 				<!-- Carousel Slide 2 -->
 				<div class="owl-item position-relative pt-5"
-					style="background-image: url(img/gen_img//slide-2.jpg); background-size: cover; background-position: center;">
+					style="background-image: url(img/gen_img/slide-2.jpg); background-size: cover; background-position: center;">
 					<div class="container position-relative z-index-3 pb-5 h-100">
 						<div class="row align-items-center pb-5 h-100">
 							<!-- <div class="col">
@@ -790,6 +790,7 @@
 					</div>
 				</div>
 			</div>
-</div>
+		</div>
+	</section>	
 
 @endsection

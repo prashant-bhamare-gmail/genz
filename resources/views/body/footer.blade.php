@@ -88,7 +88,7 @@
 					<div class="container">
 						<hr class="bg-color-light opacity-1">
 						<div class="row">
-							<div class="col mt-4 mb-4 pb-5">
+							<div class="col mb-4">
 								<p class="text-center text-3 mb-0">GenZ © 2025. All Rights Reserved.</p>
 							</div>
 						</div>

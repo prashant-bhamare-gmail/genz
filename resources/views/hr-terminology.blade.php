@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="container">
 				<!-- Tab navigation -->
-				<div class="tabs">
+				<div class="tabs" style="margin-bottom:0;">
 					<ul class="nav nav-tabs" id="alphabetTab" role="tablist">
 						@foreach (range('A', 'Z') as $letter)
 							<li class="nav-item" role="presentation">
@@ -39,7 +39,7 @@
 					</ul>
 				</div>
 				<!-- Tab content -->
-				<div class="tab-content mt-3" id="alphabetTabContent">
+				<div class="tab-content" id="alphabetTabContent">
 					@foreach ($terms as $letter => $types)
 						<div class="tab-pane fade @if($letter == 'A') show active @endif" id="{{ $letter }}">
 							<div class="">
@@ -123,7 +123,7 @@
 		<div class="row">
 			<div class="col-sm-3 col-lg-3">
 				<div class="call-to-action-btn">
-					<a href="#" target="_blank" class="btn btn-modern text-2 btn-primary">Join us at HRConnect</a>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdgIphn_i7yYI_Egi07Xpb9Br0HJOajr4wi2_-8pXZrHvkb2A/viewform" target="_blank" class="btn btn-modern text-2 btn-primary">Join us at HRConnect</a>
 					<span
 						class="arrow hlb d-none d-md-block appear-animation animated rotateInUpLeft appear-animation-visible"
 						data-appear-animation="rotateInUpLeft"

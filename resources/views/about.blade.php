@@ -95,7 +95,8 @@
 						<div class="row">
 							<div class="col-sm-3 col-lg-3">
 								<div class="call-to-action-btn">
-									<a href="#" target="_blank" class="btn btn-modern text-2 btn-primary">Join us at HRConnect</a>
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSdgIphn_i7yYI_Egi07Xpb9Br0HJOajr4wi2_-8pXZrHvkb2A/viewform" 
+										target="_blank" class="btn btn-modern text-2 btn-primary">Join us at HRConnect</a>
 									<span class="arrow hlb d-none d-md-block appear-animation animated rotateInUpLeft appear-animation-visible" 
 									data-appear-animation="rotateInUpLeft" style="left: 110%; top: -40px; animation-delay: 100ms;"></span>
 								</div>

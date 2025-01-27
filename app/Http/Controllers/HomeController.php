@@ -32,4 +32,7 @@ class HomeController extends Controller
     public function hrterminology(){
         return view('hr-terminology');
     }
+    public function hrcertification(){
+        return view('hr-certification');
+    }
 }
