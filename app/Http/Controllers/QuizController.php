@@ -286,7 +286,8 @@ class QuizController extends Controller
         $percentage = ($score / $total) * 100;
 
         return response()->json([
-            'percentage' => $percentage // Add percentage to the response
+            'percentage' => $percentage, // Add percentage to the response,
+            'questions' => $submissionData // Add submitted questions to the response
         ]);
 
     }

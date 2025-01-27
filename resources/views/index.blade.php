@@ -25,7 +25,7 @@
 								<h4 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-6 mb-5 appear-animation"
 									data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500"
 									data-plugin-options="{'minWindowWidth': 0}">
-									A Global community of 150,000 + HR Professionals & Business Leaders 
+									A Global community of 150,000 + HR Professionals & Business Leaders
 								</h4>
 
 								<a href="https://api.whatsapp.com/send?phone=911234567890" target="_blank"
@@ -73,7 +73,7 @@
 								<h4 class="custom-secondary-font text-color-light text-center font-weight-extra-bold text-6 mb-5 appear-animation"
 									data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500"
 									data-plugin-options="{'minWindowWidth': 0}">
-									A Global community of 150,000 + HR Professionals & Business Leaders 
+									A Global community of 150,000 + HR Professionals & Business Leaders
 								</h4>
 
 								<a href="#"
@@ -249,8 +249,8 @@
 														</div>
 													</div>
 												</div>
-												
-												
+
+
 												<!-- <div class="row">
 														<div class="form-group col">
 															<div class="form-check form-check-inline">
@@ -272,7 +272,8 @@
 													</div> -->
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Please mention few pointers on the topics you need counselling </label>
+														<label class="form-label mb-1 text-2">Please mention few
+															pointers on the topics you need counselling </label>
 														<div class="position-relative">
 															<i
 																class="icons icon-bubble text-color-primary text-3 position-absolute left-15 top-15"></i>
@@ -291,7 +292,8 @@
 																data-msg-required="You must agree before submiting."
 																required>
 															<label class="form-check-label" for="tabContent13Checkbox">
-																Allow as 2 working days to assign a mentor for your above session 
+																Allow as 2 working days to assign a mentor for your
+																above session
 															</label>
 														</div>
 													</div>
@@ -319,7 +321,7 @@
 	</div>
 	<!-- Model Box -->
 
-		<!--<section class=" custom-section-padding">
+	<!--<section class=" custom-section-padding">
 			<div class="container">
 				<div class="row mb-4">
 					<div class="col">
@@ -485,7 +487,8 @@
 		<section class="custom-section-padding">
 			<div class="container">
 				<div class="row mb-3">
-					<h2 class="font-weight-bold text-color-dark">- Quizzes Let's Have Fun Test Your Basic HR Fundamentals</h2>
+					<h2 class="font-weight-bold text-color-dark">- Quizzes Let's Have Fun Test Your Basic HR
+						Fundamentals</h2>
 					<div class="col-lg-9">
 						<!-- Quiz -->
 						<div class="wizard">
@@ -522,7 +525,7 @@
 										</ul>
 									</div>
 								@endforeach
-								<div class="clearfix"></div> 
+								<div class="clearfix"></div>
 							</div>
 						</div>
 					</div>
@@ -546,251 +549,285 @@
 				</div>
 			</div>
 		</section>
+	</form>
+
+	<section class="section-secondary custom-section-padding-2">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2 class="font-weight-bold text-color-dark mb-3">- Activities Connected to HR Connect Forum</h2>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="owl-carousel show-nav-title custom-both-sides-shadow custom-dots-position-2 
+				custom-dots-style-1 custom-xs-arrows-style-2 mb-0"
+	data-plugin-options="{'items': 4, 'loop': true, 'dots': true, 'nav': true}">
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/HRCounsellingPhoto.jpg" style="height:229px"
+						class="img-fluid" alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
+							Counselling</span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/HRPodcast.jpg" style="height:229px" class="img-fluid"
+						alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
+							Podcast </span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/HR_Meet.jpg" style="height:229px" class="img-fluid"
+						alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
+							Meet</span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/hrlearning.png" style="height:229px" class="img-fluid"
+						alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
+							Learning & Certification </span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/HRCommittee.jpg" class="img-fluid" alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
+							Committee </span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/CampusConnect.jpg" class="img-fluid" alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Campus
+							Connect </span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/Awards.jpg" class="img-fluid" alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Awards</span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+
+	<div>
+		<a href="#" class="text-decoration-none">
+			<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
+				<span class="thumb-info-wrapper m-0">
+					<img src="{{ asset('') }}img/gen_img/event/HRKnowledge.jpg" style="height:255px" class="img-fluid"
+						alt="">
+				</span>
+				<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
+					<span class="custom-thumb-info-title">
+						<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
+							Knowledge</span>
+						<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
+					</span>
+					<span class="custom-arrow"></span>
+				</span>
+			</span>
+		</a>
+	</div>
+
+</div>
+</section>
+
+<section class="section border-0 bg-light m-0">
+	<div class="container py-5">
+		<div class="row">
+			<div class="col">
+				<h2 class="font-weight-bold text-color-dark">- Our Corporate Partner</h2>
+				<div class="owl-carousel owl-theme stage-margin"
+					data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-8.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-9.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-10.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-11.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-12.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-13.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-9.png">
+					</div>
+					<div>
+						<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-11.png">
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <script>
 	// Quiz submission
 	document.getElementById('submit-quiz').addEventListener('click', function () {
-			const form = document.getElementById('quiz-form');
-			const formData = new FormData(form);
+		const form = document.getElementById('quiz-form');
+		const formData = new FormData(form);
 
-			const questions = @json($randomQuestions);
-			const submissionData = questions.map((question, index) => {
-				const selectedOption = form.querySelector(`input[name="questions[${index}]"]:checked`);
-				return {
-					question: question.question,
-					selectedAnswer: selectedOption ? selectedOption.value : '',
-					correctAnswer: question.answer,
-				};
-			});
-
-			formData.append('submissionData', JSON.stringify(submissionData));
-
-			// Send data to the backend
-			fetch('{{ route('submitQuiz') }}', {
-				method: 'POST',
-				headers: {
-					'X-CSRF-TOKEN': '{{ csrf_token() }}',
-				},
-				body: formData,
-			})
-				.then(response => response.json())
-				.then(data => {
-					// Update the progress bar
-					const percentage = data.percentage;
-
-					const circle = document.querySelector('.progress-ring-bar');
-					const radius = circle.r.baseVal.value;
-					const circumference = 2 * Math.PI * radius;
-
-					const offset = circumference - (percentage / 100) * circumference;
-					circle.style.strokeDashoffset = offset;
-
-					document.querySelector('.progress-percentage').textContent = `${percentage.toFixed(0)}%`;
-				})
-				.catch(error => {
-					console.error('Error submitting quiz:', error);
-				});
+		const questions = @json($randomQuestions);
+		const submissionData = questions.map((question, index) => {
+			const selectedOption = form.querySelector(`input[name="questions[${index}]"]:checked`);
+			return {
+				question: question.question,
+				selectedAnswer: selectedOption ? selectedOption.value : '',
+				correctAnswer: question.answer,
+			};
 		});
+
+		formData.append('submissionData', JSON.stringify(submissionData));
+
+		// Send data to the backend
+		fetch('{{ route('submitQuiz') }}', {
+			method: 'POST',
+			headers: {
+				'X-CSRF-TOKEN': '{{ csrf_token() }}',
+			},
+			body: formData,
+		})
+			.then(response => response.json())
+			.then(data => {
+				// Update the progress bar
+				const percentage = data.percentage;
+
+				const circle = document.querySelector('.progress-ring-bar');
+				const radius = circle.r.baseVal.value;
+				const circumference = 2 * Math.PI * radius;
+
+				const offset = circumference - (percentage / 100) * circumference;
+				circle.style.strokeDashoffset = offset;
+
+				document.querySelector('.progress-percentage').textContent = `${percentage.toFixed(0)}%`;
+				handleQuizResult(data);
+			})
+			.catch(error => {
+				console.error('Error submitting quiz:', error);
+			});
+	});
+
+	function handleQuizResult(response) {
+		const form = document.getElementById('quiz-form');
+		const questions = response.questions;
+		const finishButton = document.getElementById('submit-quiz');
+
+		// Remove the finish button
+		finishButton.remove();
+		
+		// Set the first tab to active
+		const firstTab = document.getElementById('step1');
+		const firstTabPane = firstTab.closest('.tab-pane');
+		const allTabs = document.querySelectorAll('.tab-pane');
+		allTabs.forEach(tab => tab.classList.remove('active'));
+		firstTabPane.classList.add('active');
+
+		// Disable the options and highlight answers
+		questions.forEach((question, index) => {
+			const selectedAnswer = question.selectedAnswer;
+			const correctAnswer = question.correctAnswer;
+			const options = form.querySelectorAll(`input[name="questions[${index}]"]`);
+
+			// Find the correct and selected options in the form
+			options.forEach(option => {
+				const label = option.nextElementSibling;
+
+				option.disabled = true;
+
+				if (option.value === selectedAnswer) {
+					label.style.color = selectedAnswer === correctAnswer ? 'green' : 'red';
+				}
+				if (option.value === correctAnswer) {
+					label.style.color = 'green';
+				}
+			});
+		});
+	}
 </script>
-		<section class="section-secondary custom-section-padding-2">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h2 class="font-weight-bold text-color-dark mb-3">- Activities Connected to HR Connect Forum</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="owl-carousel show-nav-title custom-both-sides-shadow custom-dots-position-2 
-				custom-dots-style-1 custom-xs-arrows-style-2 mb-0"
-			data-plugin-options="{'items': 4, 'loop': true, 'dots': true, 'nav': true}">
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/HRCounsellingPhoto.jpg" style="height:229px"
-								class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
-									Counselling</span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/HRPodcast.jpg" style="height:229px"
-								class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
-									Podcast </span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/HR_Meet.jpg" style="height:229px"
-								class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
-									Meet</span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/hrlearning.png" style="height:229px"
-								class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
-									Learning & Certification </span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/HRCommittee.jpg" class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
-									Committee </span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/CampusConnect.jpg" class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Campus
-									Connect </span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">10 Jan 2025</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/Awards.jpg" class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span
-									class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">Awards</span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-
-			<div>
-				<a href="#" class="text-decoration-none">
-					<span class="thumb-info custom-thumb-info-style-1 thumb-info-hide-wrapper-bg">
-						<span class="thumb-info-wrapper m-0">
-							<img src="{{ asset('') }}img/gen_img/event/HRKnowledge.jpg" style="height:255px"
-								class="img-fluid" alt="">
-						</span>
-						<span class="thumb-info-caption bg-color-secondary p-4 pt-5 pb-5">
-							<span class="custom-thumb-info-title">
-								<span class="custom-thumb-info-name font-weight-semibold text-color-dark text-4">HR
-									Knowledge</span>
-								<!-- <span class="custom-thumb-info-desc font-weight-light">Event Date</span> -->
-							</span>
-							<span class="custom-arrow"></span>
-						</span>
-					</span>
-				</a>
-			</div>
-
-		</div>
-	</section>
-
-	<section class="section border-0 bg-light m-0">
-		<div class="container py-5">
-			<div class="row">
-				<div class="col">
-					<h2 class="font-weight-bold text-color-dark">- Our Corporate Partner</h2>
-					<div class="owl-carousel owl-theme stage-margin"
-						data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-8.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-9.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded"
-								src="img/gen_img/logo-10.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded"
-								src="img/gen_img/logo-11.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded"
-								src="img/gen_img/logo-12.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded"
-								src="img/gen_img/logo-13.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded" src="img/gen_img/logo-9.png">
-						</div>
-						<div>
-							<img alt="" style="max-width: 90px;" class="img-fluid rounded"
-								src="img/gen_img/logo-11.png">
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>	
 
 @endsection
