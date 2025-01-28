@@ -156,8 +156,10 @@
 								<div class="card-body">
 									<div class="row">
 										<div class="col">
-											<form class="contact-form form-with-icons" action="php/contact-form.php"
+											<form class="contact-form form-with-icons" action="/submit-contact-form"
 												method="POST">
+												@csrf
+
 												<div class="contact-form-success alert alert-success d-none mt-4">
 													<strong>Success!</strong> Your message has been sent to us.
 												</div>
@@ -179,6 +181,7 @@
 																name="name" required>
 														</div>
 													</div>
+
 													<div class="form-group col-lg-12">
 														<label class="form-label mb-1 text-2">Email Address</label>
 														<div class="position-relative">
@@ -191,19 +194,20 @@
 																name="email" required>
 														</div>
 													</div>
+
 													<div class="form-group col-lg-12">
 														<label class="form-label mb-1 text-2">Phone Number</label>
 														<div class="position-relative">
-															<i class="icons icon-phone text-color-primary text-3 
-																position-absolute left-15 top-50pct transform3dy-n50"></i>
-															<input type="email" value=""
-																data-msg-required="Please enter your phone Number."
-																data-msg-email="Please enter a valid email address."
+															<i
+																class="icons icon-phone text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
+															<input type="number" value=""
+																data-msg-required="Please enter your phone number."
 																maxlength="100" class="form-control text-3 h-auto py-2"
-																name="email" required>
+																name="phone" required>
 														</div>
 													</div>
 												</div>
+
 												<div class="row">
 													<div class="form-group col">
 														<label class="form-label">City</label>
@@ -223,57 +227,39 @@
 														</div>
 													</div>
 												</div>
+
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Current Role </label>
+														<label class="form-label mb-1 text-2">Current Role</label>
 														<div class="position-relative">
 															<i
 																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
 															<input type="text" value=""
-																data-msg-required="Please enter the current role ."
+																data-msg-required="Please enter your current role."
 																maxlength="100" class="form-control text-3 h-auto py-2"
 																name="role" required>
 														</div>
 													</div>
 												</div>
+
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Current Company </label>
+														<label class="form-label mb-1 text-2">Current Company</label>
 														<div class="position-relative">
 															<i
 																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
 															<input type="text" value=""
-																data-msg-required="Please enter the current company."
+																data-msg-required="Please enter your current company."
 																maxlength="100" class="form-control text-3 h-auto py-2"
 																name="company" required>
 														</div>
 													</div>
 												</div>
 
-
-												<!-- <div class="row">
-														<div class="form-group col">
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent13Radio1" value="option1" required> Option 1
-																</label>
-															</div>
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent13Radio2" value="option2" required> Option 2
-																</label>
-															</div>
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent13Radio3" value="option3" required> Option 3
-																</label>
-															</div>
-														</div>
-													</div> -->
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Please mention few
-															pointers on the topics you need counselling </label>
+														<label class="form-label mb-1 text-2">Please mention a few
+															pointers on the topics you need counselling</label>
 														<div class="position-relative">
 															<i
 																class="icons icon-bubble text-color-primary text-3 position-absolute left-15 top-15"></i>
@@ -284,20 +270,22 @@
 														</div>
 													</div>
 												</div>
+
 												<div class="row">
 													<div class="form-group col">
 														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value=""
+															<input class="form-check-input" type="checkbox" value="1"
 																name="agree" id="tabContent13Checkbox"
-																data-msg-required="You must agree before submiting."
+																data-msg-required="You must agree before submitting."
 																required>
 															<label class="form-check-label" for="tabContent13Checkbox">
-																Allow as 2 working days to assign a mentor for your
+																Allow us 2 working days to assign a mentor for your
 																above session
 															</label>
 														</div>
 													</div>
 												</div>
+
 												<div class="row">
 													<div class="form-group col">
 														<input type="submit" value="Submit Form" class="btn btn-primary"
@@ -305,6 +293,23 @@
 													</div>
 												</div>
 											</form>
+
+											@if(session('success'))
+												<div class="alert alert-success">
+													{{ session('success') }}
+												</div>
+											@endif
+
+											@if($errors->any())
+												<div class="alert alert-danger">
+													<ul>
+														@foreach($errors->all() as $error)
+															<li>{{ $error }}</li>
+														@endforeach
+													</ul>
+												</div>
+											@endif
+
 										</div>
 									</div>
 								</div>

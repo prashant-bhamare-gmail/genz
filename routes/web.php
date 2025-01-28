@@ -6,6 +6,9 @@ use App\Http\Controllers\HrTerminologyController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,4 +61,23 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', function () {
         return view('profile'); // Protected route
     })->name('profile');
+});
+
+Route::post('/submit-contact-form', function (Illuminate\Http\Request $request) {
+    Log::info('Request Data:', $request->all());
+
+    $validated = $request->validate([
+        'name' => 'required|string|max:100',
+        'email' => 'required|email|max:100',
+        'phone' => 'required|string|max:100',
+        'city' => 'required|string|max:100',
+        'role' => 'required|string|max:100',
+        'company' => 'required|string|max:100',
+        'message' => 'required|string|max:5000',
+    ]);
+
+    Mail::to('prashantbhamre94@gmail.com') // Replace with the recipient's email address
+        ->send(new ContactFormMail($validated));
+
+    return back()->with('success', 'Your message has been sent successfully!');
 });
