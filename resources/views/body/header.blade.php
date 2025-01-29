@@ -240,12 +240,12 @@
 
 									@if (Auth::check())
 										<a href="/profile" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																						py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
+																							py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
 											data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">Profile</a>
 									@else
 										<a href="/login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																						py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
+																							py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
 											data-appear-animation-delay="800"
 									style="height: 50px;border-radius: 50px;">Login</a> @endif
 								</nav>
@@ -326,7 +326,7 @@
 											<span
 												class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
 										</div>
-										<a class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
+										<a href="{{ route('login.google') }}" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
                 font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3"
 											data-loading-text="Loading..."><i class="fab fa-google text-5 me-2"></i>
 											Login With Google</a>

@@ -25,17 +25,17 @@ use Illuminate\Support\Facades\Log;
 //     return view('welcome');
 // });
 
-Route::get('/',[HomeController::class, 'index'])->name('home');
-Route::get('/login',[HomeController::class, 'index'])->name('home');
-Route::get('/register',[HomeController::class, 'index'])->name('home');
-Route::get('/leadership-team',[HomeController::class, 'leadershipteam'])->name('leadership-team');
-Route::get('/core-team',[HomeController::class, 'coreteam'])->name('core-team');
-Route::get('/mentors',[HomeController::class, 'mentorspanel'])->name('mentors');
-Route::get('/about',[HomeController::class, 'about'])->name('about');
-Route::get('/mission-vision',[HomeController::class, 'missionvision'])->name('mission-vision');
-Route::get('/hr-terminology',[HomeController::class, 'hrterminology'])->name('hr-terminology');
-Route::get('/hr-certification',[HomeController::class, 'hrcertification'])->name('hr-certification');
-Route::get('/profile',[HomeController::class, 'profile'])->name('profile');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/login', [HomeController::class, 'index'])->name('home');
+Route::get('/register', [HomeController::class, 'index'])->name('home');
+Route::get('/leadership-team', [HomeController::class, 'leadershipteam'])->name('leadership-team');
+Route::get('/core-team', [HomeController::class, 'coreteam'])->name('core-team');
+Route::get('/mentors', [HomeController::class, 'mentorspanel'])->name('mentors');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/mission-vision', [HomeController::class, 'missionvision'])->name('mission-vision');
+Route::get('/hr-terminology', [HomeController::class, 'hrterminology'])->name('hr-terminology');
+Route::get('/hr-certification', [HomeController::class, 'hrcertification'])->name('hr-certification');
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
 
 // Process the login form
@@ -76,8 +76,12 @@ Route::post('/submit-contact-form', function (Illuminate\Http\Request $request) 
         'message' => 'required|string|max:5000',
     ]);
 
-    Mail::to('prashantbhamre94@gmail.com') // Replace with the recipient's email address
+    Mail::to('hrconnect2025@gmail.com')
         ->send(new ContactFormMail($validated));
 
     return back()->with('success', 'Your message has been sent successfully!');
 });
+
+
+Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback']);
