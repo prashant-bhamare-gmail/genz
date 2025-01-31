@@ -36,6 +36,7 @@ Route::get('/mission-vision', [HomeController::class, 'missionvision'])->name('m
 Route::get('/hr-terminology', [HomeController::class, 'hrterminology'])->name('hr-terminology');
 Route::get('/hr-certification', [HomeController::class, 'hrcertification'])->name('hr-certification');
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/reset-password', [HomeController::class, 'resetpassword'])->name('reset-password');
 
 
 // Process the login form
