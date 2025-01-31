@@ -36,7 +36,14 @@ Route::get('/mission-vision', [HomeController::class, 'missionvision'])->name('m
 Route::get('/hr-terminology', [HomeController::class, 'hrterminology'])->name('hr-terminology');
 Route::get('/hr-certification', [HomeController::class, 'hrcertification'])->name('hr-certification');
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-Route::get('/reset-password', [HomeController::class, 'resetpassword'])->name('reset-password');
+
+Route::get('forgot-password', [LoginController::class, 'showLinkRequestForm'])->name('password.request');
+// Send Reset Link
+Route::post('forgot-password', [LoginController::class, 'sendResetLinkEmail'])->name('password.email');
+// Show Reset Password Form
+Route::get('reset-password/{token}', [LoginController::class, 'showResetForm'])->name('password.reset');
+// Handle Password Reset
+Route::post('reset-password', [LoginController::class, 'reset'])->name('password.update');
 
 
 // Process the login form

@@ -312,7 +312,7 @@
 										</div>
 									</div>
 									<div class="form-group col-md-auto">
-										<a href="{{ url('/reset-password')}}"
+										<a href="{{ url('/forgot-password')}}"
 											class="text-decoration-none text-color-dark text-color-hover-primary 
 											font-weight-semibold 
 											text-2">Forgot

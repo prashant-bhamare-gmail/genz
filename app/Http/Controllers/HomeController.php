@@ -53,8 +53,5 @@ class HomeController extends Controller
 
         return view('profile');
     }
-    public function resetpassword()
-    {
-        return view('reset-password');
-    }
+   
 }
