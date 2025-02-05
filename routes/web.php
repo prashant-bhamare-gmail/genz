@@ -45,6 +45,7 @@ Route::get('reset-password/{token}', [LoginController::class, 'showResetForm'])-
 // Handle Password Reset
 Route::post('reset-password', [LoginController::class, 'reset'])->name('password.update');
 
+Route::get('/verify-otp', [HomeController::class, 'index'])->name('home');
 
 // Process the login form
 Route::post('login', [LoginController::class, 'login'])->name('login');
@@ -58,7 +59,8 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // quiz routes
 Route::get('/', [QuizController::class, 'showQuiz']);
-Route::get('/login', [QuizController::class, 'showQuiz']);
+Route::get('/login', action: [QuizController::class, 'showQuiz']);
+Route::get('/verify-otp', action: [QuizController::class, 'showQuiz']);
 Route::get('/register', [QuizController::class, 'showQuiz']);
 Route::post('/submitQuiz', [QuizController::class, 'submitQuiz'])->name('submitQuiz');
 
@@ -91,5 +93,10 @@ Route::post('/submit-contact-form', function (Illuminate\Http\Request $request) 
 });
 
 
+// Google Login
 Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback']);
+
+// otp based login
+Route::post('/send-otp', [LoginController::class, 'sendOtp'])->name('send-otp');
+Route::post('/verify-otp', [LoginController::class, 'verifyOtp'])->name('verify-otp');

@@ -240,12 +240,12 @@
 
 									@if (Auth::check())
 										<a href="/profile" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																							py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
+																																															py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
 											data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">Profile</a>
 									@else
-										<a href="/login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																							py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
+										<a data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
+																																															py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
 											data-appear-animation-delay="800"
 									style="height: 50px;border-radius: 50px;">Login</a> @endif
 								</nav>
@@ -264,7 +264,8 @@
 
 
 <!-- login Model Box -->
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+<div class="modal fade" id="login" tabindex="-1" role="dialog"
+	aria-labelledby="smallModalLabel" aria-hidden="true">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -276,75 +277,115 @@
 					<div class="row justify-content-center">
 						<div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
 
-							<form action="{{ route('login') }}" id="frmSignIn" method="post" class="needs-validation">
-								@csrf <!-- Laravel CSRF token for security -->
-								<div class="row">
-									<div class="form-group col">
-										<label class="form-label text-color-dark text-3">Email address <span
-												class="text-color-danger">*</span></label>
-										<input type="email" name="email" value="{{ old('email') }}"
-											class="form-control form-control-lg text-4 @error('email') is-invalid @enderror"
-											required>
-										@error('email')
-											<div class="invalid-feedback">{{ $message }}</div>
-										@enderror
-									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col">
-										<label class="form-label text-color-dark text-3">Password <span
-												class="text-color-danger">*</span></label>
-										<input type="password" name="password"
-											class="form-control form-control-lg text-4 @error('password') is-invalid @enderror"
-											required>
-										@error('password')
-											<div class="invalid-feedback">{{ $message }}</div>
-										@enderror
-									</div>
-								</div>
-								<div class="row justify-content-between">
-									<div class="form-group col-md-auto">
-										<div class="custom-control custom-checkbox">
-											<input type="checkbox" name="remember" class="custom-control-input"
-												id="rememberme">
-											<label class="form-label custom-control-label cur-pointer text-2"
-												for="rememberme">Remember Me</label>
+							<!-- Regular Login Form -->
+							<div id="regular-login">
+								<form action="{{ route('login') }}" id="frmSignIn" method="post"
+									class="needs-validation">
+									@csrf <!-- Laravel CSRF token for security -->
+									<div class="row">
+										<div class="form-group col">
+											<label class="form-label text-color-dark text-3">Email address <span
+													class="text-color-danger">*</span></label>
+											<input type="email" name="email" value="{{ old('email') }}"
+												class="form-control form-control-lg text-4 @error('email') is-invalid @enderror"
+												required>
+											@error('email')
+												<div class="invalid-feedback">{{ $message }}</div>
+											@enderror
 										</div>
 									</div>
-									<div class="form-group col-md-auto">
-										<a href="{{ url('/forgot-password')}}"
-											class="text-decoration-none text-color-dark text-color-hover-primary 
-											font-weight-semibold 
-											text-2">Forgot
-											Password?</a>
-									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col">
-										<button type="submit"
-											class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3"
-											data-loading-text="Loading...">Login</button>
-										<div class="divider">
-											<span
-												class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
+									<div class="row">
+										<div class="form-group col">
+											<label class="form-label text-color-dark text-3">Password <span
+													class="text-color-danger">*</span></label>
+											<input type="password" name="password"
+												class="form-control form-control-lg text-4 @error('password') is-invalid @enderror"
+												required>
+											@error('password')
+												<div class="invalid-feedback">{{ $message }}</div>
+											@enderror
 										</div>
-										<a href="{{ route('login.google') }}" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
-                							font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3"
-											data-loading-text="Loading..."><i class="fab fa-google text-5 me-2"></i>
-											Login With Google</a>
 									</div>
-								</div>
-							</form>
+									<div class="row justify-content-between">
+										<div class="form-group col-md-auto">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" name="remember" class="custom-control-input"
+													id="rememberme">
+												<label class="form-label custom-control-label cur-pointer text-2"
+													for="rememberme">Remember Me</label>
+											</div>
+										</div>
+										<div class="form-group col-md-auto">
+											<a href="{{ url('/forgot-password')}}" class="text-decoration-none text-color-dark text-color-hover-primary 
+												font-weight-semibold text-2">Forgot Password?</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col">
+											<button type="submit"
+												class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3"
+												data-loading-text="Loading...">Login</button>
 
-							<div class="tab_end_text">Don't have an account? <a href="/register">Create an Account</a>
+											<div class="divider">
+												<span
+													class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
+											</div>
+
+											<div class="row">
+												<div class="col-md-6">
+													<button type="button" id="showOtpForm" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
+													 font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3">
+														Login With OTP
+													</button>
+												</div>
+												<div class="col-md-6">
+													<a href="{{ route('login.google') }}" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
+													 font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3"
+														data-loading-text="Loading...">
+														Login With Google
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+
+								<div class="tab_end_text">Don't have an account? <a href="" data-bs-toggle="modal"
+										data-bs-target="#signup">Create an
+										Account</a></div>
 							</div>
-						</div>
 
+							<!-- Login with OTP Form (Initially Hidden) -->
+							<div id="otp-login" style="display: none;">
+								<form action="{{ route('send-otp') }}" id="frmOtpSignIn" method="post">
+									@csrf
+									<div class="row">
+										<div class="form-group col">
+											<label class="form-label text-color-dark text-3">Email address <span
+													class="text-color-danger">*</span></label>
+											<input type="email" name="otpemail" value="{{ old('email') }}"
+												class="form-control form-control-lg text-4 @error('otpemail', 'otp_form') is-invalid @enderror"
+												required>
+											@error('otpemail', 'otp_form') <!-- Specify error bag -->
+												<div class="invalid-feedback">{{ $message }}</div>
+											@enderror
+										</div>
+									</div>
+									<button type="submit"
+										class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3"
+										data-loading-text="Loading...">Send OTP</button>
+
+									<!-- Button to go back to regular login -->
+									<button type="button" id="showLoginForm"
+										class="btn btn-link w-100 text-center mt-3">
+										Back to Login
+									</button>
+								</form>
+							</div>
+
+						</div>
 					</div>
 				</div>
-				<!-- <div class="modal-footer">
-						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-					</div> -->
 			</div>
 		</div>
 	</div>
@@ -352,7 +393,7 @@
 <!-- Model Box -->
 
 <!-- sign up Model Box -->
-<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true" >
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -363,6 +404,8 @@
 				<div class="row mb-4">
 					<div class="row justify-content-center">
 						<div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
+
+
 
 							<form action="/register" method="POST" class="needs-validation" novalidate>
 								@csrf
@@ -464,43 +507,6 @@
 							</form>
 
 
-
-							<script>
-								(function () {
-									'use strict';
-									document.addEventListener('DOMContentLoaded', function () {
-										const forms = document.querySelectorAll('.needs-validation');
-										Array.prototype.slice.call(forms).forEach(function (form) {
-											form.addEventListener('submit', function (event) {
-												if (!form.checkValidity()) {
-													event.preventDefault();
-													event.stopPropagation();
-												}
-												form.classList.add('was-validated');
-											}, false);
-										});
-									});
-								})();
-
-								document.addEventListener('DOMContentLoaded', function () {
-									const passwordField = document.getElementById('password');
-									const confirmPasswordField = document.getElementById('password_confirmation');
-									const confirmPasswordFeedback = document.getElementById('confirm-password-feedback');
-
-									// Add input event listener to confirm password field
-									confirmPasswordField.addEventListener('input', function () {
-										if (passwordField.value !== confirmPasswordField.value) {
-											confirmPasswordField.setCustomValidity("Passwords do not match.");
-											confirmPasswordFeedback.textContent = "Passwords do not match.";
-										} else {
-											confirmPasswordField.setCustomValidity("");
-											confirmPasswordFeedback.textContent = "Passwords match.";
-										}
-									});
-								});
-							</script>
-
-
 						</div>
 
 					</div>
@@ -513,20 +519,112 @@
 	</div>
 </div>
 
+<!-- otp login Model Box -->
+<div class="modal fade" id="verifyotp" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="font-weight-bold text-5 mb-0">Verify OTP</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="row mb-4">
+					<div class="row justify-content-center">
+						<div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
+
+							@if (session('success'))
+								<div class="alert alert-success">
+									{{ session('success') }}
+								</div>
+							@endif
+							<form action="{{ route('verify-otp') }}" id="verify-otp" method="post"
+								class="needs-validation">
+								@csrf
+								<!-- Hidden field to pass email -->
+								<input type="hidden" name="email" value="{{ session('otp_email') }}">
+								<div class="row">
+									<div class="form-group col">
+										<label class="form-label text-color-dark text-3">OTP <span
+												class="text-color-danger">*</span></label>
+										<input type="text" name="otp" value="{{ old('otp') }}"
+											class="form-control form-control-lg text-4 @error('otp', 'otp_form') is-invalid @enderror"
+											required pattern="\d{6}" maxlength="6" placeholder="Enter 6-digit OTP">
+										@error('otp', 'otp_form')
+											<div class="invalid-feedback">{{ $message }}</div>
+										@enderror
+									</div>
+								</div>
+								<button type="submit"
+									class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3"
+									data-loading-text="Loading...">Verify OTP</button>
+							</form>
+
+						</div>
+						<!-- end Login with OTP Form -->
+					</div>
+				</div>
+				<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+					</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const passwordField = document.getElementById('password');
+		const confirmPasswordField = document.getElementById('password_confirmation');
+		const confirmPasswordFeedback = document.getElementById('confirm-password-feedback');
+
+		if (passwordField && confirmPasswordField) { // Prevents errors if fields are missing
+			confirmPasswordField.addEventListener('input', function () {
+				if (passwordField.value !== confirmPasswordField.value) {
+					confirmPasswordField.setCustomValidity("Passwords do not match.");
+					confirmPasswordFeedback.textContent = "Passwords do not match.";
+					confirmPasswordFeedback.style.color = "red";
+				} else {
+					confirmPasswordField.setCustomValidity("");
+					confirmPasswordFeedback.textContent = "Passwords match.";
+					confirmPasswordFeedback.style.color = "green";
+				}
+			});
+		}
+	});
+
+	document.getElementById("showOtpForm").addEventListener("click", function () {
+		document.getElementById("regular-login").style.display = "none";
+		document.getElementById("otp-login").style.display = "block";
+	});
+
+	document.getElementById("showLoginForm").addEventListener("click", function () {
+		document.getElementById("regular-login").style.display = "block";
+		document.getElementById("otp-login").style.display = "none";
+	});
+
 	document.addEventListener("DOMContentLoaded", function () {
 		// Get the current page URL
 		const currentURL = window.location.href;
-
+		const loginError = "{{ session('loginError') }}";
+        const registerError = "{{ session('registerError') }}";
+		console.log('loginError',loginError);
+		console.log('registerError',registerError);
 		// Check if the URL contains 'login'
-		if (currentURL.includes('login')) {
+		if (currentURL.includes('login') || loginError) {
 			// Trigger the modal
 			const loginModal = new bootstrap.Modal(document.getElementById('login'), {});
 			loginModal.show();
 		}
-		if (currentURL.includes('register')) {
+		if (currentURL.includes('register') || registerError) {
 			const signupModal = new bootstrap.Modal(document.getElementById('signup'), {});
 			signupModal.show();
 		}
+
+		if (currentURL.includes('verify-otp')) {
+			const verifyotp = new bootstrap.Modal(document.getElementById('verifyotp'), {});
+			verifyotp.show();
+		}
 	});
+
+
 </script>
