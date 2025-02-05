@@ -240,12 +240,12 @@
 
 									@if (Auth::check())
 										<a href="/profile" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																													py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
+																																															py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
 											data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">Profile</a>
 									@else
-										<a href="/login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																													py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
+										<a data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
+																																															py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
 											data-appear-animation-delay="800"
 									style="height: 50px;border-radius: 50px;">Login</a> @endif
 								</nav>
@@ -264,7 +264,8 @@
 
 
 <!-- login Model Box -->
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+<div class="modal fade" id="login" tabindex="-1" role="dialog"
+	aria-labelledby="smallModalLabel" aria-hidden="true">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -349,7 +350,8 @@
 									</div>
 								</form>
 
-								<div class="tab_end_text">Don't have an account? <a href="/register">Create an
+								<div class="tab_end_text">Don't have an account? <a href="" data-bs-toggle="modal"
+										data-bs-target="#signup">Create an
 										Account</a></div>
 							</div>
 
@@ -391,7 +393,7 @@
 <!-- Model Box -->
 
 <!-- sign up Model Box -->
-<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true" >
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -568,7 +570,6 @@
 		</div>
 	</div>
 </div>
-<!-- Model Box -->
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
@@ -604,14 +605,17 @@
 	document.addEventListener("DOMContentLoaded", function () {
 		// Get the current page URL
 		const currentURL = window.location.href;
-
+		const loginError = "{{ session('loginError') }}";
+        const registerError = "{{ session('registerError') }}";
+		console.log('loginError',loginError);
+		console.log('registerError',registerError);
 		// Check if the URL contains 'login'
-		if (currentURL.includes('login')) {
+		if (currentURL.includes('login') || loginError) {
 			// Trigger the modal
 			const loginModal = new bootstrap.Modal(document.getElementById('login'), {});
 			loginModal.show();
 		}
-		if (currentURL.includes('register')) {
+		if (currentURL.includes('register') || registerError) {
 			const signupModal = new bootstrap.Modal(document.getElementById('signup'), {});
 			signupModal.show();
 		}
@@ -621,4 +625,6 @@
 			verifyotp.show();
 		}
 	});
+
+
 </script>

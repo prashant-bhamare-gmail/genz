@@ -26,9 +26,11 @@ class RegisterController extends Controller
 
         // If validation fails, return errors
         if ($validator->fails()) {
-            return redirect('/register')
-                    ->withErrors($validator)
-                    ->withInput();
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput()
+                ->with('registerError', true);
+
         }
 
         // Merge first name and last name to create full name
@@ -36,7 +38,7 @@ class RegisterController extends Controller
 
         // Check if the email already exists
         if (User::where('email', $request->email)->exists()) {
-            return redirect('/register')->withErrors(['email' => 'This email is already registered.']);
+            return redirect()->back()->withErrors(['email' => 'This email is already registered.'])->with('registerError', true);
         }
 
         // Create a new user instance after valid registration

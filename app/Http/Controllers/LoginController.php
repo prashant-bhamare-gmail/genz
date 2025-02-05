@@ -29,8 +29,13 @@ class LoginController extends Controller
         if (Auth::attempt($request->only('email', 'password'), $request->has('remember'))) {
             return redirect()->route('profile'); // Redirect to the intended route
         }
+        // Store the login error message in the session
+        return redirect()->back()
+            ->withInput($request->only('email')) // Keep email input after refresh
+            ->with('loginError', true)
+            ->withErrors(['email' => 'Invalid credentials']);
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        // return back()->withErrors(['loginError' => true, 'email' => 'Invalid credentials']);
     }
 
     public function logout()
