@@ -35,21 +35,24 @@
 	<link rel="stylesheet" href="{{ asset('') }}vendor/magnific-popup/magnific-popup.min.css">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" href="css/theme.css">
-	<link rel="stylesheet" href="css/theme-elements.css">
-	<link rel="stylesheet" href="css/theme-blog.css">
-	<link rel="stylesheet" href="css/theme-shop.css">
+	<link rel="stylesheet" href="{{ asset('') }}css/theme.css">
+	<link rel="stylesheet" href="{{ asset('') }}css/theme-elements.css">
+	<link rel="stylesheet" href="{{ asset('') }}css/theme-blog.css">
+	<link rel="stylesheet" href="{{ asset('') }}css/theme-shop.css">
 
 	<!-- Demo CSS -->
-	<link rel="stylesheet" href="css/demos/demo-business-consulting.css">
+	<!-- <link rel="stylesheet" href="css/demos/demo-business-consulting.css"> -->
+	<link href="{{ asset('css/demos/demo-business-consulting.css') }}" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="css/demos/demo-business-consulting-2.css"> -->
 
 	<!-- Skin CSS -->
-	<link id="skinCSS" rel="stylesheet" href="css/skins/skin-business-consulting.css">
+	<!-- <link id="skinCSS" rel="stylesheet" href="css/skins/skin-business-consulting.css"> -->
+	<link href="{{ asset('css/skins/skin-business-consulting.css') }}" rel="stylesheet">
 	<!-- <link id="skinCSS" rel="stylesheet" href="css/skins/skin-business-consulting-2.css"> -->
 
 	<!-- Theme Custom CSS -->
-	<link rel="stylesheet" href="css/custom.css">
+	<!-- <link rel="stylesheet" href="css/custom.css"> -->
+	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 </head>
 

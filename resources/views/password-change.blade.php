@@ -3,24 +3,25 @@
 
 <div role="main" class="main">
 
-    <section class="page-header page-header-modern custom-page-header bg-color-quaternary">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-                    <h1 class="font-weight-bold text-9 text-color-secondary appear-animation"
-                        data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">About Us</h1>
-                </div>
-                <div class="col-md-4 order-1 order-md-2 align-self-center">
-                    <ul class="breadcrumb d-block text-md-end appear-animation"
-                        data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-                        <li><a href="#">Home</a></li>
-                        <li class="active">About Us</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
+	<section class="page-header page-header-modern custom-page-header bg-color-quaternary">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+					<h1 class="font-weight-bold text-9 text-color-secondary appear-animation"
+						data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Reset Password
+					</h1>
+				</div>
+				<div class="col-md-4 order-1 order-md-2 align-self-center">
+					<ul class="breadcrumb d-block text-md-end appear-animation"
+						data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+						<li><a href="#">Home</a></li>
+						<li class="active">Reset Password</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
     <div class="container py-4">
 
@@ -79,7 +80,7 @@
             </form>
         </div>
     </div>
-</div>
+    </div>
 </div>
 
 @endsection
