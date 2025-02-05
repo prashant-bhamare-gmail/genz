@@ -25,7 +25,7 @@
 					<div class="row align-items-center">
 						<div class="col-lg-5 pt-3 pt-lg-0 pb-4 pb-lg-0">
 							<div class="card border-radius-0 box-shadow-1 border-0 me-lg-3 p-3 mb-3 mb-lg-0">
-								<img src="img/demos/business-consulting-2/bg/bg-1.jpg" class="img-fluid border-radius-0" alt="">
+								<img src="img/gen_img/mission.jpg" class="img-fluid border-radius-0" alt="">
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -61,7 +61,7 @@
 						</div>
 						<div class="col-lg-5 pt-3 pt-lg-0 pb-4 pb-lg-0">
 							<div class="card border-radius-0 box-shadow-1 border-0 me-lg-3 p-3 mb-3 mb-lg-0">
-								<img src="img/demos/business-consulting-2/bg/bg-1.jpg" class="img-fluid border-radius-0" alt="">
+								<img src="img/gen_img/vision.jpg" class="img-fluid border-radius-0" alt="">
 							</div>
 						</div>
 					</div>

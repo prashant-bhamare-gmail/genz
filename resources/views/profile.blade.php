@@ -103,7 +103,7 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Cureent
+							<label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Current
 								Role</label>
 							<div class="col-lg-9">
 								<input class="form-control text-3 h-auto py-2" type="text" name="company" value="">
@@ -111,14 +111,14 @@
 						</div>
 						<div class="form-group row">
 							<label
-								class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Description</label>
+								class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Comapny Name</label>
 							<div class="col-lg-9">
 								<input class="form-control text-3 h-auto py-2" type="text" name="description" value="">
 							</div>
 						</div>
 						<div class="form-group row">
 							<label
-								class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Website</label>
+								class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Phone</label>
 							<div class="col-lg-9">
 								<input class="form-control text-3 h-auto py-2" type="url" name="website" value="">
 							</div>
@@ -199,26 +199,165 @@
 						</div>
 					</section>
 				</div>
-				<!-- <div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple3">
-								<h4>500+ Google Fonts</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
-								<img class="float-start" width="200" src="img/device.png" alt="">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+				<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple3">
+					<section class="call-to-action featured featured-primary mb-5">
+						<div class="col-sm-12 col-lg-12">
+							<div class="call-to-action-content">
+							
+								<h3>You do not have an active membership. 
+									<a href="#" data-bs-toggle="modal" data-bs-target="#pricing"> 
+										<strong class="font-weight-extra-bold"> Choose a membership level.</strong> 
+									</a>
+								</h3>
+								
 							</div>
-							<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple4">
-								<h4>Colors</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+						</div>
+						<!-- <div class="col-sm-3 col-lg-3">
+							<div class="call-to-action-btn">
+								<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
 							</div>
-							<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple5">
-								<h4>Sliders</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
-							</div> -->
+						</div> -->
+					</section>
+
+					
+					<div class="col-lg-12">
+						<div class="card border-width-3 border-radius-0 border-color-success">
+							<div class="card-body text-center">
+								<p class="text-color-dark font-weight-bold text-4-5 mb-0"><i class="fas fa-check text-color-success me-1"></i> Thank You. Your Order has been received.</p>
+							</div>
+						</div>
+						<div class="d-flex flex-column flex-md-row justify-content-between py-3 px-4 my-4">
+							<div class="text-center">
+								<span>
+									Start Date <br>
+									<strong class="text-color-dark">January 25, 2025</strong>
+								</span>
+							</div>
+							<div class="text-center mt-4 mt-md-0">
+								<span>
+									End Date <br>
+									<strong class="text-color-dark">January 25, 2026</strong>
+								</span>
+							</div>
+							<div class="text-center mt-4 mt-md-0">
+								<span>
+									Email <br>
+									<strong class="text-color-dark">abc@abc.com</strong>
+								</span>
+							</div>
+							<div class="text-center mt-4 mt-md-0">
+								<span>
+									Total <br>
+									<strong class="text-color-dark">$30</strong>
+								</span>
+							</div>
+							<div class="text-center mt-4 mt-md-0">
+								<span>
+									Your Plan <br>
+									<strong class="text-color-dark">1 Year</strong>
+								</span>
+							</div>
+								<!-- <div class="text-center mt-4 mt-md-0">
+									<div class="form-group row pb-4">
+										<select class="form-control mb-3">
+											<option>Select Plan </option>
+											<option>1 Year</option>
+											<option>06 Months</option>
+										</select>
+									</div>
+								</div> -->
+							</div>
+						</div>
+						
+				</div>
+
+				<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple5">
+
+					<div class="alert alert-info">
+						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+					</div>
+					<div class="alert alert-info">
+						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+					</div>
+					<div class="alert alert-info">
+						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+					</div>
+					<div class="alert alert-info">
+						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+					</div>
+				</div>
+				
 			</div>
 		</div>
 
 	</div>
 </div>
+
+<!-- Pricing Model Box -->
+<div class="modal fade" id="pricing" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="font-weight-bold text-5 mb-0">Pricing Table</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="row mb-4">
+					<div class="row justify-content-center">
+						<div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
+							<div class="pricing-table row g-0 mb-4">
+								<div class="col-md-6">
+									<div class="plan">
+										<div class="plan-header">
+											<h3>Basic</h3>
+										</div>
+										<div class="plan-price">
+											<span class="price"><span class="price-unit">&#8377;</span>1500</span>
+											<label class="price-label">Monthly</label>
+										</div>
+										<div class="plan-features">
+											<ul>
+												<li>1GB Disk Space</li>
+												<li>10GB Monthly Bandwith</li>
+												<li>2 Email Accounts</li>
+												<li>Unlimited Subdomains</li>
+											</ul>
+										</div>
+										<div class="plan-footer">
+											<a href="#" class="btn btn-dark btn-modern btn-outline py-2 px-4">Book Now</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="plan">
+										<div class="plan-header">
+											<h3>Standard</h3>
+										</div>
+										<div class="plan-price">
+											<span class="price"><span class="price-unit">&#8377;</span>2000</span>
+											<label class="price-label">Yearly</label>
+										</div>
+										<div class="plan-features">
+											<ul>
+												<li>3GB Disk Space</li>
+												<li>25GB Monthly Bandwith</li>
+												<li>5 Email Accounts</li>
+												<li>Unlimited Subdomains</li>
+											</ul>
+										</div>
+										<div class="plan-footer">
+											<a href="#" class="btn btn-dark btn-modern btn-outline py-2 px-4">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Model Box -->
 
 @endsection

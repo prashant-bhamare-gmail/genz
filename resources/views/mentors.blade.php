@@ -38,7 +38,7 @@
 
 						<div class="row team-list sort-destination" data-sort-id="team">
 							<div class="col-md-3 isotope-item leadership">
-								<div class="team-item mb-4 p-0 pb-2" data-bs-toggle="modal" data-bs-target="#largeModal">
+								<div class="team-item mb-4 p-0 pb-2" data-bs-toggle="modal" data-bs-target="#Avantika">
 									<a href="#" class="text-decoration-none">
 										<span class="image-wrapper">
 											<img src="img/gen_img/team-4.jpg" alt="" class="img-fluid" />
@@ -47,19 +47,19 @@
 									
 									<div class="team-infos">
 										<a href="#" class="text-decoration-none">
-											<span class="team-member-name text-color-dark font-weight-semibold text-4">Preeti Ahuja</span>
+											<span class="team-member-name text-color-dark font-weight-semibold text-4">Avantika Bhardwaj</span>
 											<span class="team-member-desc font-weight-light">Current Work</span>
 										</a>
 									</div>
 								</div>
 
 								<!-- Model Box -->
-								<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel" aria-hidden="true">
+								<div class="modal fade" id="Avantika" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel" aria-hidden="true">
 									<div class="modal-dialog modal-xl">
 										<div class="modal-content">
 											<div class="modal-header">
 												<div class="">
-												<h4 class="modal-title" id="largeModalLabel">Preeti Ahuja</h4>
+												<h4 class="modal-title" id="largeModalLabel">Avantika Bhardwaj</h4>
 												<p class="lead pt-1">CEO &amp; Founder</p>
 												</div>
 												
@@ -91,10 +91,10 @@
 															adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. 
 															Vestibulum ante ipsum primis.</p>
 
-														<ul class="list list-icons">
+														<!-- <ul class="list list-icons">
 															<li><i class="icon-phone icons"></i> <strong>Phone:</strong> (123) 456-789</li>
 															<li><i class="icon-envelope icons"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
-														</ul>
+														</ul> -->
 													</div>
 												</div>
 												<div class="row mt-4">

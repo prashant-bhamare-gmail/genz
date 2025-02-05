@@ -28,7 +28,7 @@
 									A Global community of 150,000 + HR Professionals & Business Leaders
 								</h4>
 
-								<a href="https://api.whatsapp.com/send?phone=911234567890" target="_blank"
+								<a href="https://chat.whatsapp.com/DZgVl8LD692FjyVnHPyYt8" target="_blank"
 									class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation"
 									data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Join
 									Whatsapp Group

@@ -329,7 +329,7 @@
 												class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
 										</div>
 										<a href="{{ route('login.google') }}" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
-                font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3"
+                							font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3"
 											data-loading-text="Loading..."><i class="fab fa-google text-5 me-2"></i>
 											Login With Google</a>
 									</div>
