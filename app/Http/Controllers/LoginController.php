@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Socialite;
+use Laravel\Socialite\Facades\Socialite;
 use Exception;
 use App\Models\User;
 
@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 
 class LoginController extends Controller
@@ -107,5 +110,62 @@ class LoginController extends Controller
         return $status === Password::PASSWORD_RESET
             ? redirect()->route('login')->with('status', __($status))
             : back()->withErrors(['email' => [__($status)]]);
+    }
+
+    // Send OTP to the user's email
+    public function sendOtp(Request $request)
+    {
+        $request->validate(['otpemail' => 'required|email'], [], [], 'otp_form');
+
+        $otp = rand(100000, 999999);
+        $email = $request->otpemail;
+
+        // Store OTP in session (You can use Redis/DB for scalability)
+        Session::put('otp_' . $email, $otp);
+        Session::put('otp_expiry_' . $email, now()->addMinutes(30));
+        Session::put('otp_email', $email);
+
+        // Send OTP via email
+        Mail::raw("Your OTP is: $otp", function ($message) use ($email) {
+            $message->to($email)
+                ->subject('Your Login OTP');
+        });
+
+        return redirect()->route('verify-otp')->with('success', 'OTP sent successfully to ' . $email);
+    }
+
+
+    public function verifyOtp(Request $request)
+    {
+        $request->validate([
+            'otp' => 'required|digits:6'
+        ]);
+
+        $email = $request->email;
+        $otp = $request->otp;
+
+        if (Session::get('otp_' . $email) != $otp || now()->gt(Session::get('otp_expiry_' . $email))) {
+            return response()->json(['message' => 'Invalid or expired OTP'], 422);
+        }
+
+        // Check if user exists
+        $user = User::where('email', $email)->first();
+
+        if (!$user) {
+            // Create user if not exists
+            $user = User::create([
+                'name' => explode('@', $email)[0],
+                'email' => $email,
+                'password' => Hash::make($otp) // Set dummy password
+            ]);
+        }
+
+        // Login the user
+        Auth::login($user);
+
+        // Clear OTP from session
+        Session::forget(['otp_' . $email, 'otp_expiry_' . $email]);
+
+        return redirect()->route('profile')->with('success', 'Logged in successfully');
     }
 }
