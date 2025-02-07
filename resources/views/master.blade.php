@@ -39,6 +39,12 @@
 	<link rel="stylesheet" href="{{ asset('') }}css/theme-elements.css">
 	<link rel="stylesheet" href="{{ asset('') }}css/theme-blog.css">
 	<link rel="stylesheet" href="{{ asset('') }}css/theme-shop.css">
+	
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="{{ asset('') }}css/demos/demo-church.css">
+
+	<!-- Skin CSS -->
+	<link id="skinCSS" rel="stylesheet" href="{{ asset('') }}css/skins/skin-church.css">
 
 	<!-- Demo CSS -->
 	<!-- <link rel="stylesheet" href="css/demos/demo-business-consulting.css"> -->

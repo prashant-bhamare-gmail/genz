@@ -56,10 +56,10 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#tabsNavigationVertSimple2" data-bs-toggle="tab">Download</a>
 							</li>
-							<li class="nav-item">
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="#tabsNavigationVertSimple3"
 									data-bs-toggle="tab">Membership</a>
-							</li>
+							</li> -->
 							<li class="nav-item">
 								<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Social
 									Media</a>
