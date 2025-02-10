@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller
 {
+    public function showLogin(Request $request) {
+        $eventId = session('eventId');
+        return view('index', compact('eventId'));
+    }
+
     // Handle login
     public function login(Request $request)
     {

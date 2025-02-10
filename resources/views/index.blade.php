@@ -28,7 +28,7 @@
 									A Global community of 150,000 + HR Professionals & Business Leaders
 								</h4>
 								
-								<a href="#" 
+								<a href="{{ route('event') }}" 
 									class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-4 appear-animation" 
 									data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Book Event
 								</a>
