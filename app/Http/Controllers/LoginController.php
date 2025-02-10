@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller
 {
-    public function showLogin(Request $request) {
+    public function showLogin(Request $request)
+    {
         $eventId = session('eventId');
         return view('index', compact('eventId'));
     }
@@ -32,7 +33,9 @@ class LoginController extends Controller
 
         // Attempt authentication
         if (Auth::attempt($request->only('email', 'password'), $request->has('remember'))) {
-            return redirect()->route('profile'); // Redirect to the intended route
+            $redirectTo = $request->input('redirect_to', route('profile'));
+            return redirect($redirectTo); // Redirect to the intended route
+
         }
         // Store the login error message in the session
         return redirect()->back()
@@ -49,8 +52,9 @@ class LoginController extends Controller
         return redirect('/')->with('message', 'Logged out successfully!');
     }
 
-    public function redirectToGoogle()
+    public function redirectToGoogle(Request $request)
     {
+        session(['redirect_to' => $request->input('redirect_to', route('profile'))]);
         return Socialite::driver('google')->redirect();
     }
 
@@ -75,7 +79,11 @@ class LoginController extends Controller
             // Log the user in
             Auth::login($user);
 
-            return redirect()->route('profile')->with('success', 'Logged in successfully');
+            $redirectTo = session('redirect_to', route('profile'));
+            session()->forget('redirect_to'); // Clear session after use
+
+
+            return redirect($redirectTo);
         } catch (Exception $e) {
             return redirect('login')->with('error', 'Google login failed');
         }
@@ -125,6 +133,7 @@ class LoginController extends Controller
     // Send OTP to the user's email
     public function sendOtp(Request $request)
     {
+        session(['redirect_to' => $request->input('redirect_to', route('profile'))]);
         $request->validate(['otpemail' => 'required|email'], [], [], 'otp_form');
 
         $otp = rand(100000, 999999);
@@ -172,10 +181,13 @@ class LoginController extends Controller
 
         // Login the user
         Auth::login($user);
+        $redirectTo = session('redirect_to', route('profile'));
+        session()->forget('redirect_to'); // Clear session after use
 
         // Clear OTP from session
         Session::forget(['otp_' . $email, 'otp_expiry_' . $email]);
 
-        return redirect()->route('profile')->with('success', 'Logged in successfully');
+
+        return redirect($redirectTo);
     }
 }

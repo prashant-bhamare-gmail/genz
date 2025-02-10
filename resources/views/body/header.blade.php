@@ -241,13 +241,13 @@
 
 									@if (Auth::check())
 										<a href="/profile" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																																py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
-											data-appear-animation-delay="800"
+																																																				py-3 btn-px-4 appear-animation"
+											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">Profile</a>
 									@else
 										<a data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																																py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter"
-											data-appear-animation-delay="800"
+																																																				py-3 btn-px-4 appear-animation"
+											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
 									style="height: 50px;border-radius: 50px;">Login</a> @endif
 								</nav>
 							</div>
@@ -281,7 +281,9 @@
 							<div id="regular-login">
 								<form action="{{ route('login') }}" id="frmSignIn" method="post"
 									class="needs-validation">
-									@csrf <!-- Laravel CSRF token for security -->
+									@csrf
+									<input type="hidden" name="redirect_to"
+										value="{{ request('redirect_to', url()->previous()) }}">
 									<div class="row">
 										<div class="form-group col">
 											<label class="form-label text-color-dark text-3">Email address <span
@@ -339,7 +341,8 @@
 													</button>
 												</div>
 												<div class="col-md-6">
-													<a href="{{ route('login.google') }}" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
+													<a href="{{ route('login.google', ['redirect_to' => request('redirect_to')]) }}"
+														class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
 													 font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3"
 														data-loading-text="Loading...">
 														Login With Google
@@ -357,7 +360,8 @@
 
 							<!-- Login with OTP Form (Initially Hidden) -->
 							<div id="otp-login" style="display: none;">
-								<form action="{{ route('send-otp') }}" id="frmOtpSignIn" method="post">
+								<form action="{{ route('send-otp', ['redirect_to' => request('redirect_to')]) }}"
+									id="frmOtpSignIn" method="post">
 									@csrf
 									<div class="row">
 										<div class="form-group col">
@@ -607,10 +611,13 @@
 		const currentURL = window.location.href;
 		const loginError = "{{ session('loginError') }}";
 		const registerError = "{{ session('registerError') }}";
-		console.log('loginError', loginError);
-		console.log('registerError', registerError);
+
+		const urlParams = new URLSearchParams(window.location.search);
+
+		const showLogin = urlParams.get("showLogin");
+
 		// Check if the URL contains 'login'
-		if (currentURL.includes('login') || currentURL.includes('login-event') || loginError) {
+		if (currentURL.includes('login') || showLogin || loginError) {
 			// Trigger the modal
 			const loginModal = new bootstrap.Modal(document.getElementById('login'), {});
 			loginModal.show();

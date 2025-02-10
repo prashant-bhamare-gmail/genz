@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class EventController extends Controller
 {
@@ -49,6 +50,13 @@ class EventController extends Controller
     // Event Details
     public function eventbooking($eventId)
     {
+        if (!Auth::check() && !Session::has('guest_logged_in')) {
+            return redirect()->route('event', [
+                'showLogin' => true,
+                'guestLogin' => true,
+                'redirect_to' => route('event-booking', ['eventId' => $eventId])
+            ]);
+        }
         $event = Event::findOrFail($eventId);
         return view('event-booking', compact('event'));
         
