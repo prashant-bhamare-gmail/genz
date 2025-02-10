@@ -76,7 +76,7 @@
 																								method="POST">
 																								@csrf
 																								@method('DELETE')
-																								<button type="submit" class="btn btn-danger">Cancel</button>
+																								<button type="submit" class="btn btn-danger">Cancel Booking</button>
 																							</form>
 														@else
 															<a href="{{ route('event-booking', ['eventId' => $nextEvent->id]) }}"
