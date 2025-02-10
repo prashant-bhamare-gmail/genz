@@ -46,9 +46,16 @@ class LoginController extends Controller
         // return back()->withErrors(['loginError' => true, 'email' => 'Invalid credentials']);
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
+        Session::flush();
+
+        // Logout user
         Auth::logout();
+
+        // Regenerate session ID to prevent session fixation attacks
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect('/')->with('message', 'Logged out successfully!');
     }
 

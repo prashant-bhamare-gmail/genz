@@ -9,12 +9,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\EventRegistrationMail;
+
 
 class EventController extends Controller
 {
     public function eventpage()
     {
         $today = Carbon::today();
+        $user = auth()->user(); // Get the logged-in user
 
         // Completed Events (Last 4 past events)
         $completedEvents = Event::where('event_date', '<', $today)
@@ -33,11 +36,18 @@ class EventController extends Controller
             ->orderBy('event_date', 'asc')
             ->get();
 
-        // Log::info('Completed Events: ' . $completedEvents);
-        // Log::info('Next Event: ' . $nextEvent);
-        // Log::info('Upcoming Events: ' . $upcomingEvents);
-        return view('event', compact('completedEvents', 'nextEvent', 'upcomingEvents'));
+        // Check if the user is already registered for these events
+        $registeredEvents = [];
+        if ($user) {
+            $registeredEvents = EventRegistration::where('user_id', $user->id)
+                ->get(['id','event_id'])
+                ->toArray(); // Get IDs of registered events
+        }
+        Log::info('registeredEvents: ' . json_encode($registeredEvents));
+
+        return view('event', compact('completedEvents', 'nextEvent', 'upcomingEvents', 'registeredEvents'));
     }
+
 
     public function checkLogin($eventId)
     {
@@ -52,6 +62,9 @@ class EventController extends Controller
     // Event Details
     public function eventbooking($eventId)
     {
+        Log::info('Event id:' . $eventId);
+        Log::info('User:' . Auth::user());
+        Log::info('Session:' . json_encode(Session::all()));
         if (!Auth::check() && !Session::has('guest_logged_in')) {
             return redirect()->route('event', [
                 'showLogin' => true,
@@ -88,6 +101,8 @@ class EventController extends Controller
             'contact_number' => $request->contact_number,
             'interested' => $request->interested,
         ]);
+
+        Mail::to($request->email)->send(new EventRegistrationMail($event, $user ?? (object) ['name' => $request->name]));
 
         return response()->json([
             'message' => 'Successfully registered for the event!'
@@ -146,5 +161,53 @@ class EventController extends Controller
 
 
         return redirect($redirectTo);
+    }
+
+    public function storeEventBooking(Request $request)
+    {
+        $validatedData = $request->validate([
+            'event_id' => 'required|exists:events,id',  // Ensures event exists
+            'user_id' => 'nullable|exists:users,id',   // Ensures user exists if provided
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'company_name' => 'required|string|max:255',
+            'designation' => 'required|string|max:255',
+            'contact_number' => 'required|string|max:20',
+            'interested' => 'required|boolean'
+        ]);
+
+        $user = auth()->user();
+        $event = Event::findOrFail($request->event_id);
+
+        // Store registration
+        $registration = EventRegistration::create([
+            'event_id' => $event->id,
+            'user_id' => $user ? $user->id : null, // Store if logged in
+            'name' => $request->name,
+            'email' => $request->email,
+            'company_name' => $request->company_name,
+            'designation' => $request->designation,
+            'contact_number' => $request->contact_number,
+            'interested' => $request->interested,
+        ]);
+
+        // Send confirmation email
+        Mail::to($request->email)->send(new EventRegistrationMail($event, $user ?? (object) ['name' => $request->name]));
+
+        return redirect()->route('event', ['id' => $request->event_id])
+            ->with('success', 'You have successfully registered for the event!');
+    }
+
+    public function cancelRegistration($id)
+    {
+        $registration = EventRegistration::find($id);
+
+        if (!$registration) {
+            return redirect()->route('event')->with('success', 'Event booking has been canceled successfully');
+        }
+
+        $registration->delete();
+
+        return redirect()->route('event')->with('success', 'Event booking has been canceled successfully');
     }
 }

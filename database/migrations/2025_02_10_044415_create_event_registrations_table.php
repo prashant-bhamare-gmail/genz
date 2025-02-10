@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->string('designation');
             $table->string('contact_number');
             $table->boolean('interested')->default(true);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

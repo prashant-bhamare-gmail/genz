@@ -44,7 +44,7 @@
                                     <li class="text-uppercase">
                                         <i class="fas fa-calendar"></i>
                                         {{ $event->event_date }}
-                                        </li>
+                                    </li>
                                     <li class="text-uppercase">
                                         <i class="fas fa-map-marker-alt"></i>
                                         {{$event->location}}
@@ -71,70 +71,73 @@
                 </div>
                 <div class="col-lg-6  p-4 bg-white">
                     <div class="card-body" style="padding: 0;">
-                        <form class="contact-form" action="" method="POST">
+                        @if(session('success'))
+                            <div class="alert alert-success mt-3">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        <form class="contact-form" action="{{ route('event-register') }}" method="POST">
+                            @csrf
+
+                            <input type="hidden" name="event_id" value="{{ $event->id }}">
+                            @auth
+                                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                            @endauth
+
                             <div class="row">
                                 <div class="form-group col-lg-12">
                                     <label class="form-label mb-1 text-2">Full Name</label>
-                                    <input type="text" value="" data-msg-required="Please enter your name."
-                                        maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+                                    <input type="text" value="{{ auth()->check() ? auth()->user()->name : '' }}"
+                                        class="form-control text-3 h-auto py-2" name="name" required>
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label class="form-label mb-1 text-2">Email Address</label>
-                                    <input type="email" value="" data-msg-required="Please enter your email address."
-                                        data-msg-email="Please enter a valid email address." maxlength="100"
+                                    <input type="email" value="{{ auth()->check() ? auth()->user()->email : '' }}"
                                         class="form-control text-3 h-auto py-2" name="email" required>
                                 </div>
                                 <div class="form-group col-lg-12">
-                                    <label class="form-label mb-1 text-2">Comapny Name</label>
-                                    <input type="text" value="" data-msg-required="Please enter your comapny name."
-                                        data-msg-company="Please enter a valid comapny name" maxlength="100"
-                                        class="form-control text-3 h-auto py-2" name="email" required>
+                                    <label class="form-label mb-1 text-2">Company Name</label>
+                                    <input type="text" class="form-control text-3 h-auto py-2" name="company_name"
+                                        required>
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label class="form-label mb-1 text-2">Current Designation</label>
-                                    <input type="text" value=""
-                                        data-msg-required="Please enter your Current Designation"
-                                        data-msg-designation="Please enter a valid Current Designation" maxlength="100"
-                                        class="form-control text-3 h-auto py-2" name="email" required>
+                                    <input type="text" class="form-control text-3 h-auto py-2" name="designation"
+                                        required>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="form-group col">
                                     <label class="form-label mb-1 text-2">Contact Number</label>
-                                    <input type="number" value="" data-msg-required="Please enter your contact number ."
-                                        maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+                                    <input type="number" class="form-control text-3 h-auto py-2" name="contact_number" pattern="[0-9]{10}" maxlength="10" 
+                                        required>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="form-group col">
-                                    <label class="form-check-label" for="tabContent9Checkbox">
-                                        I am interested in the event.
-                                    </label>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="radios"
-                                                data-msg-required="Please select at least one option."
-                                                id="tabContent9Radio1" value="option1" required> Yes
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="radios"
-                                                data-msg-required="Please select at least one option."
-                                                id="tabContent9Radio2" value="option2" required> No
-                                        </label>
-                                    </div>
 
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="form-group col">
-                                    <input type="submit" value="Submit" class="btn btn-primary"
-                                        data-loading-text="Loading...">
+                                    <label class="form-check-label">I am interested in the event.</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="interested" value="1"
+                                            required> Yes
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="interested" value="0"
+                                            required> No
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col">
+                                    <input type="submit" value="Register" class="btn btn-primary">
                                 </div>
                             </div>
                         </form>
+
+
+
                     </div>
                 </div>
             </div>
