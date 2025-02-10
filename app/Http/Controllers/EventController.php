@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
 
 class EventController extends Controller
 {
@@ -38,7 +39,8 @@ class EventController extends Controller
         return view('event', compact('completedEvents', 'nextEvent', 'upcomingEvents'));
     }
 
-    public function checkLogin($eventId) {
+    public function checkLogin($eventId)
+    {
         Log::info('Event ID: ' . $eventId);
         Log::info('User: ' . Auth::user());
         if (!Auth::check()) {
@@ -59,12 +61,13 @@ class EventController extends Controller
         }
         $event = Event::findOrFail($eventId);
         return view('event-booking', compact('event'));
-        
+
     }
 
 
     // Register for an event
-    public function register(Request $request, $eventId) {
+    public function register(Request $request, $eventId)
+    {
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:event_registrations,email,NULL,id,event_id,' . $eventId,
@@ -89,5 +92,59 @@ class EventController extends Controller
         return response()->json([
             'message' => 'Successfully registered for the event!'
         ], 201);
+    }
+
+    public function guestaccountsendOtp(Request $request)
+    {
+        session(['redirect_to' => $request->input('redirect_to', route('profile'))]);
+        $request->validate(['otpemail' => 'required|email'], [], [], 'otp_form');
+
+        $otp = rand(100000, 999999);
+        $email = $request->otpemail;
+
+        // Store OTP in session (You can use Redis/DB for scalability)
+        Session::put('otp_' . $email, $otp);
+        Session::put('otp_expiry_' . $email, now()->addMinutes(30));
+        Session::put('otp_email', $email);
+
+        // Send OTP via email
+        Mail::raw("Your OTP is: $otp", function ($message) use ($email) {
+            $message->to($email)
+                ->subject('Your Login OTP');
+        });
+
+        return redirect()->back()->with([
+            'success' => 'OTP sent successfully to ' . $email,
+            'guest_verify_otp' => true
+        ]);
+    }
+
+    public function guestverifyotp(Request $request)
+    {
+        $request->validate([
+            'otp' => 'required|digits:6'
+        ]);
+
+        $email = $request->email;
+        $otp = $request->otp;
+
+        if (Session::get('otp_' . $email) != $otp || now()->gt(Session::get('otp_expiry_' . $email))) {
+            // return response()->json(['message' => 'Invalid or expired OTP'], 422);
+            return redirect()->back()
+                ->withInput(input: $request->only('otp')) // Keep email input after refresh
+                ->with('invalidotp', true)
+                ->withErrors(['otp' => 'Invalid or expired OTP']);
+        }
+
+        session(['guest_logged_in' => true]);
+        $redirectTo = session('redirect_to', route('profile'));
+        session()->forget('redirect_to'); // Clear session after use
+
+
+        // Clear OTP from session
+        Session::forget(['otp_' . $email, 'otp_expiry_' . $email]);
+
+
+        return redirect($redirectTo);
     }
 }

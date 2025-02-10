@@ -103,6 +103,9 @@ Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallba
 Route::post('/send-otp', [LoginController::class, 'sendOtp'])->name('send-otp');
 Route::post('/verify-otp', [LoginController::class, 'verifyOtp'])->name('verify-otp');
 
+Route::post('/guest-account-sendotp', [EventController::class, 'guestaccountsendOtp'])->name('guest-account-sendotp');
+Route::post('/guest-verify-otp', [EventController::class, 'guestverifyotp'])->name('guest-verify-otp');
+
 // event routes
 Route::get('/event', [EventController::class, 'eventpage'])->name(name: 'event');
 Route::get('/event-booking/{eventId}', [EventController::class, 'eventbooking'])->name('event-booking');

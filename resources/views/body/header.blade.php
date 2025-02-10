@@ -241,12 +241,12 @@
 
 									@if (Auth::check())
 										<a href="/profile" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																																				py-3 btn-px-4 appear-animation"
+																																																												py-3 btn-px-4 appear-animation"
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">Profile</a>
 									@else
 										<a data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																																				py-3 btn-px-4 appear-animation"
+																																																												py-3 btn-px-4 appear-animation"
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
 									style="height: 50px;border-radius: 50px;">Login</a> @endif
 								</nav>
@@ -333,12 +333,17 @@
 													class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
 											</div>
 
+											<button type="button" id="guestaccountform" class="btn btn-dark btn-modern w-100 mb-4" style="display: none;">
+												Login With Guest Account
+											</button>
+
 											<div class="row">
 												<div class="col-md-6">
 													<button type="button" id="showOtpForm" class="btn btn-dark btn-modern w-100 text-transform-none rounded-0
 													 font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3">
 														Login With OTP
 													</button>
+
 												</div>
 												<div class="col-md-6">
 													<a href="{{ route('login.google', ['redirect_to' => request('redirect_to')]) }}"
@@ -362,6 +367,36 @@
 							<div id="otp-login" style="display: none;">
 								<form action="{{ route('send-otp', ['redirect_to' => request('redirect_to')]) }}"
 									id="frmOtpSignIn" method="post">
+									@csrf
+									<div class="row">
+										<div class="form-group col">
+											<label class="form-label text-color-dark text-3">Email address <span
+													class="text-color-danger">*</span></label>
+											<input type="email" name="otpemail" value="{{ old('email') }}"
+												class="form-control form-control-lg text-4 @error('otpemail', 'otp_form') is-invalid @enderror"
+												required>
+											@error('otpemail', 'otp_form') <!-- Specify error bag -->
+												<div class="invalid-feedback">{{ $message }}</div>
+											@enderror
+										</div>
+									</div>
+									<button type="submit"
+										class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3"
+										data-loading-text="Loading...">Send OTP</button>
+
+									<!-- Button to go back to regular login -->
+									<button type="button" id="showLoginForm"
+										class="btn btn-link w-100 text-center mt-3">
+										Back to Login
+									</button>
+								</form>
+							</div>
+
+							<!-- guest account -->
+							<div id="guest-login" style="display: none;">
+								<form
+									action="{{ route('guest-account-sendotp', ['redirect_to' => request('redirect_to')]) }}"
+									id="guestaccount" method="post">
 									@csrf
 									<div class="row">
 										<div class="form-group col">
@@ -575,7 +610,71 @@
 	</div>
 </div>
 
+<!-- guest otp login Model Box -->
+<div class="modal fade" id="guestverifyotp" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="font-weight-bold text-5 mb-0">Guest Account Verify OTP</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="row mb-4">
+					<div class="row justify-content-center">
+						<div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
+
+							@if (session('success'))
+								<div class="alert alert-success">
+									{{ session('success') }}
+								</div>
+							@endif
+							<form action="{{ route('guest-verify-otp') }}" id="verify-otp" method="post"
+								class="needs-validation">
+								@csrf
+								<!-- Hidden field to pass email -->
+								<input type="hidden" name="email" value="{{ session('otp_email') }}">
+								<div class="row">
+									<div class="form-group col">
+										<label class="form-label text-color-dark text-3">OTP <span
+												class="text-color-danger">*</span></label>
+										<input type="text" name="otp" value="{{ old('otp') }}"
+											class="form-control form-control-lg text-4 @error('otp', 'otp_form') is-invalid @enderror"
+											required pattern="\d{6}" maxlength="6" placeholder="Enter 6-digit OTP">
+										@error('otp', 'otp_form')
+											<div class="otp-error-message">{{ $message }}</div>
+										@enderror
+									</div>
+								</div>
+								<button type="submit"
+									class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3"
+									data-loading-text="Loading...">Verify OTP</button>
+							</form>
+
+						</div>
+						<!-- end Login with OTP Form -->
+					</div>
+				</div>
+				<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+					</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <script>
+	document.addEventListener("DOMContentLoaded", function () {
+		// Get the current URL
+		const currentURL = window.location.href;
+
+		// Check if the URL contains '/event'
+		if (currentURL.includes('/event') || currentURL.includes('/event-booking')) {
+			document.getElementById("guestaccountform").style.display = "block";
+		}
+	});
+
 	document.addEventListener('DOMContentLoaded', function () {
 		const passwordField = document.getElementById('password');
 		const confirmPasswordField = document.getElementById('password_confirmation');
@@ -601,23 +700,47 @@
 		document.getElementById("otp-login").style.display = "block";
 	});
 
+	document.getElementById("guestaccountform").addEventListener("click", function () {
+		document.getElementById("regular-login").style.display = "none";
+		document.getElementById("guest-login").style.display = "block";
+	});
+
 	document.getElementById("showLoginForm").addEventListener("click", function () {
 		document.getElementById("regular-login").style.display = "block";
 		document.getElementById("otp-login").style.display = "none";
 	});
 
 	document.addEventListener("DOMContentLoaded", function () {
+		const urlParams = new URLSearchParams(window.location.search);
+		const guestLogin = urlParams.get("guestLogin");
+
+		if (guestLogin === "1") {
+			document.getElementById("guestaccountform").style.display = "block"; // Show the button
+		}
+	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+
+
 		// Get the current page URL
 		const currentURL = window.location.href;
 		const loginError = "{{ session('loginError') }}";
+		const guestotpError = "{{ session('loginError') }}";
 		const registerError = "{{ session('registerError') }}";
+		const guestotp = "{{ session('guest_verify_otp') }}";
 
 		const urlParams = new URLSearchParams(window.location.search);
 
+
 		const showLogin = urlParams.get("showLogin");
 
-		// Check if the URL contains 'login'
-		if (currentURL.includes('login') || showLogin || loginError) {
+		if (guestotp) {
+			const guestverifyotp = new bootstrap.Modal(document.getElementById('guestverifyotp'), {});
+			guestverifyotp.show();
+
+			const loginModal = new bootstrap.Modal(document.getElementById('login'), {});
+			loginModal.hide();
+		} else if (currentURL.includes('login') || showLogin || loginError) {
 			// Trigger the modal
 			const loginModal = new bootstrap.Modal(document.getElementById('login'), {});
 			loginModal.show();
