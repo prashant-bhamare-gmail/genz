@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EventRegistrationMail;
-
+use App\Mail\EventCancellationMail;
 
 class EventController extends Controller
 {
@@ -40,7 +40,7 @@ class EventController extends Controller
         $registeredEvents = [];
         if ($user) {
             $registeredEvents = EventRegistration::where('user_id', $user->id)
-                ->get(['id','event_id'])
+                ->get(['id', 'event_id'])
                 ->toArray(); // Get IDs of registered events
         }
         Log::info('registeredEvents: ' . json_encode($registeredEvents));
@@ -200,14 +200,23 @@ class EventController extends Controller
 
     public function cancelRegistration($id)
     {
-        $registration = EventRegistration::find($id);
+        $event = EventRegistration::find($id);
 
-        if (!$registration) {
+        if (!$event) {
             return redirect()->route('event')->with('success', 'Event booking has been canceled successfully');
         }
 
-        $registration->delete();
+        // Get event details
+        $eventName = $event->name; // Adjust field name
+        $userEmail = auth()->user()->email; // Ensure user is authenticated
+        $userName = auth()->user()->name; // Get user name
 
+        // Send cancellation email
+        Mail::to($userEmail)->send(new EventCancellationMail($eventName, $userName));
+
+        // Delete the event booking
+        $event->delete();
+        
         return redirect()->route('event')->with('success', 'Event booking has been canceled successfully');
     }
 }
