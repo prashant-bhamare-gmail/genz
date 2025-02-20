@@ -54,4 +54,8 @@ class HomeController extends Controller
         return view('profile');
     }
    
+    public function managingcommittee($city)
+    {
+        return view('managing-committee', ['city' => $city]);
+    }
 }

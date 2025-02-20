@@ -58,18 +58,18 @@
 														Our Core Team
 													</a>
 												</li>
-												<li>
+												<!-- <li>
 													<a class="dropdown-item" target="_blank"
 														href="{{ url('https://forms.gle/6tur28y68aAx1ajf9')}}">
 														Become Volunteer
 													</a>
-												</li>
-												<li>
+												</li> -->
+												<!-- <li>
 													<a class="dropdown-item" data-bs-toggle="modal"
 														data-bs-target="#login" href="">
 														Become Member
 													</a>
-												</li>
+												</li> -->
 
 
 											</ul>
@@ -87,88 +87,81 @@
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Pune</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Bangalore</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Mumbai</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'mumbai']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Nashik</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Solapur</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'solapur']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Bangalore</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Indore</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="#">Managing Committee</a>
+														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'indore']) }}">Managing Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current President &
-																Mentors</a></li>
-														<li><a class="dropdown-item" href="#">Past & Current Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
+														<li><a class="dropdown-item" href="#">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
 											</ul>
 
 										</li>
-										<li>
+										<!-- <li>
 											<a class="nav-link" href="#">
 												Gen Z Resources
 											</a>
-										</li>
+										</li> -->
 										<li class="dropdown dropdown-primary">
 											<a class="nav-link" href="#">
 												knowledge center
