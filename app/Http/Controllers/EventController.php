@@ -17,7 +17,7 @@ class EventController extends Controller
     public function eventpage()
     {
         $today = Carbon::today();
-        $user = auth()->user(); // Get the logged-in user
+        $user = auth()->user(); 
 
         // Completed Events (Last 4 past events)
         $completedEvents = Event::where('event_date', '<', $today)
@@ -32,7 +32,7 @@ class EventController extends Controller
 
         // Upcoming Events (Excluding the Next Event)
         $upcomingEvents = Event::where('event_date', '>', $today)
-            ->where('id', '!=', optional($nextEvent)->id) // Exclude the next event
+            ->where('id', '!=', optional($nextEvent)->id)
             ->orderBy('event_date', 'asc')
             ->get();
 
@@ -43,7 +43,6 @@ class EventController extends Controller
                 ->get(['id', 'event_id'])
                 ->toArray(); // Get IDs of registered events
         }
-        Log::info('registeredEvents: ' . json_encode($registeredEvents));
 
         return view('event', compact('completedEvents', 'nextEvent', 'upcomingEvents', 'registeredEvents'));
     }
@@ -51,8 +50,6 @@ class EventController extends Controller
 
     public function checkLogin($eventId)
     {
-        Log::info('Event ID: ' . $eventId);
-        Log::info('User: ' . Auth::user());
         if (!Auth::check()) {
             return redirect()->route('event')->with('eventId', $eventId);
         }
@@ -62,9 +59,7 @@ class EventController extends Controller
     // Event Details
     public function eventbooking($eventId)
     {
-        Log::info('Event id:' . $eventId);
-        Log::info('User:' . Auth::user());
-        Log::info('Session:' . json_encode(Session::all()));
+      
         if (!Auth::check() && !Session::has('guest_logged_in')) {
             return redirect()->route('event', [
                 'showLogin' => true,
@@ -117,7 +112,6 @@ class EventController extends Controller
         $otp = rand(100000, 999999);
         $email = $request->otpemail;
 
-        // Store OTP in session (You can use Redis/DB for scalability)
         Session::put('otp_' . $email, $otp);
         Session::put('otp_expiry_' . $email, now()->addMinutes(30));
         Session::put('otp_email', $email);
@@ -151,7 +145,9 @@ class EventController extends Controller
                 ->withErrors(['otp' => 'Invalid or expired OTP']);
         }
 
-        session(['guest_logged_in' => true]);
+        session()->put('guest_logged_in', true);
+        session()->put('guest_login_time', now()); // Store the login time
+
         $redirectTo = session('redirect_to', route('profile'));
         session()->forget('redirect_to'); // Clear session after use
 

@@ -108,7 +108,9 @@ Route::post('/guest-verify-otp', [EventController::class, 'guestverifyotp'])->na
 
 // event routes
 Route::get('/event', [EventController::class, 'eventpage'])->name(name: 'event');
-Route::get('/event-booking/{eventId}', [EventController::class, 'eventbooking'])->name('event-booking');
+Route::middleware(['guest.expiry'])->group(function () {
+    Route::get('/event-booking/{eventId}', [EventController::class, 'eventbooking'])->name('event-booking');
+});
 Route::post('/events/{eventId}/register', [EventController::class, 'register']);
 Route::post('/event-register', [EventController::class, 'storeEventBooking'])->name('event-register');
 Route::delete('/event/cancel/{id}', [EventController::class, 'cancelRegistration'])->name('event.cancel');
