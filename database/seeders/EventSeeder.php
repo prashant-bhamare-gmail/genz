@@ -17,7 +17,7 @@ class EventSeeder extends Seeder
         $faker = Faker::create();
 
         $categories = ['Technology', 'Music', 'Business', 'Sports', 'Education'];
-        $statuses = ['upcoming', 'ongoing', 'completed'];
+        $statuses = ['upcoming', 'next', 'completed'];
 
         for ($i = 0; $i < 5; $i++) {
             Event::create([
