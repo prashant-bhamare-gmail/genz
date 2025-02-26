@@ -59,6 +59,9 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 // Handle logout
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::middleware(['auth'])->group(function () {
+    Route::post('/profile', [RegisterController::class, 'update'])->name('profile.update');
+});
 
 // quiz routes
 Route::get('/', [QuizController::class, 'showQuiz']);

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -50,5 +52,38 @@ class RegisterController extends Controller
 
         // Redirect after successful registration
         return redirect()->route('profile')->with('success', 'Account created successfully!');
+    }
+
+    public function update(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'current_role'  => 'nullable|string|max:255',
+            'company_name'  => 'nullable|string|max:255',
+            'phone'         => 'nullable|string|max:20',
+            'address'       => 'nullable|string|max:255',
+            'street'        => 'nullable|string|max:255',
+            'city'          => 'nullable|string|max:255',
+            'state'         => 'nullable|string|max:255',
+            'profile_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $user = Auth::user();
+
+        // Handle profile photo upload
+        if ($request->hasFile('profile_photo')) {
+            if ($user->profile_photo) {
+                Storage::disk('public')->delete($user->profile_photo);
+            }
+            $user->profile_photo = $request->file('profile_photo')->store('profile_photos', 'public');
+        }
+
+        // Update user data
+        $user->update($request->except('profile_photo'));
+
+        return redirect()->route('profile')->with('success', 'Profile updated successfully');
     }
 }
