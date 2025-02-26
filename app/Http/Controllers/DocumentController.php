@@ -69,7 +69,7 @@ class DocumentController extends Controller
         $approvalLink = route('approve.document', ['id' => $document->id]);
 
         Mail::raw("A new document has been uploaded by " . Auth::user()->name . ". Click to approve: $approvalLink", function ($message) use ($document, $path) {
-            $message->to('2000sagarr@gmail.com')
+            $message->to('prashantbhamre94@gmail.com')
                 ->subject("Approve Document: {$document->filename}")
                 ->attach($path);
         });

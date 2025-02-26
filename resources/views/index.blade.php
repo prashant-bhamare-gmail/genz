@@ -109,7 +109,8 @@
 						</h2>
 						<!-- <p>Would you like to be part of HR growth or attend consulting sessions?</p> -->
 						<a href="#" class="btn btn-primary btn-modern font-weight-bold text-2 mt-3
-								py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
+								py-3 btn-px-4 appear-animation" data-appear-animation="fadeInUpShorter" 
+								data-appear-animation-delay="800"
 							data-bs-toggle="modal" data-bs-target="#booknow">Book Now</a>
 					</div>
 				</div>
@@ -127,7 +128,7 @@
 						title="Email Us Now">
 						<span class="custom-call-to-action">
 							<span class="action-title text-color-primary">Email Us Now</span>
-							<span class="action-info text-color-light">hrconnect2025@gmail.com</span>
+							<span class="action-info text-color-light">hello@hrconnects.org</span>
 						</span>
 					</a>
 				</div>
@@ -213,25 +214,32 @@
 													<div class="form-group col">
 														<label class="form-label">City</label>
 														<div class="position-relative">
-															<i
-																class="icons icon-location-pin text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50 z-index-1"></i>
+															<i class="icons icon-location-pin text-color-primary text-3 position-absolute 
+																left-15 top-50pct transform3dy-n50 z-index-1"></i>
 															<div class="custom-select-1">
-																<select class="form-select form-control h-auto"
+																<!-- <select class="form-select form-control h-auto"
 																	data-msg-required="Please select a city."
 																	name="city" required>
 																	<option value="">--- Please Select City ---</option>
 																	<option value="1">Pune</option>
 																	<option value="2">Solapur</option>
 																	<option value="3">Mumbai</option>
-																</select>
+																</select> -->
+																<div class="position-relative">
+																	<i class="icons icon-location-pin text-color-primary text-3 position-absolute 
+																		left-15 top-50pct transform3dy-n50 z-index-1"></i>
+																	<input type="city" value="" data-msg-required="Please enter your City"
+																			class="form-control text-3 h-auto py-2" name="email" required>
+																</div>
 															</div>
+															
 														</div>
 													</div>
 												</div>
 
 												<div class="row">
 													<div class="form-group col">
-														<label class="form-label mb-1 text-2">Current Role</label>
+														<label class="form-label mb-1 text-2">Current Designation</label>
 														<div class="position-relative">
 															<i
 																class="icons icon-note text-color-primary text-3 position-absolute left-15 top-50pct transform3dy-n50"></i>
@@ -288,8 +296,8 @@
 												</div>
 
 												<div class="row">
-													<div class="form-group col">
-														<input type="submit" value="Submit Form" class="btn btn-primary"
+													<div class="form-group col" style="text-align: right;">
+														<input type="submit" value="Submit" class="btn btn-primary"
 															data-loading-text="Loading...">
 													</div>
 												</div>
@@ -318,9 +326,9 @@
 
 						</div>
 					</div>
-					<div class="modal-footer">
+					<!-- <div class="modal-footer">
 						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

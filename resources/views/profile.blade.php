@@ -27,30 +27,21 @@
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			</div>
 		@endif
-		<form action="{{ route('logout') }}" method="POST">
+		<!-- <form action="{{ route('logout') }}" method="POST">
 			@csrf
 			<button type="submit" class="btn btn-danger">Logout</button>
-		</form>
+		</form> -->
 		<div class="container pt-3 pb-2">
 
 			<div class="row pt-2">
 				<div class="col-lg-3 mt-4 mt-lg-0">
 
 					<!-- Upload  -->
-					<form id="file-upload-form" class="d-flex justify-content-center mb-4 uploader">
-						<input id="file-upload" type="file" name="fileUpload" accept="image/*" />
-
-						<label for="file-upload" id="file-drag">
-							<img id="file-image" src="#" alt="Preview" class="hidden">
-							<div id="start">
-								<i class="fa fa-download" aria-hidden="true"></i>
-								<div>Upload Your Photo</div>
-								<div id="notimage" class="hidden">Please select an image</div>
-							</div>
-							<div id="response" class="hidden">
-								<div id="messages"></div>
-							</div>
-						</label>
+					<form id="file-upload-form" class="d-flex justify-content-center mb-4 uploader" style="border: 1px solid #ccc;">
+						@if(Auth::user()->profile_photo)
+							<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
+								width="100">
+						@endif
 					</form>
 
 					<aside class="sidebar mt-2" id="sidebar">
@@ -73,10 +64,13 @@
 										Search</a>
 								</li>
 								<li class="nav-item">
+									<a class="nav-link" href="#tabsNavigationVertSimple7" data-bs-toggle="tab">Social Media</a>
+								</li>
+								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple5" data-bs-toggle="tab"> My Event</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#tabsNavigationVertSimple6" data-bs-toggle="tab">Blog</a>
+									<a class="nav-link" href="#tabsNavigationVertSimple6" data-bs-toggle="tab">Notification</a>
 								</li>
 							</ul>
 						</div>
@@ -176,10 +170,10 @@
 								<div class="col-lg-9">
 									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
 										accept="image/*">
-									@if(Auth::user()->profile_photo)
+									<!-- @if(Auth::user()->profile_photo)
 										<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
 											width="100">
-									@endif
+									@endif -->
 								</div>
 							</div>
 
@@ -476,21 +470,19 @@
 										<strong class="text-color-dark">1 Year</strong>
 									</span>
 								</div>
-								<!-- <div class="text-center mt-4 mt-md-0">
-																																																												<div class="form-group row pb-4">
-																																																													<select class="form-control mb-3">
-																																																														<option>Select Plan </option>
-																																																														<option>1 Year</option>
-																																																														<option>06 Months</option>
-																																																													</select>
-																																																												</div>
-																																																											</div> -->
 							</div>
 						</div>
 
 					</div>
 
 					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple5">
+
+						<div class="alert alert-info">
+							<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						</div>
+						
+					</div>
+					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple6">
 
 						<div class="alert alert-info">
 							<strong>Heads up!</strong> This alert needs your attention, but it's not super important.

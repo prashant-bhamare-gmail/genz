@@ -90,7 +90,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -100,7 +100,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -110,7 +110,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'mumbai']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -120,7 +120,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -130,7 +130,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'solapur']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -140,7 +140,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -150,7 +150,7 @@
 														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'indore']) }}">Managing Committee</a>
 														</li>
 														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="#">Current & Past Event</a>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -233,15 +233,34 @@
 
 
 									@if (Auth::check())
-										<a href="/profile" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																																												py-3 btn-px-4 appear-animation"
+										<a href="/profile" class=" font-weight-bold text-2 mt-4
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
-											style="height: 50px;border-radius: 50px;">Profile</a>
+											style="height: 50px;border-radius: 50px;">
+											<i class='fas fa-user-circle' style='font-size:36px'></i></a>
 									@else
-										<a data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary btn-modern font-weight-bold text-2 mt-4
-																																																												py-3 btn-px-4 appear-animation"
+										<a data-bs-toggle="modal" data-bs-target="#login" 
+											class="btn btn-primary btn-modern font-weight-bold text-2 mt-4"
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
-									style="height: 50px;border-radius: 50px;">Login</a> @endif
+											style="height: 50px;border-radius: 50px;">Login</a> @endif
+
+										<!-- <a data-bs-toggle="modal" data-bs-target="#login" 
+											class="btn btn-primary btn-modern font-weight-bold text-2 mt-4"
+											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
+											style="height: 50px;border-radius: 50px;">Login</a> -->
+											
+											<form action="{{ route('logout') }}" method="POST">
+												@csrf
+												<button type="submit" class=" font-weight-bold text-2 mt-4"
+													style='height: 41px;
+														border-radius: 50px;
+														padding: 7px;
+														margin-left: 10px;
+														margin-top: 21px !important;' 
+													>
+													<i class="fa fa-power-off" 
+														style='font-size:24px'
+													aria-hidden="true"></i></button>
+											</form>
 								</nav>
 							</div>
 							<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse"
