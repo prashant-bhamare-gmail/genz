@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\HrTerminologyController;
@@ -115,3 +116,11 @@ Route::middleware(['guest.expiry'])->group(function () {
 Route::post('/events/{eventId}/register', [EventController::class, 'register']);
 Route::post('/event-register', [EventController::class, 'storeEventBooking'])->name('event-register');
 Route::delete('/event/cancel/{id}', [EventController::class, 'cancelRegistration'])->name('event.cancel');
+
+// document upload routes
+Route::post('/upload', [DocumentController::class, 'uploadPDF'])->name('upload.pdf');
+Route::get('/approve/{id}', [DocumentController::class, 'approvePDF'])->name('approve.document');
+Route::get('/approved-pdfs', [DocumentController::class, 'showApprovedPDFs'])->name('approved.pdfs');
+Route::get('/profile', [DocumentController::class, 'showUserPDFs'])->name('profile');
+Route::post('/document/{id}/like', [DocumentController::class, 'likeDocument'])->name('document.like');
+Route::get('/document/{id}/open', [DocumentController::class, 'openDocument'])->name('document.open');
