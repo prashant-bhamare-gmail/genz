@@ -31,7 +31,7 @@ class DocumentController extends Controller
         $approvalLink = route('approve.document', ['id' => $pdf->id]);
 
         Mail::raw("A new PDF has been uploaded by " . Auth::user()->name . ". Click to approve: $approvalLink", function ($message) use ($pdf) {
-            $message->to('2000sagarr@gmail.com')
+            $message->to("hello@hrconnects.org")
                 ->subject("Approve PDF: {$pdf->filename}")
                 ->attach(storage_path("app/public/{$pdf->path}"));
         });
