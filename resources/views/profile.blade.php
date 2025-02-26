@@ -65,9 +65,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																										<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																											data-bs-toggle="tab">Membership</a>
-																																																									</li> -->
+																																																											<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																												data-bs-toggle="tab">Membership</a>
+																																																										</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -82,20 +82,26 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																											<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																											<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																											<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																											<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																										</ul> -->
+																																																												<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																												<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																												<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																												<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																											</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
 
 					<div class="tab-pane tab-pane-navigation active" id="tabsNavigationVertSimple1">
+						@if(session('success'))
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								{{ session('success') }}
+								
+							</div>
+						@endif
 						<form role="form" class="needs-validation" action="{{ route('profile.update') }}" method="POST"
 							enctype="multipart/form-data">
 							@csrf
-							
+
 
 
 							<div class="form-group row">
@@ -168,7 +174,8 @@
 								<label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Profile
 									Photo</label>
 								<div class="col-lg-9">
-									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo">
+									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
+										accept="image/*">
 									@if(Auth::user()->profile_photo)
 										<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
 											width="100">
@@ -302,8 +309,8 @@
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<!-- <div class="input-group-append">
-														<button class="btn btn-primary mt-2" type="button">Search</button>
-													</div> -->
+															<button class="btn btn-primary mt-2" type="button">Search</button>
+														</div> -->
 								</div>
 							</form>
 						</section>
@@ -337,8 +344,8 @@
 													@auth
 														<div class="mt-3 text-center">
 															<button class="btn like-button 
-																															@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
-																															@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
+																																			@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
+																																			@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
 																@if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
 																👍 Like
 															</button>
@@ -423,10 +430,10 @@
 								</div>
 							</div>
 							<!-- <div class="col-sm-3 col-lg-3">
-																																																									<div class="call-to-action-btn">
-																																																										<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
-																																																									</div>
-																																																								</div> -->
+																																																										<div class="call-to-action-btn">
+																																																											<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
+																																																										</div>
+																																																									</div> -->
 						</section>
 
 
@@ -470,14 +477,14 @@
 									</span>
 								</div>
 								<!-- <div class="text-center mt-4 mt-md-0">
-																																																											<div class="form-group row pb-4">
-																																																												<select class="form-control mb-3">
-																																																													<option>Select Plan </option>
-																																																													<option>1 Year</option>
-																																																													<option>06 Months</option>
-																																																												</select>
-																																																											</div>
-																																																										</div> -->
+																																																												<div class="form-group row pb-4">
+																																																													<select class="form-control mb-3">
+																																																														<option>Select Plan </option>
+																																																														<option>1 Year</option>
+																																																														<option>06 Months</option>
+																																																													</select>
+																																																												</div>
+																																																											</div> -->
 							</div>
 						</div>
 
