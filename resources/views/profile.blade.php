@@ -65,9 +65,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																		<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																			data-bs-toggle="tab">Membership</a>
-																																																	</li> -->
+																																																					<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																						data-bs-toggle="tab">Membership</a>
+																																																				</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -82,11 +82,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																			<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																			<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																			<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																			<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																		</ul> -->
+																																																						<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																						<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																						<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																						<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																					</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -298,67 +298,60 @@
 					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple4">
 						<!-- Knowledge Search-->
 						<section class="call-to-action with-borders mb-5 appear-animation" data-appear-animation="fadeIn">
-							<form method="GET" class="form-group my-2 my-lg-0 w-100">
+							<form class="form-group my-2 my-lg-0 w-100">
 								<div class="input-group">
-									<input class="form-control" type="search" name="query" placeholder="Search"
-										aria-label="Search" style="width: 100%;">
+									<input class="form-control" type="search" id="searchInput"
+										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<div class="input-group-append">
-										<button class="btn btn-primary mt-2" type="submit">Search</button>
+										<button class="btn btn-primary mt-2" type="button">Search</button>
 									</div>
 								</div>
 							</form>
-
 						</section>
-
 						@if ($approvedPDFs->isEmpty())
 							<p>No Documents available.</p>
 						@else
 							<div class="container mt-4">
-								<div class="row">
+								<div class="row" id="pdfList">
 									@foreach ($approvedPDFs as $pdf)
-										<div class="col-md-6 col-lg-4">
+										<div class="col-md-6 col-lg-4 pdf-item" data-filename="{{ strtolower($pdf->filename) }}">
 											<div class="card shadow-sm border-0 mb-4">
 												<div class="card-body">
 													<h5 class="card-title">
 														<a href="{{ route('document.open', $pdf->id) }}" target="_blank"
-															class="pdf-link text-decoration-none" data-pdf-id="{{ $pdf->id }}">
+															class="pdf-link text-decoration-none">
 															📄 {{ $pdf->filename }}
 														</a>
 													</h5>
 													<p class="card-text text-muted">Uploaded by:
 														<strong>{{ $pdf->user->name }}</strong>
 													</p>
-
 													<div class="d-flex justify-content-between">
-														<span class="">
-															👁 Views: <span id="views-{{ $pdf->id }}">{{ $pdf->views }}</span>
-														</span>
-														<span class="">
-															👍 Likes: <span
-																id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span>
-														</span>
+														<span>👁 Views: <span
+																id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
+														<span>👍 Likes: <span
+																id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span>
 													</div>
-
-													@auth
-														<div class="mt-3 text-center">
-															<button
-																class="btn like-button 
-																																																							@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success @else btn-outline-primary @endif"
-																data-pdf-id="{{ $pdf->id }}" @if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
-																👍 Like
-															</button>
-															<span class="text-success d-block mt-2"
-																id="like-message-{{ $pdf->id }}"></span>
-														</div>
-													@endauth
 												</div>
 											</div>
 										</div>
 									@endforeach
 								</div>
 							</div>
-
 							<script>
+								document.getElementById('searchInput').addEventListener('input', function () {
+									let searchValue = this.value.toLowerCase();
+									let pdfItems = document.querySelectorAll('.pdf-item');
+
+									pdfItems.forEach(item => {
+										let filename = item.getAttribute('data-filename');
+										if (filename.includes(searchValue)) {
+											item.style.display = "block"; // Show matching items
+										} else {
+											item.style.display = "none"; // Hide non-matching items
+										}
+									});
+								});
 								document.addEventListener("DOMContentLoaded", function () {
 									document.querySelectorAll(".like-button").forEach(button => {
 										button.addEventListener("click", function () {
@@ -408,10 +401,10 @@
 								</div>
 							</div>
 							<!-- <div class="col-sm-3 col-lg-3">
-																																																	<div class="call-to-action-btn">
-																																																		<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
-																																																	</div>
-																																																</div> -->
+																																																				<div class="call-to-action-btn">
+																																																					<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
+																																																				</div>
+																																																			</div> -->
 						</section>
 
 
@@ -455,14 +448,14 @@
 									</span>
 								</div>
 								<!-- <div class="text-center mt-4 mt-md-0">
-																																																			<div class="form-group row pb-4">
-																																																				<select class="form-control mb-3">
-																																																					<option>Select Plan </option>
-																																																					<option>1 Year</option>
-																																																					<option>06 Months</option>
-																																																				</select>
-																																																			</div>
-																																																		</div> -->
+																																																						<div class="form-group row pb-4">
+																																																							<select class="form-control mb-3">
+																																																								<option>Select Plan </option>
+																																																								<option>1 Year</option>
+																																																								<option>06 Months</option>
+																																																							</select>
+																																																						</div>
+																																																					</div> -->
 							</div>
 						</div>
 
