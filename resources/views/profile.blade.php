@@ -28,20 +28,21 @@
 			</div>
 		@endif
 		<!-- <form action="{{ route('logout') }}" method="POST">
-			@csrf
-			<button type="submit" class="btn btn-danger">Logout</button>
-		</form> -->
+				@csrf
+				<button type="submit" class="btn btn-danger">Logout</button>
+			</form> -->
 		<div class="container pt-3 pb-2">
 
 			<div class="row pt-2">
 				<div class="col-lg-3 mt-4 mt-lg-0">
 
 					<!-- Upload  -->
-					<form id="file-upload-form" class="d-flex justify-content-center mb-4 uploader" style="border: 1px solid #ccc;">
-						@if(Auth::user()->profile_photo)
-							<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
-								width="100">
+					<form id="file-upload-form" class="d-flex justify-content-center mb-4 uploader"
+						style="border: 1px solid #ccc;">
+						@if(Auth::check() && Auth::user()->profile_photo)
+							<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo" width="100">
 						@endif
+
 					</form>
 
 					<aside class="sidebar mt-2" id="sidebar">
@@ -56,31 +57,33 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																											<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																												data-bs-toggle="tab">Membership</a>
-																																																										</li> -->
+																																																												<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																													data-bs-toggle="tab">Membership</a>
+																																																											</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Knowledge
 										Search</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#tabsNavigationVertSimple7" data-bs-toggle="tab">Social Media</a>
+									<a class="nav-link" href="#tabsNavigationVertSimple7" data-bs-toggle="tab">Social
+										Media</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple5" data-bs-toggle="tab"> My Event</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#tabsNavigationVertSimple6" data-bs-toggle="tab">Notification</a>
+									<a class="nav-link" href="#tabsNavigationVertSimple6"
+										data-bs-toggle="tab">Notification</a>
 								</li>
 							</ul>
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																												<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																												<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																												<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																												<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																											</ul> -->
+																																																													<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																													<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																													<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																													<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																												</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -89,7 +92,7 @@
 						@if(session('success'))
 							<div class="alert alert-success alert-dismissible fade show" role="alert">
 								{{ session('success') }}
-								
+
 							</div>
 						@endif
 						<form role="form" class="needs-validation" action="{{ route('profile.update') }}" method="POST"
@@ -171,9 +174,9 @@
 									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
 										accept="image/*">
 									<!-- @if(Auth::user()->profile_photo)
-										<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
-											width="100">
-									@endif -->
+											<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
+												width="100">
+										@endif -->
 								</div>
 							</div>
 
@@ -303,8 +306,8 @@
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<!-- <div class="input-group-append">
-															<button class="btn btn-primary mt-2" type="button">Search</button>
-														</div> -->
+																<button class="btn btn-primary mt-2" type="button">Search</button>
+															</div> -->
 								</div>
 							</form>
 						</section>
@@ -338,8 +341,8 @@
 													@auth
 														<div class="mt-3 text-center">
 															<button class="btn like-button 
-																																			@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
-																																			@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
+																																							@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
+																																							@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
 																@if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
 																👍 Like
 															</button>
@@ -424,10 +427,10 @@
 								</div>
 							</div>
 							<!-- <div class="col-sm-3 col-lg-3">
-																																																										<div class="call-to-action-btn">
-																																																											<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
-																																																										</div>
-																																																									</div> -->
+																																																											<div class="call-to-action-btn">
+																																																												<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
+																																																											</div>
+																																																										</div> -->
 						</section>
 
 
@@ -480,7 +483,7 @@
 						<div class="alert alert-info">
 							<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
 						</div>
-						
+
 					</div>
 					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple6">
 

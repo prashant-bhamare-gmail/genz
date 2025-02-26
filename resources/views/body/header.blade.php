@@ -87,70 +87,98 @@
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Pune</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Bangalore</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Mumbai</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'mumbai']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'mumbai']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Nashik</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Solapur</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'solapur']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'solapur']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Bangalore</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
 													<a class="dropdown-item" href="#">Indore</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item" href="{{ route('managing-committee', ['city' => 'indore']) }}">Managing Committee</a>
+														<li><a class="dropdown-item"
+																href="{{ route('managing-committee', ['city' => 'indore']) }}">Managing
+																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past President</a></li>
-														<li><a class="dropdown-item" href="{{ url('/event')}}">Current & Past Event</a>
+														<li><a class="dropdown-item" href="#">Current Mentor & Past
+																President</a></li>
+														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
+																Past Event</a>
 														</li>
 													</ul>
 												</li>
@@ -233,34 +261,33 @@
 
 
 									@if (Auth::check())
-										<a href="/profile" class=" font-weight-bold text-2 mt-4
+										<a href="/profile" class=" font-weight-bold text-2 mt-4"
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">
 											<i class='fas fa-user-circle' style='font-size:36px'></i></a>
 									@else
-										<a data-bs-toggle="modal" data-bs-target="#login" 
+										<a data-bs-toggle="modal" data-bs-target="#login"
 											class="btn btn-primary btn-modern font-weight-bold text-2 mt-4"
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
-											style="height: 50px;border-radius: 50px;">Login</a> @endif
+											style="height: 50px;border-radius: 50px;">Login</a>
+									@endif
 
-										<!-- <a data-bs-toggle="modal" data-bs-target="#login" 
+									<!-- <a data-bs-toggle="modal" data-bs-target="#login" 
 											class="btn btn-primary btn-modern font-weight-bold text-2 mt-4"
 											data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"
 											style="height: 50px;border-radius: 50px;">Login</a> -->
-											
-											<form action="{{ route('logout') }}" method="POST">
-												@csrf
-												<button type="submit" class=" font-weight-bold text-2 mt-4"
-													style='height: 41px;
-														border-radius: 50px;
-														padding: 7px;
-														margin-left: 10px;
-														margin-top: 21px !important;' 
-													>
-													<i class="fa fa-power-off" 
-														style='font-size:24px'
+									@if (Auth::check())
+										<form action="{{ route('logout') }}" method="POST">
+											@csrf
+											<button type="submit" class=" font-weight-bold text-2 mt-4" style='height: 41px;
+															border-radius: 50px;
+															padding: 7px;
+															margin-left: 10px;
+															margin-top: 21px !important;'>
+												<i class="fa fa-power-off" style='font-size:24px'
 													aria-hidden="true"></i></button>
-											</form>
+										</form>
+									@endif
 								</nav>
 							</div>
 							<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse"
@@ -345,7 +372,8 @@
 													class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
 											</div>
 
-											<button type="button" id="guestaccountform" class="btn btn-dark btn-modern w-100 mb-4" style="display: none;">
+											<button type="button" id="guestaccountform"
+												class="btn btn-dark btn-modern w-100 mb-4" style="display: none;">
 												Login With Guest Account
 											</button>
 
