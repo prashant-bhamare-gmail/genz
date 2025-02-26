@@ -58,4 +58,12 @@ class HomeController extends Controller
     {
         return view('managing-committee', ['city' => $city]);
     }
+
+    
+    public function mentorpresident($city)
+    {
+        return view('current-mentor-past-pre', ['city' => $city]);
+    }
+
+
 }

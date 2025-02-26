@@ -39,6 +39,7 @@ Route::get('/hr-terminology', [HomeController::class, 'hrterminology'])->name('h
 Route::get('/hr-certification', [HomeController::class, 'hrcertification'])->name('hr-certification');
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 Route::get('/managing-committee/{city}', [HomeController::class, 'managingcommittee'])->name('managing-committee');
+Route::get('/mentor-president/{city}', [HomeController::class, 'mentorpresident'])->name('mentor-president');
 
 Route::get('forgot-password', [LoginController::class, 'showLinkRequestForm'])->name('password.request');
 // Send Reset Link

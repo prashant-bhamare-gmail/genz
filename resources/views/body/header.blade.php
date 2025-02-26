@@ -91,7 +91,7 @@
 																href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'nashik']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
@@ -105,7 +105,7 @@
 																href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'nashik']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
@@ -119,7 +119,7 @@
 																href="{{ route('managing-committee', ['city' => 'mumbai']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'nashik']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
@@ -133,7 +133,7 @@
 																href="{{ route('managing-committee', ['city' => 'nashik']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'nashik']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
@@ -147,7 +147,7 @@
 																href="{{ route('managing-committee', ['city' => 'solapur']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'solapur']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
@@ -161,7 +161,7 @@
 																href="{{ route('managing-committee', ['city' => 'bangalore']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'bangalore']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
@@ -175,7 +175,7 @@
 																href="{{ route('managing-committee', ['city' => 'indore']) }}">Managing
 																Committee</a>
 														</li>
-														<li><a class="dropdown-item" href="#">Current Mentor & Past
+														<li><a class="dropdown-item" href="{{ route('mentor-president', ['city' => 'indore']) }}">Current Mentor & Past
 																President</a></li>
 														<li><a class="dropdown-item" href="{{ url('/event')}}">Current &
 																Past Event</a>
