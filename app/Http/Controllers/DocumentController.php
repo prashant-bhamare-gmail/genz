@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Document;
 use App\Models\DocumentLike;
+use App\Models\EventRegistration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
@@ -93,9 +95,35 @@ class DocumentController extends Controller
 
     public function showUserPDFs()
     {
+        $user = Auth::user();
+        $today = Carbon::today();
+
         $userPDFs = Document::where('user_id', Auth::id())->get();
         $approvedPDFs = Document::where('is_approved', true)->get(); // All approved PDFs
-        return view('profile', compact('userPDFs', 'approvedPDFs'));
+
+        // Fetch registered events for the logged-in user
+        $registrations = EventRegistration::where('user_id', $user->id)
+            ->with('event')
+            ->get();
+
+        // Categorize events
+        $upcomingEvents = [];
+        $todayEvents = [];
+        $completedEvents = [];
+
+        foreach ($registrations as $registration) {
+            if ($registration->event) {
+                $event = $registration->event;
+                if ($event->event_date > $today) {
+                    $upcomingEvents[] = $event;
+                } elseif ($event->event_date == $today) {
+                    $todayEvents[] = $event;
+                } else {
+                    $completedEvents[] = $event;
+                }
+            }
+        }
+        return view('profile', compact('userPDFs', 'approvedPDFs', 'upcomingEvents', 'todayEvents', 'completedEvents'));
     }
 
     public function likeDocument($id)

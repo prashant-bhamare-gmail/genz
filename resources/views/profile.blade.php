@@ -28,9 +28,9 @@
 			</div>
 		@endif
 		<!-- <form action="{{ route('logout') }}" method="POST">
-				@csrf
-				<button type="submit" class="btn btn-danger">Logout</button>
-			</form> -->
+							@csrf
+							<button type="submit" class="btn btn-danger">Logout</button>
+						</form> -->
 		<div class="container pt-3 pb-2">
 
 			<div class="row pt-2">
@@ -57,9 +57,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																												<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																													data-bs-toggle="tab">Membership</a>
-																																																											</li> -->
+																																																															<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																																data-bs-toggle="tab">Membership</a>
+																																																														</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -79,11 +79,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																													<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																													<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																													<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																													<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																												</ul> -->
+																																																																<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																																<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																																<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																																<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																															</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -174,9 +174,9 @@
 									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
 										accept="image/*">
 									<!-- @if(Auth::user()->profile_photo)
-											<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
-												width="100">
-										@endif -->
+														<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
+															width="100">
+													@endif -->
 								</div>
 							</div>
 
@@ -306,8 +306,8 @@
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<!-- <div class="input-group-append">
-																<button class="btn btn-primary mt-2" type="button">Search</button>
-															</div> -->
+																			<button class="btn btn-primary mt-2" type="button">Search</button>
+																		</div> -->
 								</div>
 							</form>
 						</section>
@@ -341,8 +341,8 @@
 													@auth
 														<div class="mt-3 text-center">
 															<button class="btn like-button 
-																																							@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
-																																							@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
+																																																			@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
+																																																			@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
 																@if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
 																👍 Like
 															</button>
@@ -427,10 +427,10 @@
 								</div>
 							</div>
 							<!-- <div class="col-sm-3 col-lg-3">
-																																																											<div class="call-to-action-btn">
-																																																												<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
-																																																											</div>
-																																																										</div> -->
+																																																														<div class="call-to-action-btn">
+																																																															<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
+																																																														</div>
+																																																													</div> -->
 						</section>
 
 
@@ -479,9 +479,69 @@
 					</div>
 
 					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple5">
+						<h3 class="mb-3">My Events</h3>
 
-						<div class="alert alert-info">
-							<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						<!-- Upcoming Events -->
+						<div class="card mb-4">
+							<div class="card-header bg-primary text-white">Upcoming Events</div>
+							<div class="card-body">
+								@if(count($upcomingEvents) > 0)
+									<ul class="list-group">
+										@foreach($upcomingEvents as $event)
+											<li class="list-group-item">
+												<strong>{{ $event->title }}</strong><br>
+												<span>Date: {{ $event->event_date }}</span><br>
+												<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
+													<span>Location: {{ $event->location }}</span>
+											</li>
+										@endforeach
+									</ul>
+								@else
+									<p class="text-muted">No upcoming events.</p>
+								@endif
+							</div>
+						</div>
+
+						<!-- Today's Events -->
+						<div class="card mb-4">
+							<div class="card-header bg-primary text-white">Today's Events</div>
+							<div class="card-body">
+								@if(count($todayEvents) > 0)
+									<ul class="list-group">
+										@foreach($todayEvents as $event)
+											<li class="list-group-item">
+												<strong>{{ $event->title }}</strong><br>
+												<span>Date: {{ $event->event_date }}</span><br>
+												<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
+												<span>Location: {{ $event->location }}</span>
+											</li>
+										@endforeach
+									</ul>
+								@else
+									<p class="text-muted">No events today.</p>
+								@endif
+							</div>
+						</div>
+
+						<!-- Completed Events -->
+						<div class="card mb-4">
+							<div class="card-header bg-primary text-white">Completed Events</div>
+							<div class="card-body">
+								@if(count($completedEvents) > 0)
+									<ul class="list-group">
+										@foreach($completedEvents as $event)
+											<li class="list-group-item">
+												<strong>{{ $event->title }}</strong><br>
+												<span>Date: {{ $event->event_date }}</span><br>
+												<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
+												<span>Location: {{ $event->location }}</span>
+											</li>
+										@endforeach
+									</ul>
+								@else
+									<p class="text-muted">No completed events.</p>
+								@endif
+							</div>
 						</div>
 
 					</div>

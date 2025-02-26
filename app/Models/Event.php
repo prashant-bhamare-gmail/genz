@@ -22,4 +22,9 @@ class Event extends Model
         'category',
         'status'
     ];
+
+    public function registrations()
+    {
+        return $this->hasMany(EventRegistration::class);
+    }
 }
