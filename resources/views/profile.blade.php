@@ -65,9 +65,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																					<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																						data-bs-toggle="tab">Membership</a>
-																																																				</li> -->
+																																																						<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																							data-bs-toggle="tab">Membership</a>
+																																																					</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -82,11 +82,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																						<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																						<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																						<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																						<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																					</ul> -->
+																																																							<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																							<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																							<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																							<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																						</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -302,12 +302,13 @@
 								<div class="input-group">
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
-									<div class="input-group-append">
+									<!-- <div class="input-group-append">
 										<button class="btn btn-primary mt-2" type="button">Search</button>
-									</div>
+									</div> -->
 								</div>
 							</form>
 						</section>
+
 						@if ($approvedPDFs->isEmpty())
 							<p>No Documents available.</p>
 						@else
@@ -332,13 +333,30 @@
 														<span>👍 Likes: <span
 																id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span>
 													</div>
+
+													<!-- Like Button Added -->
+													@auth
+														<div class="mt-3 text-center">
+															<button class="btn like-button 
+															@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
+															@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}"
+																@if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
+																👍 Like
+															</button>
+															<span class="text-success d-block mt-2"
+																id="like-message-{{ $pdf->id }}"></span>
+														</div>
+													@endauth
 												</div>
 											</div>
 										</div>
 									@endforeach
 								</div>
 							</div>
-							<script>
+
+							<!-- JavaScript -->
+							<script defer>
+								// Live Search Functionality
 								document.getElementById('searchInput').addEventListener('input', function () {
 									let searchValue = this.value.toLowerCase();
 									let pdfItems = document.querySelectorAll('.pdf-item');
@@ -352,6 +370,8 @@
 										}
 									});
 								});
+
+								// Like Button Functionality
 								document.addEventListener("DOMContentLoaded", function () {
 									document.querySelectorAll(".like-button").forEach(button => {
 										button.addEventListener("click", function () {
@@ -372,8 +392,10 @@
 												.then(data => {
 													if (data.success) {
 														likeButton.disabled = true; // Disable the button
+														likeButton.classList.remove("btn-outline-primary");
+														likeButton.classList.add("btn-success");
 														likeCount.textContent = parseInt(likeCount.textContent) + 1;
-														likeMessage.textContent = "You liked this!";
+														// likeMessage.textContent = "Liked!";
 													} else {
 														likeMessage.textContent = data.message;
 													}
@@ -385,6 +407,7 @@
 							</script>
 						@endif
 					</div>
+
 
 
 					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple3">
@@ -401,10 +424,10 @@
 								</div>
 							</div>
 							<!-- <div class="col-sm-3 col-lg-3">
-																																																				<div class="call-to-action-btn">
-																																																					<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
-																																																				</div>
-																																																			</div> -->
+																																																					<div class="call-to-action-btn">
+																																																						<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
+																																																					</div>
+																																																				</div> -->
 						</section>
 
 
@@ -448,14 +471,14 @@
 									</span>
 								</div>
 								<!-- <div class="text-center mt-4 mt-md-0">
-																																																						<div class="form-group row pb-4">
-																																																							<select class="form-control mb-3">
-																																																								<option>Select Plan </option>
-																																																								<option>1 Year</option>
-																																																								<option>06 Months</option>
-																																																							</select>
-																																																						</div>
-																																																					</div> -->
+																																																							<div class="form-group row pb-4">
+																																																								<select class="form-control mb-3">
+																																																									<option>Select Plan </option>
+																																																									<option>1 Year</option>
+																																																									<option>06 Months</option>
+																																																								</select>
+																																																							</div>
+																																																						</div> -->
 							</div>
 						</div>
 
