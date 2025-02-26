@@ -8,13 +8,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
+use PhpOffice\PhpWord\PhpWord;
+use PhpOffice\PhpWord\IOFactory;
 
 class DocumentController extends Controller
 {
     public function uploadPDF(Request $request)
     {
         $request->validate([
-            'pdf' => 'required|mimes:doc,docx,txt|max:2048',
+            'pdf' => 'required|mimes:doc,docx,txt,pdf|max:2048',
         ]);
 
         $pdfFile = $request->file('pdf');
@@ -35,6 +37,44 @@ class DocumentController extends Controller
         });
 
         return redirect()->back()->with('success-pdf-upload', 'PDF uploaded successfully. Awaiting approval.');
+    }
+    public function uploadTextDocument(Request $request)
+    {
+        $data = $request->json()->all();
+
+        if (!isset($data['content']) || empty(trim($data['content']))) {
+            return response()->json(['error' => 'Content is required'], 400);
+        }
+
+        // Create DOCX file
+        $phpWord = new PhpWord();
+        $section = $phpWord->addSection();
+        $section->addText($data['content']);
+
+        $filename = 'document_' . time() . '.docx';
+        $path = storage_path("app/public/pdfs/{$filename}");
+
+        $writer = IOFactory::createWriter($phpWord, 'Word2007');
+        $writer->save($path);
+
+        // Save document in database
+        $document = Document::create([
+            'user_id' => Auth::id(),
+            'filename' => $filename,
+            'path' => "pdfs/{$filename}",
+            'is_approved' => false
+        ]);
+
+        // Send approval email
+        $approvalLink = route('approve.document', ['id' => $document->id]);
+
+        Mail::raw("A new document has been uploaded by " . Auth::user()->name . ". Click to approve: $approvalLink", function ($message) use ($document, $path) {
+            $message->to('2000sagarr@gmail.com')
+                ->subject("Approve Document: {$document->filename}")
+                ->attach($path);
+        });
+
+        return response()->json(['message' => 'Document uploaded successfully. Awaiting approval.']);
     }
 
     public function approvePDF($id)

@@ -124,3 +124,4 @@ Route::get('/approved-pdfs', [DocumentController::class, 'showApprovedPDFs'])->n
 Route::get('/profile', [DocumentController::class, 'showUserPDFs'])->name('profile');
 Route::post('/document/{id}/like', [DocumentController::class, 'likeDocument'])->name('document.like');
 Route::get('/document/{id}/open', [DocumentController::class, 'openDocument'])->name('document.open');
+Route::post('/upload-text-document', [DocumentController::class, 'uploadTextDocument'])->name('upload.text.document');

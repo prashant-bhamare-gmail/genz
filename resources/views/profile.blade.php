@@ -3,6 +3,7 @@
 
 	<div role="main" class="main">
 
+
 		<section class="page-header page-header-modern custom-page-header bg-color-quaternary">
 			<div class="container">
 				<div class="row">
@@ -20,6 +21,12 @@
 				</div>
 			</div>
 		</section>
+		@if(session('success-pdf-upload'))
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				{{ session('success-pdf-upload') }}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		@endif
 		<form action="{{ route('logout') }}" method="POST">
 			@csrf
 			<button type="submit" class="btn btn-danger">Logout</button>
@@ -58,9 +65,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																											<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																												data-bs-toggle="tab">Membership</a>
-																																										</li> -->
+																																																		<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																			data-bs-toggle="tab">Membership</a>
+																																																	</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple4" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -75,11 +82,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																												<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																												<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																												<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																												<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																											</ul> -->
+																																																			<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																			<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																			<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																			<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																		</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -214,9 +221,7 @@
 						@endif
 
 
-						@if(session('success-pdf-upload'))
-							<p style="color: green;">{{ session('success') }}</p>
-						@endif
+
 						<!-- My Contribution -->
 						<form action="{{ route('upload.pdf') }}" method="POST" enctype="multipart/form-data">
 							@csrf
@@ -229,30 +234,63 @@
 											accept=".pdf,.doc,.docx,.txt">
 									</div>
 								</div>
-								<!-- <div class="col-sm-3 col-lg-3">
-																							<div class="call-to-action-btn">
-																								<a href="#" target="_blank" class="btn btn-modern dwn_btn text-2 btn-primary">
-																									<i class="fa fa-upload" aria-hidden="true"></i>
-																								</a>
-																							</div>
-																						</div> -->
+
 							</section>
 							<div class="form-group mt-3 d-flex gap-2">
 								<button type="submit" class="btn btn-primary mr-2">Send</button>
-								<button type="button" class="btn btn-secondary">Cancel</button>
 							</div>
 						</form>
 						<p class="text-center">Or</p>
 						<label for="editor" class="form-label">Enter Text</label>
-						<div class="mb-2">
-							<textarea style="width: 100%; border-radius: 5px; border: 1px solid #DFDFDF" name="description"
-								id="description" rows="5" cols="50"></textarea>
-						</div>
+						<form id="documentForm">
+							<textarea id="textContent" name="content" rows="5"
+								style="width: 100%; border-radius: 5px; border: 1px solid #DFDFDF;"></textarea>
+							<button type="button" id="saveDocument" class="btn btn-primary mt-2">Upload</button>
+						</form>
 
-						<div class="form-group mt-3 d-flex gap-2">
-							<button type="submit" class="btn btn-primary mr-2">Send</button>
-							<button type="button" class="btn btn-secondary">Cancel</button>
-						</div>
+						<script>
+							document.getElementById('saveDocument').addEventListener('click', function () {
+								let button = this;
+								let content = document.getElementById('textContent').value;
+
+								if (!content.trim()) {
+									alert("Please enter some text.");
+									return;
+								}
+
+								// Disable button and show waiting message
+								button.disabled = true;
+								button.textContent = "Please wait...";
+
+								fetch("{{ route('upload.text.document') }}", {
+									method: "POST",
+									headers: {
+										"Content-Type": "application/json",
+										"X-CSRF-TOKEN": "{{ csrf_token() }}"
+									},
+									body: JSON.stringify({ content: content })
+								})
+									.then(response => response.json())
+									.then(data => {
+										if (data.message) {
+											alert("Document uploaded successfully! Awaiting approval.");
+											document.getElementById('textContent').value = "";
+										} else {
+											alert("Error: " + data.error);
+										}
+									})
+									.catch(error => {
+										console.error("Error:", error);
+										alert("An error occurred while uploading the document.");
+									})
+									.finally(() => {
+										// Re-enable button and reset text
+										button.disabled = false;
+										button.textContent = "Upload";
+									});
+							});
+						</script>
+
 
 
 					</div>
@@ -305,7 +343,7 @@
 														<div class="mt-3 text-center">
 															<button
 																class="btn like-button 
-																											@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success @else btn-outline-primary @endif"
+																																																							@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success @else btn-outline-primary @endif"
 																data-pdf-id="{{ $pdf->id }}" @if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
 																👍 Like
 															</button>
@@ -370,10 +408,10 @@
 								</div>
 							</div>
 							<!-- <div class="col-sm-3 col-lg-3">
-																																										<div class="call-to-action-btn">
-																																											<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
-																																										</div>
-																																									</div> -->
+																																																	<div class="call-to-action-btn">
+																																																		<a href="#"  class="btn btn-modern text-2 btn-primary">Buy Now</a>
+																																																	</div>
+																																																</div> -->
 						</section>
 
 
@@ -417,14 +455,14 @@
 									</span>
 								</div>
 								<!-- <div class="text-center mt-4 mt-md-0">
-																																												<div class="form-group row pb-4">
-																																													<select class="form-control mb-3">
-																																														<option>Select Plan </option>
-																																														<option>1 Year</option>
-																																														<option>06 Months</option>
-																																													</select>
-																																												</div>
-																																											</div> -->
+																																																			<div class="form-group row pb-4">
+																																																				<select class="form-control mb-3">
+																																																					<option>Select Plan </option>
+																																																					<option>1 Year</option>
+																																																					<option>06 Months</option>
+																																																				</select>
+																																																			</div>
+																																																		</div> -->
 							</div>
 						</div>
 
