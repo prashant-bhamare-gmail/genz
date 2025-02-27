@@ -17,7 +17,7 @@ class EventController extends Controller
     public function eventpage()
     {
         $today = Carbon::today();
-        $user = auth()->user(); 
+        $user = auth()->user();
 
         // Completed Events (Last 4 past events)
         $completedEvents = Event::where('event_date', '<', $today)
@@ -44,6 +44,8 @@ class EventController extends Controller
                 ->toArray(); // Get IDs of registered events
         }
 
+        Log::info('Completed Events: ' . json_encode($upcomingEvents));
+        Log::info('Next Event: ' . json_encode($registeredEvents));
         return view('event', compact('completedEvents', 'nextEvent', 'upcomingEvents', 'registeredEvents'));
     }
 
@@ -59,7 +61,7 @@ class EventController extends Controller
     // Event Details
     public function eventbooking($eventId)
     {
-      
+
         if (!Auth::check() && !Session::has('guest_logged_in')) {
             return redirect()->route('event', [
                 'showLogin' => true,
@@ -212,7 +214,7 @@ class EventController extends Controller
 
         // Delete the event booking
         $event->delete();
-        
+
         return redirect()->route('event')->with('success', 'Event booking has been canceled successfully');
     }
 }
