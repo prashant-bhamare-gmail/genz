@@ -114,12 +114,14 @@ class DocumentController extends Controller
         foreach ($registrations as $registration) {
             if ($registration->event) {
                 $event = $registration->event;
-                if ($event->event_date > $today) {
+                $eventDate = Carbon::parse($event->event_date);
+    
+                if ($eventDate->isFuture()) {
                     $upcomingEvents[] = $event;
-                } elseif ($event->event_date == $today) {
-                    $todayEvents[] = $event;
+                } elseif ($eventDate->isSameDay($today)) {
+                    $todayEvents[] = $event; 
                 } else {
-                    $completedEvents[] = $event;
+                    $completedEvents[] = $event; 
                 }
             }
         }
@@ -144,21 +146,6 @@ class DocumentController extends Controller
 
         return response()->json(['success' => true, 'message' => 'PDF liked successfully!']);
 
-        // $pdf = Document::findOrFail($id);
-        // $user = Auth::user();
-
-        // // Check if the user already liked this PDF
-        // if ($pdf->likes()->where('user_id', $user->id)->exists()) {
-        //     return redirect()->back()->with('message', 'You have already liked this PDF.');
-        // }
-
-        // // Create a like record
-        // DocumentLike::create([
-        //     'user_id' => $user->id,
-        //     'document_id' => $pdf->id,
-        // ]);
-
-        // return redirect()->back()->with('message', 'PDF liked successfully!');
     }
     public function openDocument($id)
     {

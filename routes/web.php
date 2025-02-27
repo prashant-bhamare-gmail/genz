@@ -37,7 +37,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/mission-vision', [HomeController::class, 'missionvision'])->name('mission-vision');
 Route::get('/hr-terminology', [HomeController::class, 'hrterminology'])->name('hr-terminology');
 Route::get('/hr-certification', [HomeController::class, 'hrcertification'])->name('hr-certification');
-Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/profile', [HomeController::class, 'profile'])->middleware('auth')->name('profile');
 Route::get('/managing-committee/{city}', [HomeController::class, 'managingcommittee'])->name('managing-committee');
 Route::get('/mentor-president/{city}', [HomeController::class, 'mentorpresident'])->name('mentor-president');
 
