@@ -28,9 +28,9 @@
 			</div>
 		@endif
 		<!-- <form action="{{ route('logout') }}" method="POST">
-										@csrf
-										<button type="submit" class="btn btn-danger">Logout</button>
-									</form> -->
+												@csrf
+												<button type="submit" class="btn btn-danger">Logout</button>
+											</form> -->
 		<div class="container pt-3 pb-2">
 
 			<div class="row pt-2">
@@ -57,9 +57,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																																		<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																																			data-bs-toggle="tab">Membership</a>
-																																																																	</li> -->
+																																																																				<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																																					data-bs-toggle="tab">Membership</a>
+																																																																			</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple3" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -79,11 +79,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																																			<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																																			<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																																			<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																																			<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																																		</ul> -->
+																																																																					<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																																					<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																																					<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																																					<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																																				</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -174,9 +174,9 @@
 									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
 										accept="image/*">
 									<!-- @if(Auth::user()->profile_photo)
-																	<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
-																		width="100">
-																@endif -->
+																			<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
+																				width="100">
+																		@endif -->
 								</div>
 							</div>
 
@@ -319,8 +319,8 @@
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<!-- <div class="input-group-append">
-														<button class="btn btn-primary mt-2" type="button">Search</button>
-													</div> -->
+																<button class="btn btn-primary mt-2" type="button">Search</button>
+															</div> -->
 								</div>
 							</form>
 						</section>
@@ -350,7 +350,7 @@
 															<span>👁 Views: <span
 																	id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
 															<!-- <span>👍 Likes: <span
-																																		id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span> -->
+																																								id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span> -->
 														</div>
 
 														<!-- Like Button Added -->
@@ -425,59 +425,75 @@
 									});
 								});
 
-							
+
 							</script>
 						@endif
 					</div>
 
 					<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple4">
 						<h4 class="mb-3">Social Networks</h4>
-						<div class=" mb-4">
-							<div class="">
-								<div class="row">
-									<div class="col">
-										<div class="input-group mb-3">
-											<span class="input-group-text text-3" id="basic-addon1"><i
-													class="fab fa-linkedin-in"></i></span>
-											<input type="text" class="form-control text-3 h-auto py-2"
-												placeholder="Enter Your linkedin Link" aria-label="Username"
-												aria-describedby="basic-addon1">
-										</div>
-										<div class="input-group mb-3">
-											<span class="input-group-text text-3" id="basic-addon1"><i
-													class="fa-brands fa-square-instagram"></i></span>
-											<input type="text" class="form-control text-3 h-auto py-2"
-												placeholder="Enter Your Instagram Link" aria-label="Username"
-												aria-describedby="basic-addon1">
-										</div>
-										<div class="input-group mb-3">
-											<span class="input-group-text text-3" id="basic-addon1"><i
-													class="fa-brands fa-square-facebook"></i></span>
-											<input type="text" class="form-control text-3 h-auto py-2"
-												placeholder="Enter Your Facebook Link" aria-label="Username"
-												aria-describedby="basic-addon1">
-										</div>
-										<div class="input-group mb-3">
-											<span class="input-group-text text-3" id="basic-addon1"><i
-													class="fa-brands fa-square-x-twitter"></i></span>
-											<input type="text" class="form-control text-3 h-auto py-2"
-												placeholder="Enter Your Twitter Link" aria-label="Username"
-												aria-describedby="basic-addon1">
-										</div>
-										<div class="input-group mb-3">
-											<span class="input-group-text text-3" id="basic-addon1"><i
-													class="fa-solid fa-link"></i></span>
-											<input type="text" class="form-control text-3 h-auto py-2"
-												placeholder="Enter Your Prtfolio Link" aria-label="Username"
-												aria-describedby="basic-addon1">
-										</div>
-										<div class="form-group mt-3 d-flex gap-2">
-											<button type="submit" class="btn btn-primary mr-2">Save</button>
+						<form action="{{ route('profilemedia') }}" method="POST">
+							@csrf
+							<div class="mb-4">
+								<div class="">
+									<div class="row">
+										<div class="col">
+											<!-- LinkedIn -->
+											<div class="input-group mb-3">
+												<span class="input-group-text text-3"><i
+														class="fab fa-linkedin-in"></i></span>
+												<input type="text" class="form-control text-3 h-auto py-2" name="linkedin"
+													placeholder="Enter Your LinkedIn Link"
+													value="{{ old('linkedin', Auth::user()->linkedin) }}">
+											</div>
+
+											<!-- Instagram -->
+											<div class="input-group mb-3">
+												<span class="input-group-text text-3"><i
+														class="fa-brands fa-square-instagram"></i></span>
+												<input type="text" class="form-control text-3 h-auto py-2" name="instagram"
+													placeholder="Enter Your Instagram Link"
+													value="{{ old('instagram', Auth::user()->instagram) }}">
+											</div>
+
+											<!-- Facebook -->
+											<div class="input-group mb-3">
+												<span class="input-group-text text-3"><i
+														class="fa-brands fa-square-facebook"></i></span>
+												<input type="text" class="form-control text-3 h-auto py-2" name="facebook"
+													placeholder="Enter Your Facebook Link"
+													value="{{ old('facebook', Auth::user()->facebook) }}">
+											</div>
+
+											<!-- Twitter (X) -->
+											<div class="input-group mb-3">
+												<span class="input-group-text text-3"><i
+														class="fa-brands fa-square-x-twitter"></i></span>
+												<input type="text" class="form-control text-3 h-auto py-2" name="x_twitter"
+													placeholder="Enter Your Twitter (X) Link"
+													value="{{ old('x_twitter', Auth::user()->x_twitter) }}">
+											</div>
+
+											<!-- Portfolio -->
+											<div class="input-group mb-3">
+												<span class="input-group-text text-3"><i
+														class="fa-solid fa-link"></i></span>
+												<input type="text" class="form-control text-3 h-auto py-2" name="portfolio"
+													placeholder="Enter Your Portfolio Link"
+													value="{{ old('portfolio', Auth::user()->portfolio) }}">
+											</div>
+
+											<!-- Save Button -->
+											<div class="form-group mt-3 d-flex gap-2">
+												<button type="submit" class="btn btn-primary mr-2">Save</button>
+											</div>
+
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</form>
+
 					</div>
 
 
@@ -487,24 +503,24 @@
 						<h3 class="mb-3">My Events</h3>
 						<!-- Today's Events -->
 						<!-- <div class="card mb-4">
-										<div class="card-header bg-primary text-white">Today's Events</div>
-										<div class="card-body">
-											@if(count($todayEvents) > 0)
-												<ul class="list-group">
-													@foreach($todayEvents as $event)
-														<li class="list-group-item">
-															<strong>{{ $event->title }}</strong><br>
-															<span>Date: {{ $event->event_date }}</span><br>
-															<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
-															<span>Location: {{ $event->location }}</span>
-														</li>
-													@endforeach
-												</ul>
-											@else
-												<p class="text-muted">No events today.</p>
-											@endif
-										</div>
-									</div> -->
+												<div class="card-header bg-primary text-white">Today's Events</div>
+												<div class="card-body">
+													@if(count($todayEvents) > 0)
+														<ul class="list-group">
+															@foreach($todayEvents as $event)
+																<li class="list-group-item">
+																	<strong>{{ $event->title }}</strong><br>
+																	<span>Date: {{ $event->event_date }}</span><br>
+																	<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
+																	<span>Location: {{ $event->location }}</span>
+																</li>
+															@endforeach
+														</ul>
+													@else
+														<p class="text-muted">No events today.</p>
+													@endif
+												</div>
+											</div> -->
 						<div class="col mb-4 mb-lg-0">
 							<div class="accordion accordion-modern-status accordion-modern-status-borders accordion-modern-status-arrow"
 								id="accordion200">

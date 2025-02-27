@@ -57,13 +57,13 @@ class RegisterController extends Controller
     public function update(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'current_role'  => 'nullable|string|max:255',
-            'company_name'  => 'nullable|string|max:255',
-            'phone'         => 'nullable|string|max:20',
-            'address'       => 'nullable|string|max:255',
-            'street'        => 'nullable|string|max:255',
-            'city'          => 'nullable|string|max:255',
-            'state'         => 'nullable|string|max:255',
+            'current_role' => 'nullable|string|max:255',
+            'company_name' => 'nullable|string|max:255',
+            'phone' => 'nullable|string|max:20',
+            'address' => 'nullable|string|max:255',
+            'street' => 'nullable|string|max:255',
+            'city' => 'nullable|string|max:255',
+            'state' => 'nullable|string|max:255',
             'profile_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -86,4 +86,26 @@ class RegisterController extends Controller
 
         return redirect()->route('profile')->with('success', 'Profile updated successfully');
     }
+
+    public function profilemedia(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'linkedin' => 'nullable|url|max:255',
+            'instagram' => 'nullable|url|max:255',
+            'facebook' => 'nullable|url|max:255',
+            'x_twitter' => 'nullable|url|max:255',
+            'portfolio' => 'nullable|url|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $user = Auth::user();
+        $user->fill($request->only(['linkedin', 'instagram', 'facebook', 'x_twitter', 'portfolio']));
+        $user->save();
+
+        return redirect()->route('profile')->with('success', 'Profile updated successfully');
+    }
+
 }

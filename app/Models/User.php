@@ -31,7 +31,14 @@ class User extends Authenticatable
         'street',
         'city',
         'state',
-        'profile_photo'
+        'profile_photo',
+        'linkedin',
+        'instagram',
+        'facebook',
+        'x_twitter',
+        'portfolio',
+        'reward_points',
+        'used_reward_points'
     ];
 
 

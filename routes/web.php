@@ -64,6 +64,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile', [RegisterController::class, 'update'])->name('profile.update');
 });
 
+
+Route::middleware(['auth'])->group(function () {
+    Route::post('/profilemedia', [RegisterController::class, 'profilemedia'])->name('profilemedia');
+});
+
 // quiz routes
 Route::get('/', [QuizController::class, 'showQuiz']);
 Route::get('/login', action: [QuizController::class, 'showQuiz']);
