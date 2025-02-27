@@ -74,7 +74,7 @@
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple6"
 										data-bs-toggle="tab">Notification</a>
-								</li>
+								</li> 
 							</ul>
 						</div>
 
