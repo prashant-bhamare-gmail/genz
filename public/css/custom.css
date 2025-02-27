@@ -535,3 +535,16 @@ input[type="checkbox"]:checked::before{
   a.btn.btn-modern.dwn_btn.text-2.btn-primary  {
     padding: 8px 15px !important;
   }
+  .count_sect {
+    right: 10px;
+    position: absolute;
+}
+span.approved_clr {
+    color: green;
+}
+span.reject_clr {
+    color: red;
+}
+.list-group-item+.list-group-item {
+    border-top-width: thin;
+}

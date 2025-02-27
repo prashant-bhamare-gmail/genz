@@ -279,13 +279,15 @@
 									@if (Auth::check())
 										<form action="{{ route('logout') }}" method="POST">
 											@csrf
-											<button type="submit" class=" font-weight-bold text-2 mt-4" style='height: 41px;
+											<button type="submit" class=" bg-color-primary text-white font-weight-bold text-2 mt-4" style='height: 40px;
 															border-radius: 50px;
 															padding: 7px;
 															margin-left: 10px;
 															margin-top: 21px !important;'>
-												<i class="fa fa-power-off" style='font-size:24px'
-													aria-hidden="true"></i></button>
+												<!-- <i class="fa fa-power-off" style='font-size:24px'
+													aria-hidden="true"></i> -->
+													Logout
+												</button>
 										</form>
 									@endif
 								</nav>
