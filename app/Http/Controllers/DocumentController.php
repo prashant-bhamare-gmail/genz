@@ -35,7 +35,7 @@ class DocumentController extends Controller
         $unapprovalLink = route('unapprove.document', ['id' => $pdf->id]);
 
         Mail::raw("A new PDF has been uploaded by " . Auth::user()->name . ". Click to approve: $approvalLink or unapprove: $unapprovalLink", function ($message) use ($pdf) {
-            $message->to("2000sagarr@gmail.com")
+            $message->to("hello@hrconnects.org")
                 ->subject("Review PDF: {$pdf->filename}")
                 ->attach(storage_path("app/public/{$pdf->path}"));
         });
@@ -71,9 +71,10 @@ class DocumentController extends Controller
 
         // Send approval email
         $approvalLink = route('approve.document', ['id' => $document->id]);
+        $unapprovalLink = route('unapprove.document', ['id' => $document->id]);
 
-        Mail::raw("A new document has been uploaded by " . Auth::user()->name . ". Click to approve: $approvalLink", function ($message) use ($document, $path) {
-            $message->to('2000sagarr@gmail.com')
+        Mail::raw("A new document has been uploaded by " . Auth::user()->name . ". Click to approve: $approvalLink or unapprove: $unapprovalLink", function ($message) use ($document, $path) {
+            $message->to('hello@hrconnects.org')
                 ->subject("Approve Document: {$document->filename}")
                 ->attach($path);
         });
