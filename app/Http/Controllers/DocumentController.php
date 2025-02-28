@@ -108,7 +108,12 @@ class DocumentController extends Controller
 
     public function showUserPDFs()
     {
+        if (!auth()->check()) {
+            return redirect('/');
+        }
+
         $user = Auth::user();
+
         $today = Carbon::today();
 
         $userPDFs = Document::where('user_id', Auth::id())->get();

@@ -50,7 +50,10 @@ class HomeController extends Controller
         // Access user properties
         $name = $user->name;
         $email = $user->email;
-
+        if (!auth()->check()) {
+            return redirect('/');
+        }
+    
         return view('profile');
     }
    
