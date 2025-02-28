@@ -7,6 +7,7 @@ use App\Models\DocumentLike;
 use App\Models\EventRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
@@ -18,9 +19,9 @@ class DocumentController extends Controller
     public function uploadPDF(Request $request)
     {
         $request->validate([
-            'pdf' => 'required|file|mimes:pdf,doc,docx,txt|max:2048', 
+            'pdf' => 'required|file|mimes:pdf,doc,docx,txt|max:2048',
         ]);
-        
+
 
         $pdfFile = $request->file('pdf');
         $path = $pdfFile->store('pdfs', 'public');
@@ -156,11 +157,14 @@ class DocumentController extends Controller
             'document_id' => $pdf->id,
         ]);
 
-        $user->reward_points = ($user->reward_points ?? 0) + 25;
-        $user->save();
-
-        return response()->json(['success' => true, 'message' => 'PDF liked successfully!']);
-
+        // Refresh the likes count (fetch again)
+        $updatedLikeCount = DocumentLike::where('document_id', $pdf->id)->count();
+        Log::info("updatedLikeCount" . $updatedLikeCount);
+        return response()->json([
+            'success' => true,
+            'message' => 'PDF liked successfully!',
+            'likes_count' => $updatedLikeCount, // ✅ Updated count
+        ]);
     }
     public function openDocument($id)
     {

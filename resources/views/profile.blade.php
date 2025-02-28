@@ -28,9 +28,9 @@
 			</div>
 		@endif
 		<!-- <form action="{{ route('logout') }}" method="POST">
-														@csrf
-														<button type="submit" class="btn btn-danger">Logout</button>
-													</form> -->
+																					@csrf
+																					<button type="submit" class="btn btn-danger">Logout</button>
+																				</form> -->
 		<div class="container pt-3 pb-2">
 
 			<div class="row pt-2">
@@ -57,9 +57,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																																						<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																																							data-bs-toggle="tab">Membership</a>
-																																																																					</li> -->
+																																																																													<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																																														data-bs-toggle="tab">Membership</a>
+																																																																												</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple3" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -79,11 +79,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																																							<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																																							<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																																							<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																																							<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																																						</ul> -->
+																																																																														<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																																														<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																																														<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																																														<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																																													</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -174,9 +174,9 @@
 									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
 										accept="image/*">
 									<!-- @if(Auth::user()->profile_photo)
-																					<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
-																						width="100">
-																				@endif -->
+																												<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
+																													width="100">
+																											@endif -->
 								</div>
 							</div>
 
@@ -243,7 +243,7 @@
 														<span>👁 Views: <span
 																id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
 														<span>👍 Likes: <span
-																id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span>
+																id="likes-{{ $pdf->id }}">{{  $pdf->id }}{{ $pdf->likes->count() }}</span></span>
 													</div>
 												</div>
 											</div>
@@ -337,8 +337,8 @@
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<!-- <div class="input-group-append">
-																		<button class="btn btn-primary mt-2" type="button">Search</button>
-																	</div> -->
+																									<button class="btn btn-primary mt-2" type="button">Search</button>
+																								</div> -->
 								</div>
 							</form>
 						</section>
@@ -367,18 +367,27 @@
 														<div class="d-flex justify-content-between">
 															<span>👁 Views: <span
 																	id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
-															<!-- <span>👍 Likes: <span
-																																														id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span> -->
 														</div>
 
 														<!-- Like Button Added -->
 														@auth
 															<div class="text-center">
-																<button
-																	class="btn like-button 																																																								@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 																																																								@else btn-outline-primary @endif"
-																	data-pdf-id="{{ $pdf->id }}" @if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
-																	👍 Like {{ $pdf->likes->count() }}
+																<!-- <button
+																					class="btn like-button @if($pdf->likes->where('user_id', Auth::id())->count()) btn-success  @else btn-outline-primary @endif"
+																					data-pdf-id="{{ $pdf->id }}" @if($pdf->likes->where('user_id', Auth::id())->count()) disabled @endif>
+																					👍 Likes:
+																					<span id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span>
+																				</button> -->
+
+																<button class="btn like-button 
+																					@if($pdf->likes->where('user_id', Auth::id())->count()) btn-success 
+																					@else btn-outline-primary @endif" data-pdf-id="{{ $pdf->id }}" data-likes="{{ $pdf->likes->count() }}"
+																	@if($pdf->likes->where('user_id', Auth::id())->count()) disabled
+																	@endif>
+																	👍 Likes: <span>{{ $pdf->likes->count() }}</span>
 																</button>
+
+
 																<span class="text-success d-block mt-2"
 																	id="like-message-{{ $pdf->id }}"></span>
 															</div>
@@ -394,46 +403,73 @@
 
 							<!-- JavaScript -->
 							<script defer>
-								// Live Search Functionality
-								document.getElementById('searchInput').addEventListener('input', function () {
-									let searchValue = this.value.toLowerCase();
-									let pdfItems = document.querySelectorAll('.pdf-item');
+								// document.addEventListener("DOMContentLoaded", function () {
+								// 	document.querySelectorAll(".like-button").forEach(button => {
+								// 		button.addEventListener("click", function () {
+								// 			let pdfId = this.getAttribute("data-pdf-id");
+								// 			let likeButton = this;
+								// 			let likeCountSpan = document.getElementById("likes-" + pdfId);
+								// 			let likeMessage = document.getElementById("like-message-" + pdfId);
 
-									pdfItems.forEach(item => {
-										let filename = item.getAttribute('data-filename');
-										if (filename.includes(searchValue)) {
-											item.style.display = "block"; // Show matching items
-										} else {
-											item.style.display = "none"; // Hide non-matching items
-										}
-									});
-								});
+								// 			console.log("Like button clicked for PDF ID:", pdfId); // ✅ Check if button is working
+								// 			console.log("Like count span:", likeCountSpan); // ✅ Check if span exists in HTML
 
-								// Like Button Functionality
+								// 			fetch(`/document/${pdfId}/like`, {
+								// 				method: "POST",
+								// 				headers: {
+								// 					"Content-Type": "application/json",
+								// 					"X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+								// 				},
+								// 				body: JSON.stringify({})
+								// 			})
+								// 				.then(response => response.json())
+								// 				.then(data => {
+								// 					console.log("API Response:", data); // ✅ Debug API response
+								// 					if (data.success) {
+								// 						likeButton.disabled = true;
+								// 						likeButton.classList.remove("btn-outline-primary");
+								// 						likeButton.classList.add("btn-success");
+
+								// 						if (likeCountSpan) {
+								// 							likeCountSpan.textContent = data.likes_count; // ✅ Update count if span exists
+								// 						} else {
+								// 							console.error("❌ Like count span not found!");
+								// 						}
+
+								// 					} else {
+								// 						likeMessage.textContent = data.message;
+								// 					}
+								// 				})
+								// 				.catch(error => console.error("Error:", error));
+								// 		});
+								// 	});
+								// });
 								document.addEventListener("DOMContentLoaded", function () {
 									document.querySelectorAll(".like-button").forEach(button => {
 										button.addEventListener("click", function () {
 											let pdfId = this.getAttribute("data-pdf-id");
 											let likeButton = this;
-											let likeCount = document.getElementById("likes-" + pdfId);
+											let likeCountSpan = likeButton.querySelector("span"); // ✅ Find span within button
 											let likeMessage = document.getElementById("like-message-" + pdfId);
 
 											fetch(`/document/${pdfId}/like`, {
 												method: "POST",
 												headers: {
 													"Content-Type": "application/json",
-													"X-CSRF-TOKEN": "{{ csrf_token() }}",
+													"X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
 												},
 												body: JSON.stringify({})
 											})
 												.then(response => response.json())
 												.then(data => {
 													if (data.success) {
-														likeButton.disabled = true; // Disable the button
+														likeButton.disabled = true;
 														likeButton.classList.remove("btn-outline-primary");
 														likeButton.classList.add("btn-success");
-														likeCount.textContent = parseInt(likeCount.textContent) + 1;
-														// likeMessage.textContent = "Liked!";
+
+														if (likeCountSpan) {
+															likeCountSpan.textContent = data.likes_count; // ✅ Update span inside button
+														}
 													} else {
 														likeMessage.textContent = data.message;
 													}
@@ -521,24 +557,24 @@
 						<h3 class="mb-3">My Events</h3>
 						<!-- Today's Events -->
 						<!-- <div class="card mb-4">
-														<div class="card-header bg-primary text-white">Today's Events</div>
-														<div class="card-body">
-															@if(count($todayEvents) > 0)
-																<ul class="list-group">
-																	@foreach($todayEvents as $event)
-																		<li class="list-group-item">
-																			<strong>{{ $event->title }}</strong><br>
-																			<span>Date: {{ $event->event_date }}</span><br>
-																			<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
-																			<span>Location: {{ $event->location }}</span>
-																		</li>
-																	@endforeach
-																</ul>
-															@else
-																<p class="text-muted">No events today.</p>
-															@endif
-														</div>
-													</div> -->
+																					<div class="card-header bg-primary text-white">Today's Events</div>
+																					<div class="card-body">
+																						@if(count($todayEvents) > 0)
+																							<ul class="list-group">
+																								@foreach($todayEvents as $event)
+																									<li class="list-group-item">
+																										<strong>{{ $event->title }}</strong><br>
+																										<span>Date: {{ $event->event_date }}</span><br>
+																										<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
+																										<span>Location: {{ $event->location }}</span>
+																									</li>
+																								@endforeach
+																							</ul>
+																						@else
+																							<p class="text-muted">No events today.</p>
+																						@endif
+																					</div>
+																				</div> -->
 						<div class="col mb-4 mb-lg-0">
 							<div class="accordion accordion-modern-status accordion-modern-status-borders accordion-modern-status-arrow"
 								id="accordion200">

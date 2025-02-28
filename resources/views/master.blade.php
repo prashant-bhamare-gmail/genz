@@ -19,7 +19,7 @@
 
 	<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- Web Fonts  -->
 	<link id="googleFonts"
 		href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CSintony:400,700&display=swap"
