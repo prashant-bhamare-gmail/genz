@@ -97,12 +97,12 @@
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label class="form-label mb-1 text-2">Company Name</label>
-                                    <input type="text" class="form-control text-3 h-auto py-2" name="company_name"
+                                    <input type="text" value="{{ auth()->check() ? auth()->user()->company_name : '' }}" class="form-control text-3 h-auto py-2" name="company_name"
                                         required>
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label class="form-label mb-1 text-2">Current Designation</label>
-                                    <input type="text" class="form-control text-3 h-auto py-2" name="designation"
+                                    <input type="text" value="{{ auth()->check() ? auth()->user()->current_role : '' }}" class="form-control text-3 h-auto py-2" name="designation"
                                         required>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                             <div class="row">
                                 <div class="form-group col">
                                     <label class="form-label mb-1 text-2">Contact Number</label>
-                                    <input type="number" class="form-control text-3 h-auto py-2" name="contact_number" pattern="[0-9]{10}" maxlength="10" 
+                                    <input type="number" value="{{ auth()->check() ? auth()->user()->phone : '' }}" class="form-control text-3 h-auto py-2" name="contact_number" pattern="[0-9]{10}" maxlength="10" 
                                         required>
                                 </div>
                             </div>

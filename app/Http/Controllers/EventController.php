@@ -98,8 +98,13 @@ class EventController extends Controller
             'contact_number' => $request->contact_number,
             'interested' => $request->interested,
         ]);
+        $user = Auth::user();
+        Log::info('User reward points: ' . $user->reward_points);
+        // Log::info('User reward points updated: ' . $user->reward_points);
 
+       
         Mail::to($request->email)->send(new EventRegistrationMail($event, $user ?? (object) ['name' => $request->name]));
+
 
         return response()->json([
             'message' => 'Successfully registered for the event!'
@@ -188,6 +193,13 @@ class EventController extends Controller
             'contact_number' => $request->contact_number,
             'interested' => $request->interested,
         ]);
+        
+        if ($user) {
+            // Ensure reward_point is not null and increment by 25
+            $user->reward_points = ($user->reward_points ?? 0) + 25;
+            $user->save();
+            Log::info('User reward points updated: ' . $user->reward_points);
+        }
 
         // Send confirmation email
         Mail::to($request->email)->send(new EventRegistrationMail($event, $user ?? (object) ['name' => $request->name]));

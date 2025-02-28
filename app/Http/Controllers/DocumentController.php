@@ -144,6 +144,9 @@ class DocumentController extends Controller
             'document_id' => $pdf->id,
         ]);
 
+        $user->reward_points = ($user->reward_points ?? 0) + 25; 
+        $user->save();
+
         return response()->json(['success' => true, 'message' => 'PDF liked successfully!']);
 
     }
