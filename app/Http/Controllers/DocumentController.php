@@ -157,6 +157,12 @@ class DocumentController extends Controller
             'document_id' => $pdf->id,
         ]);
 
+        if ($user) {
+            // Ensure reward_point is not null and increment by 25
+            $user->reward_points = ($user->reward_points ?? 0) + 25;
+            $user->save();
+        }
+
         // Refresh the likes count (fetch again)
         $updatedLikeCount = DocumentLike::where('document_id', $pdf->id)->count();
         Log::info("updatedLikeCount" . $updatedLikeCount);
