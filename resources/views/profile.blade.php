@@ -28,9 +28,9 @@
 			</div>
 		@endif
 		<!-- <form action="{{ route('logout') }}" method="POST">
-													@csrf
-													<button type="submit" class="btn btn-danger">Logout</button>
-												</form> -->
+														@csrf
+														<button type="submit" class="btn btn-danger">Logout</button>
+													</form> -->
 		<div class="container pt-3 pb-2">
 
 			<div class="row pt-2">
@@ -57,9 +57,9 @@
 										Contribution</a>
 								</li>
 								<!-- <li class="nav-item">
-																																																																					<a class="nav-link" href="#tabsNavigationVertSimple3"
-																																																																						data-bs-toggle="tab">Membership</a>
-																																																																				</li> -->
+																																																																						<a class="nav-link" href="#tabsNavigationVertSimple3"
+																																																																							data-bs-toggle="tab">Membership</a>
+																																																																					</li> -->
 								<li class="nav-item">
 									<a class="nav-link" href="#tabsNavigationVertSimple3" data-bs-toggle="tab">Knowledge
 										Search</a>
@@ -79,11 +79,11 @@
 						</div>
 
 						<!-- <ul class="nav nav-list flex-column mb-5">
-																																																																						<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
-																																																																						<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
-																																																																						<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
-																																																																						<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
-																																																																					</ul> -->
+																																																																							<li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">My Profile</a></li>
+																																																																							<li class="nav-item"><a class="nav-link text-3" href="#">User Preferences</a></li>
+																																																																							<li class="nav-item"><a class="nav-link text-3" href="#">Billing</a></li>
+																																																																							<li class="nav-item"><a class="nav-link text-3" href="#">Invoices</a></li>
+																																																																						</ul> -->
 					</aside>
 				</div>
 				<div class="col-lg-9">
@@ -174,9 +174,9 @@
 									<input class="form-control text-3 h-auto py-2" type="file" name="profile_photo"
 										accept="image/*">
 									<!-- @if(Auth::user()->profile_photo)
-																				<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
-																					width="100">
-																			@endif -->
+																					<img src="{{ asset('storage/' . Auth::user()->profile_photo) }}" alt="Profile Photo"
+																						width="100">
+																				@endif -->
 								</div>
 							</div>
 
@@ -205,28 +205,45 @@
 									@foreach ($userPDFs as $pdf)
 										<div class="col-md-12 col-lg-12">
 											<div class="card shadow-sm border-0 mb-4">
-												<div class="card-body" style="display: flex;">
-													<div class="docu_name" style="width: 78%;">
+												<div class="card-body d-flex">
+													<div class="docu_name w-75">
 														<h5 class="card-title">
 															<a href="{{ asset('storage/' . $pdf->path) }}" target="_blank"
-																class="text-decoration-none">📄 {{ $pdf->filename }}
+																class="text-decoration-none">
+																📄 {{ $pdf->filename }}
 															</a>
 														</h5>
+
+														<!-- Approval Status -->
 														<span class="approved_clr">
-															{{ $pdf->is_approved ? '✔ Approved' : '⏳ Pending Approval' }}
+															@if ($pdf->is_approved == 1)
+																✔ Approved
+															@elseif ($pdf->is_approved == -1)
+																❌ Rejected
+															@else
+																⏳ Pending Approval
+															@endif
 														</span>
-														<span class="reject_clr">
-															✔ Reject
-														</span>
+
+														<!-- Approve / Reject Buttons -->
+														@if (auth()->user()->is_admin && $pdf->is_approved == 0)
+															<a href="{{ route('approve.document', ['id' => $pdf->id]) }}"
+																class="text-success">
+																✔ Approve
+															</a>
+															<a href="{{ route('unapprove.document', ['id' => $pdf->id]) }}"
+																class="text-danger">
+																❌ Reject
+															</a>
+														@endif
 													</div>
+
+													<!-- Views & Likes -->
 													<div class="count_sect">
-														<div class="">
-															<span>👁 Views: <span
-																	id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
-															<span>👍 Likes:
-																<span id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span>
-															</span>
-														</div>
+														<span>👁 Views: <span
+																id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
+														<span>👍 Likes: <span
+																id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span>
 													</div>
 												</div>
 											</div>
@@ -234,6 +251,7 @@
 									@endforeach
 								</div>
 							</div>
+
 						@endif
 
 
@@ -319,8 +337,8 @@
 									<input class="form-control" type="search" id="searchInput"
 										placeholder="Search documents..." aria-label="Search" style="width: 100%;">
 									<!-- <div class="input-group-append">
-																	<button class="btn btn-primary mt-2" type="button">Search</button>
-																</div> -->
+																		<button class="btn btn-primary mt-2" type="button">Search</button>
+																	</div> -->
 								</div>
 							</form>
 						</section>
@@ -350,7 +368,7 @@
 															<span>👁 Views: <span
 																	id="views-{{ $pdf->id }}">{{ $pdf->views }}</span></span>
 															<!-- <span>👍 Likes: <span
-																																											id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span> -->
+																																														id="likes-{{ $pdf->id }}">{{ $pdf->likes->count() }}</span></span> -->
 														</div>
 
 														<!-- Like Button Added -->
@@ -503,24 +521,24 @@
 						<h3 class="mb-3">My Events</h3>
 						<!-- Today's Events -->
 						<!-- <div class="card mb-4">
-													<div class="card-header bg-primary text-white">Today's Events</div>
-													<div class="card-body">
-														@if(count($todayEvents) > 0)
-															<ul class="list-group">
-																@foreach($todayEvents as $event)
-																	<li class="list-group-item">
-																		<strong>{{ $event->title }}</strong><br>
-																		<span>Date: {{ $event->event_date }}</span><br>
-																		<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
-																		<span>Location: {{ $event->location }}</span>
-																	</li>
-																@endforeach
-															</ul>
-														@else
-															<p class="text-muted">No events today.</p>
-														@endif
-													</div>
-												</div> -->
+														<div class="card-header bg-primary text-white">Today's Events</div>
+														<div class="card-body">
+															@if(count($todayEvents) > 0)
+																<ul class="list-group">
+																	@foreach($todayEvents as $event)
+																		<li class="list-group-item">
+																			<strong>{{ $event->title }}</strong><br>
+																			<span>Date: {{ $event->event_date }}</span><br>
+																			<span>Time: {{ \Carbon\Carbon::parse($event->event_time)->format('h:i A') }}</span><br>
+																			<span>Location: {{ $event->location }}</span>
+																		</li>
+																	@endforeach
+																</ul>
+															@else
+																<p class="text-muted">No events today.</p>
+															@endif
+														</div>
+													</div> -->
 						<div class="col mb-4 mb-lg-0">
 							<div class="accordion accordion-modern-status accordion-modern-status-borders accordion-modern-status-arrow"
 								id="accordion200">
@@ -623,7 +641,8 @@
 															src="{{ asset('img/gen_img/google-icon.png') }}" width="65"
 															height="65" alt="">
 														<strong class="text-color-primary custom-primary-font"
-															data-to="{{ Auth::user()->reward_points - Auth::user()->used_reward_points }}" data-append="">
+															data-to="{{ Auth::user()->reward_points - Auth::user()->used_reward_points }}"
+															data-append="">
 															{{ Auth::user()->reward_points - Auth::user()->used_reward_points }}
 														</strong>
 														<label>Total Rewards</label>

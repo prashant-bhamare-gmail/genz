@@ -129,6 +129,8 @@ Route::delete('/event/cancel/{id}', [EventController::class, 'cancelRegistration
 // document upload routes
 Route::post('/upload', [DocumentController::class, 'uploadPDF'])->name('upload.pdf');
 Route::get('/approve/{id}', [DocumentController::class, 'approvePDF'])->name('approve.document');
+Route::get('/unapprove-document/{id}', [DocumentController::class, 'unapproveDocument'])->name('unapprove.document');
+
 Route::get('/approved-pdfs', [DocumentController::class, 'showApprovedPDFs'])->name('approved.pdfs');
 Route::get('/profile', [DocumentController::class, 'showUserPDFs'])->name('profile');
 Route::post('/document/{id}/like', [DocumentController::class, 'likeDocument'])->name('document.like');
