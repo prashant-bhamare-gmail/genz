@@ -7,7 +7,8 @@
                 <div class="row">
                     <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
                         <h1 class="font-weight-bold text-9 text-color-secondary appear-animation"
-                            data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Our Core Team</h1>
+                            data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">
+                            Current Mentor & Past President</h1>
                     </div>
 
                     <div class="col-md-4 order-1 order-md-2 align-self-center">
@@ -28,7 +29,7 @@
                 <div class="row">
                     <div class="">
                         <h1 class="font-weight-bold text-color-dark mb-3" data-appear-animation="fadeInRightShorter"
-                            data-appear-animation-delay="100">Our Core Team</h1>
+                            data-appear-animation-delay="100">Current Mentor & Past President</h1>
                     </div>
                     <div class="col">
 
