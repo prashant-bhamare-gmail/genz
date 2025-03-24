@@ -196,7 +196,7 @@
 											</a>
 											<ul class="dropdown-menu">
 												<li>
-													<a class="dropdown-item" href="{{ url('/')}}">
+													<a class="dropdown-item" href="{{ asset('pdf/Useful_HR_Formats_1709227807.pdf')}}" target="_blank">
 														Hr Form
 													</a>
 												</li>
