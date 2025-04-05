@@ -34,17 +34,24 @@ p.lead {
     margin-bottom: 0;
 }
 
+.container .call-to-action {
+    border-radius: 6px;
+}
+.call-to-action.with-button-arrow .call-to-action-btn {
+    left: 0px;
+}
 
-/*------------------------*/
-input:focus,
-button:focus,
-.form-control:focus{
-	outline: none;
-	box-shadow: none;
+/* .tab-content {
+    border-radius: 0;
+    border: 0;
+    border-top: 0;
+    padding: 15px;
+    box-shadow: none;
+} */
+.custom-step-item .step:before {
+    height: 46px;
 }
-.form-control:disabled, .form-control[readonly]{
-	background-color: #fff;
-}
+
 /*----------step-wizard------------*/
 .d-flex{
 	display: flex;
@@ -177,7 +184,7 @@ span.round-tab i{
 
 .wizard .tab-pane {
     position: relative;
-    padding-top: 20px;
+    padding-top: 11px;
 }
 
 
@@ -186,14 +193,18 @@ span.round-tab i{
 }
 .prev-step,
 .next-step{
-    font-size: 13px;
+    font-size: 16px;
     padding: 8px 24px;
     border: none;
     border-radius: 4px;
     margin-top: 30px;
+    color: #fff;
+}
+.prev-step{
+    color: #000;
 }
 .next-step{
-	background-color: #0db02b;
+	background-color: #ff6708;
 }
 .skip-btn{
 	background-color: #cec12d;
@@ -257,9 +268,6 @@ span.round-tab i{
 .footer-link{
 	margin-top: 30px;
 }
-.all-info-container{
-
-}
 .list-content{
 	margin-bottom: 10px;
 }
@@ -308,7 +316,8 @@ span.round-tab i{
 }
 /*-----------custom-checkbox-----------*/
 /*----------Custom-Checkbox---------*/
-input[type="checkbox"]{
+
+/* input[type="checkbox"]{
     position: relative;
     display: inline-block;
     margin-right: 5px;
@@ -345,11 +354,6 @@ input[type="checkbox"]:checked::before{
     border-color: #18ba60;
 }
 
-
-
-
-
-
 @media (max-width: 767px){
 	.sign-content h3{
 		font-size: 40px;
@@ -367,4 +371,180 @@ input[type="checkbox"]:checked::before{
 	.signup-logo-header .header-flex{
 		display: block;
 	}
+} */
+
+.bg-color-primary-rgba-10 {
+    background-color: rgba(227, 97, 89, 0.1);
+}
+
+.nav-tabs li .nav-link {
+
+    padding: 7.2px 16.1px;
+}
+.nav-tabs li .nav-link, .nav-tabs li .nav-link:hover {
+    background: none;
+}
+
+.accordion.accordion-modern-status.accordion-modern-status-arrow > .card .card-header a:after {
+    transform: translate3d(0, -50%, 0) rotate(180deg);
+    font-family: 'Font Awesome 6 Free';
+    content: "\f107";
+    font-weight: 900;
+    background: #212529;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.uploader {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  .uploader label {
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 3px solid #ff6708;
+    transition: all 0.2s ease;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .uploader label:hover {
+    border-color: #454cad;
+  }
+  .uploader label.hover {
+    border: 3px solid #454cad;
+    box-shadow: inset 0 0 0 6px #eee;
+  }
+  .uploader label.hover #start i.fa {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  .uploader #start {
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+  .uploader #start.hidden {
+    display: none;
+  }
+  .uploader #start i.fa {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .uploader #response {
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+  .uploader #response.hidden {
+    display: none;
+  }
+  .uploader #response #messages {
+    margin-bottom: 0.5rem;
+  }
+  .uploader #file-image {
+    display: inline;
+    margin: 0 auto 0.5rem auto;
+    width: auto;
+    height: auto;
+    max-width: 180px;
+  }
+  .uploader #file-image.hidden {
+    display: none;
+  }
+  .uploader #notimage {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+  .uploader #notimage.hidden {
+    display: none;
+  }
+  .uploader progress,
+  .uploader .progress {
+    display: inline;
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 180px;
+    height: 8px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #eee;
+    overflow: hidden;
+  }
+  .uploader .progress[value]::-webkit-progress-bar {
+    border-radius: 4px;
+    background-color: #eee;
+  }
+  .uploader .progress[value]::-webkit-progress-value {
+    background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+    border-radius: 4px;
+  }
+  .uploader .progress[value]::-moz-progress-bar {
+    background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+    border-radius: 4px;
+  }
+  .uploader input[type=file] {
+    display: none;
+  }
+  .uploader div {
+    margin: 0 0 0.5rem 0;
+    color: #5f6982;
+  }
+  .uploader .btn {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    clear: both;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: initial;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0 1rem;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    background: #454cad;
+    border-color: #454cad;
+    cursor: pointer;
+  }
+  .call-to-action {
+    padding: 20px 15px;
+  }
+  a.btn.btn-modern.dwn_btn.text-2.btn-primary  {
+    padding: 8px 15px !important;
+  }
+  .count_sect {
+    right: 10px;
+    position: absolute;
+}
+span.approved_clr {
+    color: green;
+}
+span.reject_clr {
+    color: red;
+}
+.list-group-item+.list-group-item {
+    border-top-width: thin;
 }

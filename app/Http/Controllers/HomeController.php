@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,19 +11,62 @@ class HomeController extends Controller
         //
     }
 
-    public function index(){
+    public function index()
+    {
         return view('index');
     }
-    public function leadershipteam(){
+    public function leadershipteam()
+    {
         return view('leadership-team');
     }
-    public function coreteam(){
+    public function coreteam()
+    {
         return view('core-team');
     }
-    public function advisorpanel(){
-        return view('advisor-panel');
+    public function mentorspanel()
+    {
+        return view('mentors');
     }
-    public function about(){
+    public function about()
+    {
         return view('about');
     }
+    public function missionvision()
+    {
+        return view('mission-vision');
+    }
+    public function hrterminology()
+    {
+        return view('hr-terminology');
+    }
+    public function hrcertification()
+    {
+        return view('hr-certification');
+    }
+
+    public function profile()
+    {
+        $user = Auth::user();
+        // Access user properties
+        $name = $user->name;
+        $email = $user->email;
+        if (!auth()->check()) {
+            return redirect('/');
+        }
+    
+        return view('profile');
+    }
+   
+    public function managingcommittee($city)
+    {
+        return view('managing-committee', ['city' => $city]);
+    }
+
+    
+    public function mentorpresident($city)
+    {
+        return view('current-mentor-past-pre', ['city' => $city]);
+    }
+
+
 }

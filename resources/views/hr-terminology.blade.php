@@ -3,116 +3,146 @@
 
 <div role="main" class="main">
 
-				<section class="page-header page-header-modern custom-page-header bg-color-quaternary">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-								<h1 class="font-weight-bold text-9 text-color-secondary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">About Us</h1>
-							</div>
-							<div class="col-md-4 order-1 order-md-2 align-self-center">
-								<ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-									<li><a href="#">Home</a></li>
-									<li class="active">About Us</li>
+	<section class="page-header page-header-modern custom-page-header bg-color-quaternary">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+					<h1 class="font-weight-bold text-9 text-color-secondary appear-animation"
+						data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">HR Terminology</h1>
+				</div>
+				<div class="col-md-4 order-1 order-md-2 align-self-center">
+					<ul class="breadcrumb d-block text-md-end appear-animation"
+						data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+						<li><a href="#">Home</a></li>
+						<li class="active">HR Terminology</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container py-5">
+		<div class="row">
+			<div class="container">
+				<!-- Tab navigation -->
+				<div class="tabs" style="margin-bottom:0;">
+					<ul class="nav nav-tabs" id="alphabetTab" role="tablist">
+						@foreach (range('A', 'Z') as $letter)
+							<li class="nav-item" role="presentation">
+								<a class="nav-link @if($letter == 'A') active @endif" id="{{ $letter }}-tab"
+									data-bs-toggle="tab" href="#{{ $letter }}" role="tab" aria-controls="{{ $letter }}"
+									aria-selected="{{ $letter == 'A' ? 'true' : 'false' }}">
+									{{ $letter }}
+								</a>
+							</li>
+						@endforeach
+					</ul>
+				</div>
+				<!-- Tab content -->
+				<div class="tab-content" id="alphabetTabContent">
+					@foreach ($terms as $letter => $types)
+						<div class="tab-pane fade @if($letter == 'A') show active @endif" id="{{ $letter }}">
+							<div class="">
+
+								<ul class="list list-icons list-icons-style-2">
+									@foreach ($types['type1'] as $definition)
+										<li>
+											<i class="fas fa-check"></i>
+											<strong>{{ strstr($definition, ':', true) }}</strong>{{ strstr($definition, ':') }}
+										</li>
+									@endforeach
 								</ul>
+
+								<!-- Optional: Divider between types -->
+								<div class="divider divider-style-2 divider-secondary taller">
+									<i class="fas fa-chevron-down"></i>
+								</div>
+
+								<ul class="list list-icons list-icons-style-2">
+									@foreach ($types['type2'] as $definition)
+										<li>
+											<i class="fas fa-caret-right"></i>
+											<strong>{{ strstr($definition, ':', true) }}</strong>{{ strstr($definition, ':') }}
+										</li>
+									@endforeach
+								</ul>
+
 							</div>
 						</div>
-					</div>
-				</section>
+					@endforeach
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="font-weight-bold text-color-dark my-5">- Key Responsibility – Role wise </h2>
+				<div class="accordion without-bg custom-accordion-style-1" id="accordion7">
+					<div class="mt-5">
 
-				<div class="container py-5">
-					<div class="row align-items-center">
-						<div class="col">
-                        <h2 class="font-weight-bold text-color-dark mb-3">-	Who We Are</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-6">
-							<p class="m-0 p-0">
-							HRConnect is more than just a platform; it’s a mission-driven community dedicated to empowering aspiring 
-							professionals to unlock their true potential and achieve remarkable career success. We exist to bridge the 
-							gap between where you are and where you aspire to be by offering comprehensive guidance, actionable resources, 
-							and a network that feels like a genuine professional family.
-							</p>
-
-							<p class="m-0 p-0">
-							Our core philosophy revolves around the belief that every individual deserves access to the right tools, 
-							mentorship, and opportunities to excel. At HRConnect, we create an ecosystem where collaboration and personal 
-							growth thrive. Whether you’re just beginning your professional journey, transitioning careers, or striving to 
-							reach new heights, we are here to help you navigate the complexities of today’s ever-evolving professional 
-							landscape.
-							</p>
-
-							<p class="m-0 p-0">
-							We provide more than just advice; we offer mentorship from experienced professionals, insights into industry 
-							trends, and access to valuable resources that empower you to make informed decisions. Our supportive community 
-							encourages open dialogue, fosters mutual growth, and connects you with like-minded individuals who share your
-							 drive and ambition.
-							</p>
-							
-							<p class="m-0 p-0">
-								At HRConnect, we envision a world where no professional feels isolated in their career journey. We are 
-								committed to being the bridge that connects you with opportunities, expertise, and a network of support 
-								that empowers you to thrive. Together, let’s build a future where your career aspirations turn into 
-								tangible achievements, and your potential finds its ultimate expression.
-							</p>
-							<!-- <ul class="list list-icons list-primary mt-4">
-								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum.</li>
-								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300"><i class="fas fa-check"></i> Fusce sit amet orci quis arcu vestibulum stibulum.</li>
-								<li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="600"><i class="fas fa-check"></i> Fusce sit amet orci q vestibulum vestibulum.</li>
-							</ul> -->
-							<!-- <div class="d-flex align-items-center justify-content-start pt-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
-								<div class="circular-bar custom-circular-bar m-0">
-									<div class="circular-bar-chart" data-percent="89" data-plugin-options="{'barColor': '#42ad61'}">
-										<strong class="text-5">89%</strong>
+						@foreach($jobs as $title => $job)
+							<div class="card card-default">
+								<div class="card-header">
+									<h4 class="card-title m-0">
+										<a class="accordion-toggle collapsed " data-bs-toggle="collapse" data-bs-parent="#accordion7"
+											href="#collapse{{ $loop->index }}" aria-expanded="true">
+											{{ $title }}
+											<span class="custom-accordion-plus"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse{{ $loop->index }}" class="collapse {{ $loop->first ? 'show' : '' }}"
+									aria-expanded="true">
+									<div class="card-body">
+										<p><strong>Job Description:</strong> {{ $job['job_description'] }}</p>
+										<h5>Key Responsibilities:</h5>
+										<ul class="list list-icons list-icons-style-2">
+											@foreach($job['key_responsibilities'] as $responsibility)
+												<li>
+													<i class="fas fa-caret-right"></i>
+													{{ $responsibility }}
+												</li>
+											@endforeach
+										</ul>
 									</div>
 								</div>
-								<h4 class="font-weight-bold m-0 ms-3">Successful cases<br/>in 15 years.</h4>
-							</div> -->
-						</div>
-						<div class="col-lg-6 pt-4 pt-lg-0">
-							<div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 4000, 'margin': 10, 'animateIn': 'slideInDown', 'animateOut': 'slideOutDown'}">
-								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/training.jpg">
-								</div>
-								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/training-1.jpg">
-								</div>
-								<div>
-									<img alt="" class="img-fluid rounded" src="img/gen_img/training-2.jpg">
-								</div>
 							</div>
-							<!-- <div class="card border-radius-0 box-shadow-1 border-0 mt-4 mt-lg-0 ms-lg-3 p-3 mb-3 mb-lg-0">
-								<img src="img/demos/business-consulting-2/bg/bg-2.jpg" class="img-fluid border-radius-0" alt="">
-							</div> -->
-						</div>
+						@endforeach
+
 					</div>
+					
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-			
 
-			<section class="call-to-action call-to-action-default with-button-arrow call-to-action-in-footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-3 col-lg-3">
-								<div class="call-to-action-btn">
-									<a data-bs-toggle="modal" data-bs-target="#login" href="" 
-										target="_blank" class="btn btn-modern text-2 btn-primary">Join us at HRConnect</a>
-									<span class="arrow hlb d-none d-md-block appear-animation animated rotateInUpLeft appear-animation-visible" 
-									data-appear-animation="rotateInUpLeft" style="left: 110%; top: -40px; animation-delay: 100ms;"></span>
-								</div>
-							</div>
-							<div class="col-sm-9 col-lg-9">
-								<div class="call-to-action-content">
-									<h3>your partner in <strong class="font-weight-extra-bold">progress and your professional </strong> home.</h3>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				
 
-				<!-- <div class="container-fluid">
+<section class="call-to-action call-to-action-default with-button-arrow call-to-action-in-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-lg-3">
+				<div class="call-to-action-btn">
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdgIphn_i7yYI_Egi07Xpb9Br0HJOajr4wi2_-8pXZrHvkb2A/viewform" target="_blank" class="btn btn-modern text-2 btn-primary">Join us at HRConnect</a>
+					<span
+						class="arrow hlb d-none d-md-block appear-animation animated rotateInUpLeft appear-animation-visible"
+						data-appear-animation="rotateInUpLeft"
+						style="left: 110%; top: -40px; animation-delay: 100ms;"></span>
+				</div>
+			</div>
+			<div class="col-sm-9 col-lg-9">
+				<div class="call-to-action-content">
+					<h3>your partner in <strong class="font-weight-extra-bold">progress and your professional
+						</strong> home.</h3>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <div class="container-fluid">
 					<div class="row py-3 mt-2">
 
 						<div class="col-lg-6 p-0">
@@ -201,6 +231,6 @@
 					</div>
 				</section>				 -->
 
-			</div>
+</div>
 
 @endsection
